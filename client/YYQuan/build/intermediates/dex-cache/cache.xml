@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\workspace\mobile\xmpp-master\client\YYQuan\app\libs\wup-1.0.0-SNAPSHOT.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="27.0.3"
+        sha1="a0845068801a0b9a3a144b7cf57cb650b3d467e5">
+        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\release\14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\workspace\mobile\xmpp-master\client\YYQuan\multi-image-selector\build\intermediates\intermediate-jars\release\classes.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="27.0.3"
+        sha1="ca9ca5645387b39dd0cba59716481c19e03aa648">
+        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\release\34.jar" />
+    </item>
+
+</items>
