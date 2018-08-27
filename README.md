@@ -1,6 +1,6 @@
 # xmppapp
 [![Travis](https://img.shields.io/badge/License-Apache2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![Twitter](https://img.shields.io/badge/Gradle-2.1.0-brightgreen.svg)](https://github.com/jiangzehui/polygonsview)<br>
+[![Twitter](https://img.shields.io/badge/Gradle-2.1.0-brightgreen.svg)](https://github.com/kkman2008/polygonsview)<br>
 
 开源一个自己去年写的基于Xmpp协议的即时通讯社交软件 (客户端+服务端)<br>
 <br>
@@ -61,16 +61,16 @@ JavaWeb<br>
 ps: IP地址记得要改成你自己的，由于是去年写的项目，Android6.0并没有做适配，请谅解，如果遇到报错，请手动打开所有权限。<br>
 
 # 推荐阅读
-1.模仿掌上英雄联盟能力分析效果<br> https://github.com/jiangzehui/polygonsview<br><br>
+1.模仿掌上英雄联盟能力分析效果<br> https://github.com/kkman2008/polygonsview<br><br>
 
 2.此项目基于Retrotfit2.1+Material Design+ijkplayer开发的一个APP。目前已有的功能是 新闻，gif动图，视频播放<br>
-https://github.com/jiangzehui/MD<br>
+https://github.com/kkman2008/MD<br>
 
 
 
 # License
 
-Copyright 2016 jiangzehui
+Copyright 2016 kkman2008
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

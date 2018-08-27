@@ -40,7 +40,7 @@ import cz.msebera.android.httpclient.Header;
 /**
  * 图形解锁类
  *
- * @author jiangzehui
+ * @author kkman2008
  */
 public class LockActivity extends Activity implements
         LockPatternView.OnPatternListener {

@@ -110,13 +110,13 @@
 
 
             <TextView
-                android:id="@+id/tv_message"
+                android:id="@+id/tv_news"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@mipmap/tab_move_icon"
+                android:drawableTop="@mipmap/tab_comprehensive_icon"
                 android:gravity="center"
-                android:text="消息"
+                android:text="首页"
                 android:textColor="@color/tab_text_bg" />
 
 
@@ -127,18 +127,28 @@
                 android:layout_weight="1"
                 android:drawableTop="@mipmap/tab_me_icon"
                 android:gravity="center"
-                android:text="好友"
+                android:text="研讨"
+                android:textColor="@color/tab_text_bg" />
+
+            <TextView
+                android:id="@+id/tv_raiseQuestion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/tab_conference_icon"
+                android:gravity="center"
+                android:text="提问"
                 android:textColor="@color/tab_text_bg" />
 
 
             <TextView
-                android:id="@+id/tv_news"
+                android:id="@+id/tv_message"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@mipmap/tab_comprehensive_icon"
+                android:drawableTop="@mipmap/tab_move_icon"
                 android:gravity="center"
-                android:text="文章"
+                android:text="通知"
                 android:textColor="@color/tab_text_bg" />
 
             <TextView
@@ -148,7 +158,7 @@
                 android:layout_weight="1"
                 android:drawableTop="@mipmap/tab_found_icon"
                 android:gravity="center"
-                android:text="动态"
+                android:text="我的"
                 android:textColor="@color/tab_text_bg" />
 
 
