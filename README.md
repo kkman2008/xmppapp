@@ -1,18 +1,18 @@
-# zkyt app
+# xmppapp
 [![Travis](https://img.shields.io/badge/License-Apache2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Twitter](https://img.shields.io/badge/Gradle-2.1.0-brightgreen.svg)](https://github.com/jiangzehui/polygonsview)<br>
 
-开源写的基于Xmpp协议的即时通讯软件 (客户端+服务端)<br>
+开源一个自己去年写的基于Xmpp协议的即时通讯社交软件 (客户端+服务端)<br>
 <br>
 本项目仅供参考，对于正在学习Xmpp以及javaweb后台的同学，可以看一下。<br>
 做这个项目纯属个人兴趣爱好，所以即时通讯做的不是很深，只是简单的实现了功能。（查询，添加好友，聊天等）<br>另外要提的一点，源生的openfire很好，但并不能满足所有业务，所以需要对openfire进行二次开发。<br>
 
 <br>
 <br>
-如果你觉得还不错，可以给个star，支持下，谢谢了！   
+如果你觉得还不错，可以给个star，支持下，谢谢了！
 
-# 
  如无法测试，说明服务器到期了。请自行搭建服务端，搭建过程遇到任何问题可以联系我<br>email:113531420@qq.com
+<br>
 
 # 用到的三方库
 ## 客户端
@@ -68,10 +68,9 @@ https://github.com/jiangzehui/MD<br>
 
 
 
-
 # License
 
-Copyright 2016 kkman2008
+Copyright 2016 jiangzehui
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
