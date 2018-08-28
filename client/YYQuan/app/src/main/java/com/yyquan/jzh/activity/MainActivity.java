@@ -496,7 +496,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
         Fragment fragment;
         switch (index) {
-
+            case 5:
+                break;
             case 0:
                 iv_addfriend.setVisibility(View.GONE);
                 tv_message.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.tab_move_pressed_icon, 0, 0);
@@ -566,6 +567,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            // 5是题问题
+            case R.id.tv_raiseQuestion:
+                selection(5);
             case R.id.tv_news:
                 selection(2);
                 break;

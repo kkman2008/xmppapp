@@ -37,7 +37,7 @@ public class BaseDaoImpl {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/news", "root", "root");
+					"jdbc:mysql://localhost:3306/news?characterEncoding=UTF-8&autoReconnect=true", "root", "root");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

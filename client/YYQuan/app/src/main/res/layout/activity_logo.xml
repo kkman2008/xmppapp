@@ -12,7 +12,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:padding="12dip"
-        android:text="Copyright © 2015-2016 jzh. All Rights Reserved."
+        android:text="Copyright © 2018-2020 CAASSEE. All Rights Reserved."
         android:textColor="@android:color/white"
         android:textSize="11sp" />
 
