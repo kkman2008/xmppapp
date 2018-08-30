@@ -1,3 +1,4 @@
-#Sun Jan 03 21:20:21 CST 2016
 eclipse.preferences.version=1
+encoding//src/com/jzh/news/dao/BaseDaoImpl.java=UTF-8
 encoding//src/com/jzh/news/entity/User.java=UTF-8
+encoding//src/jdbc.properties=UTF-8
