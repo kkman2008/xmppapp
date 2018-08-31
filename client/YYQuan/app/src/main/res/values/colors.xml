@@ -29,4 +29,9 @@
 
     <color name="wheel_timebtn_nor">#54a3fa</color>
     <color name="wheel_timebtn_pre">#CCCCCC</color>
+
+    <color name="tab_indicator">#CCCCCC</color>
+    <color name="blank">#CCCCCC</color>
+
+
 </resources>

@@ -12,5 +12,6 @@ public class Ip {
     public static final String ip_icon = ip + "/YfriendService/DoGetIcon?name=";
     public static final String ip_user_message = ip + "/YfriendService/DoGetUser";
     public static final String ip_user_status = ip + "/YfriendService/DoGetLunTan";
-    public static  final String ip_upload_file = ip +  "/YfriendService/DoUploadFile";
+    public static  final String ip_dservlet = ip +  "/YfriendService/Dservlet";
+    public static  final String ip_upload= ip +  "/YfriendService/UploadServlet";
 }
