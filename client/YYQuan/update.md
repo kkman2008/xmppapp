@@ -15,8 +15,6 @@ http://127.0.0.1:8080/YfriendService/DoGetUser?user=75FFCD29EB7F88087AAE06878BC7
 获取信息类别： 
 http://127.0.0.1:8080/YfriendService/DoGetType
 
-
-
 #  项目需要修改IP的地方
 
 1. xmpptool中的host地址
@@ -29,4 +27,5 @@ http://127.0.0.1:8080/YfriendService/DoGetType
 update 
 2018.08.27
 1. 用户身份，分为角色进入不用的页面（普通用户（提交问题、授权后可以旁听），专家、主持人、秘书（专业讨论））
-2. 
+2. 提问UI
+3. 

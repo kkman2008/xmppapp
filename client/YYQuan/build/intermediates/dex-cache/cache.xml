@@ -3,6 +3,26 @@
 
     <item
         is-multidex="false"
+        jar="D:\workspace\mobile\xmpp-master\client\YYQuan\multi-image-selector\build\intermediates\intermediate-jars\release\classes.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="27.0.3"
+        sha1="ca9ca5645387b39dd0cba59716481c19e03aa648">
+        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\release\34.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jaylon\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.9.1\84b4b7d1c4a238e7899972b7446c250691e65f1f\okhttp-3.9.1.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="27.0.3"
+        sha1="84b4b7d1c4a238e7899972b7446c250691e65f1f">
+        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\release\35.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="D:\workspace\mobile\xmpp-master\client\YYQuan\app\libs\wup-1.0.0-SNAPSHOT.jar"
         jumboMode="false"
         min-sdk-version="15"
@@ -13,13 +33,13 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\workspace\mobile\xmpp-master\client\YYQuan\multi-image-selector\build\intermediates\intermediate-jars\release\classes.jar"
+        jar="C:\Users\Jaylon\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="27.0.3"
-        sha1="ca9ca5645387b39dd0cba59716481c19e03aa648">
-        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\release\34.jar" />
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\release\36.jar" />
     </item>
 
 </items>

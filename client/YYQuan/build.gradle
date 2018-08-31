@@ -4,6 +4,7 @@ buildscript {
     repositories {
         mavenCentral()
         mavenLocal()
+        maven { url "http://mvnrepository.com/artifact" }
         maven {
             url "https://jitpack.io"
         }

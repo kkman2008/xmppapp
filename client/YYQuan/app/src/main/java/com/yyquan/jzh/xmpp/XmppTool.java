@@ -77,7 +77,7 @@ public class XmppTool {
     private String tag = "XmppTool";
     private static XmppTool instance;
     //public static final String HOST = "123.207.145.194";
-    public static final String HOST = "192.168.1.116";
+    public static final String HOST = "192.168.1.101";
     public static final int PORT = 5222;
     private static XMPPConnection con;
     Context context;
