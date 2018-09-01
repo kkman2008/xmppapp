@@ -87,6 +87,24 @@ public class Dservlet extends HttpServlet {
             e.printStackTrace();
         }       
 
-    }
+    }    
+}
+@WebServlet("/Dservlet1")
+ class Dservlet1 extends HttpServlet {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		this.doPost(request, response);
+		System.out.println("Dservlet1 doGet...");
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Dservlet1 doPost...");
+	}
+			 
 }
 
