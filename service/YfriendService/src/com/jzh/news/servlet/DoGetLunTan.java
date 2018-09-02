@@ -169,6 +169,7 @@ public class DoGetLunTan extends HttpServlet {
 			String time = request.getParameter("time");
 			String content = request.getParameter("content");
 			String location = request.getParameter("location");
+			// image_size 为多少个图片文件？
 			String size = request.getParameter("image_size");
 			News_luntan news = new News_luntan();
 			news.setUser(user);
@@ -185,6 +186,7 @@ public class DoGetLunTan extends HttpServlet {
 					} else {
 						sb.append(request.getParameter("filename" + j) + ";");
 					}
+					// 文件内容是通过http请求传的
 					byte[] b = Base64Coder.decodeLines(request
 							.getParameter("file" + j));
 					String filepath = "c:/yyquan_luntan/";
