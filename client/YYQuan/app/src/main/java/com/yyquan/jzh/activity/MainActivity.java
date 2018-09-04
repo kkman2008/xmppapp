@@ -8,7 +8,10 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
-import android.os.*;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.os.Process;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -48,7 +51,6 @@ import com.yyquan.jzh.util.ImageCompressUtils;
 import com.yyquan.jzh.util.PhotoSelectedHelper;
 import com.yyquan.jzh.util.SetImageUtil;
 import com.yyquan.jzh.util.SharedPreferencesUtil;
-import com.yyquan.jzh.view.BadgeView;
 import com.yyquan.jzh.view.CircleImageView;
 import com.yyquan.jzh.xmpp.XmppReceiver;
 import com.yyquan.jzh.xmpp.XmppService;
@@ -86,6 +88,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private TextView tv_luntan;
     private TextView tv_friend;
     private TextView tv_message;
+    private TextView tv_question;
     private LinearLayout ll_to;
     private CircleImageView iv_me;
     private CircleImageView iv_mes;
@@ -196,6 +199,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         tv_luntan = (TextView) findViewById(R.id.tv_luntan);
         tv_friend = (TextView) findViewById(R.id.tv_friend);
         tv_message = (TextView) findViewById(R.id.tv_message);
+        tv_question = (TextView) findViewById(R.id.tv_raiseQuestion);
         ll_to = (LinearLayout) findViewById(R.id.main_layout_to);
         iv_me = (CircleImageView) findViewById(R.id.main_CircleImageView);
         iv_mes = (CircleImageView) mNavigationView.findViewById(R.id.me_icon);
@@ -232,6 +236,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         tv_luntan.setOnClickListener(this);
         tv_friend.setOnClickListener(this);
         tv_message.setOnClickListener(this);
+        tv_question.setOnClickListener(this);
         ll_to.setOnClickListener(this);
 
         selection(0);
@@ -485,6 +490,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
      * 点击不同的按钮做出不同的处理
      */
     private void selection(int index) {
+        if(index == 5){
+            // 通过inetent实现页面 跳转
+            Intent intent = new Intent(MainActivity.this, RaiseQuestionActivity.class);
+            startActivity(intent);
+            return;
+        }
         initialImage();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         List<Fragment> fragments = getSupportFragmentManager().getFragments();
@@ -496,8 +507,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
         Fragment fragment;
         switch (index) {
-            case 5:
-                break;
+
             case 0:
                 iv_addfriend.setVisibility(View.GONE);
                 tv_message.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.tab_move_pressed_icon, 0, 0);
@@ -570,6 +580,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             // 5是题问题
             case R.id.tv_raiseQuestion:
                 selection(5);
+                break;
             case R.id.tv_news:
                 selection(2);
                 break;

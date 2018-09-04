@@ -26,13 +26,7 @@ android {
             jniLibs.srcDirs = ['jniLibs']
         }
     }
-
-
 }
-
-
-
-
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')

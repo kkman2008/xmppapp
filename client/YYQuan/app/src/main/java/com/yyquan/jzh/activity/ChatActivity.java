@@ -1,13 +1,10 @@
 package com.yyquan.jzh.activity;
 
-import android.app.Notification;
 import android.content.AsyncQueryHandler;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.IntentFilter;
 import android.database.Cursor;
-import android.media.AudioManager;
-import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
@@ -17,7 +14,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
@@ -36,10 +32,7 @@ import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.entity.XmppChat;
 import com.yyquan.jzh.entity.XmppFriend;
-import com.yyquan.jzh.entity.XmppMessage;
-import com.yyquan.jzh.entity.XmppUser;
 import com.yyquan.jzh.util.SaveUserUtil;
-import com.yyquan.jzh.util.SharedPreferencesUtil;
 import com.yyquan.jzh.util.TimeUtil;
 import com.yyquan.jzh.util.ToastUtil;
 import com.yyquan.jzh.view.CircleImageView;
@@ -52,10 +45,7 @@ import com.yyquan.jzh.xmpp.view.listview.MsgListView;
 
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.ChatManager;
-import org.jivesoftware.smack.ChatManagerListener;
-import org.jivesoftware.smack.MessageListener;
 import org.jivesoftware.smack.XMPPException;
-import org.jivesoftware.smack.packet.Message;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -372,21 +362,19 @@ public class ChatActivity extends FragmentActivity implements View.OnClickListen
                 viewHolder.tv_time.setText(TimeUtil.getChatTime(list.get(position).getTime()));
             }
 
-            if (list.get(position).getIcon().equals("")) {
-                if (list.get(position).getSex().equals("男")) {
+            if (list.get(position).getIcon() != null && list.get(position).getIcon().equals("")) {
+                if (list.get(position).getSex() == null || list.get(position).getSex().equals("男")) {
                     viewHolder.iv_icon.setImageResource(R.mipmap.me_icon_man);
                 } else {
                     viewHolder.iv_icon.setImageResource(R.mipmap.me_icon_woman);
                 }
             } else {
-                if (list.get(position).getIcon().substring(0, 4).equals("http")) {
+                if (list.get(position).getIcon()!= null && list.get(position).getIcon().substring(0, 4).equals("http")) {
                     Picasso.with(ChatActivity.this).load(list.get(position).getIcon()).resize(200, 200).placeholder(R.mipmap.qq_addfriend_search_friend).error(R.mipmap.qq_addfriend_search_friend).centerInside().into(viewHolder.iv_icon);
                 } else {
                     Picasso.with(ChatActivity.this).load(url_icon + list.get(position).getIcon()).resize(200, 200).placeholder(R.mipmap.qq_addfriend_search_friend).error(R.mipmap.qq_addfriend_search_friend).centerInside().into(viewHolder.iv_icon);
                 }
             }
-
-
             return convertView;
         }
     }

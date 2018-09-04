@@ -130,18 +130,8 @@
                         android:drawableRight="@mipmap/message"
                         android:text="0 "
                         android:textColor="#bcb4b4" />
-
-
                 </RelativeLayout>
-
-
             </LinearLayout>
-
-
         </LinearLayout>
-
-
     </LinearLayout>
-
-
 </LinearLayout>
