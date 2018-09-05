@@ -3,9 +3,7 @@ package com.yyquan.jzh.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.support.v4.widget.SwipeRefreshLayout;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,14 +27,12 @@ import com.tencent.android.tpush.XGPushClickedResult;
 import com.tencent.android.tpush.XGPushManager;
 import com.yyquan.jzh.R;
 import com.yyquan.jzh.adapter.LunTanPingLunListViewAdapter;
-import com.yyquan.jzh.adapter.PingLunListViewAdapter;
 import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.News_luntan;
 import com.yyquan.jzh.entity.News_pinglun;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.location.Location;
 import com.yyquan.jzh.util.SaveUserUtil;
-import com.yyquan.jzh.util.SharedPreferencesUtil;
 import com.yyquan.jzh.view.CircleImageView;
 import com.yyquan.jzh.view.DialogView;
 import com.yyquan.jzh.xmpp.XmppTool;
@@ -45,7 +41,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -316,7 +311,7 @@ public class ShowLuntanActivity extends Activity implements View.OnClickListener
                                 }
 
 
-                                tv_pinglun_total.setText("热门评论(" + pinglun_size + ")");
+                                tv_pinglun_total.setText("热门研讨(" + pinglun_size + ")");
                                 // ((NewsContentActivity)getActivity()).pl_size=pinglun_size;
                                 if (index == 0) {
 
@@ -372,7 +367,7 @@ public class ShowLuntanActivity extends Activity implements View.OnClickListener
 
         String pinglun = et_pinglun.getText().toString();
         if (pinglun.equals("")) {
-            Toast.makeText(ShowLuntanActivity.this, "请先评论", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ShowLuntanActivity.this, "请先填写讨论内容", Toast.LENGTH_SHORT).show();
 
             return;
         }

@@ -1,8 +1,6 @@
 package com.yyquan.jzh.activity;
 
 import android.content.Intent;
-
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -10,21 +8,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-import com.amap.api.location.LocationManagerProxy;
-
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-
 import com.yyquan.jzh.R;
 import com.yyquan.jzh.adapter.ContentFragmentPageAadpter;
 import com.yyquan.jzh.entity.Ip;
@@ -38,11 +29,9 @@ import com.yyquan.jzh.view.DialogView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
 import cz.msebera.android.httpclient.Header;
 
 public class NewsContentActivity extends FragmentActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
@@ -111,7 +100,7 @@ public class NewsContentActivity extends FragmentActivity implements View.OnClic
         et_pinglun = (EditText) findViewById(R.id.news_content_editText_pinglun);
         tv_pinglun = (TextView) findViewById(R.id.news_content_text_showpinglun);
         tv_uppinglun = (TextView) findViewById(R.id.news_content_text_enterpinglun);
-        tv_pinglun.setText(content.getCpinglun() + "评");
+        tv_pinglun.setText(content.getCpinglun() + "讨论");
 
         back = (LinearLayout) findViewById(R.id.news_content_back);
         back.setOnClickListener(this);
@@ -179,7 +168,7 @@ public class NewsContentActivity extends FragmentActivity implements View.OnClic
 
         String pinglun = et_pinglun.getText().toString();
         if (pinglun.equals("")) {
-            Toast.makeText(NewsContentActivity.this, "请先评论", Toast.LENGTH_SHORT).show();
+            Toast.makeText(NewsContentActivity.this, "请先填写讨论内容", Toast.LENGTH_SHORT).show();
 
             return;
         }
@@ -250,7 +239,7 @@ public class NewsContentActivity extends FragmentActivity implements View.OnClic
     public void onPageSelected(int position) {
         page_select = position;
         if (page_select == 0) {
-            tv_pinglun.setText(pl_size + "评");
+            tv_pinglun.setText(pl_size + "讨论");
 
         } else {
             tv_pinglun.setText("原文");

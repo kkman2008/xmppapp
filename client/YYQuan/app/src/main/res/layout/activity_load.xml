@@ -61,5 +61,4 @@
             android:background="@drawable/load_round" />
     </LinearLayout>
 
-
 </FrameLayout>

@@ -98,8 +98,22 @@
 
         <item name="android:windowExitAnimation">@anim/timepicker_anim_exit_bottom</item> <!-- 指定消失的动画xml -->
     </style>
-
-
+    <style name="Coder">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="Coder.TextView">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="Coder.TextView.White">
+        <item name="android:textColor">@color/base_color_text_white</item>
+    </style>
+    <style name="Coder.Button.theme" parent="Coder.TextView.White">
+        <item name="android:background">@drawable/btn_login_selector</item>
+    </style>
+    <style name="Coder.Button.logout" parent="Coder.TextView.White">
+        <item name="android:background">@drawable/btn_logout_selector</item>
+    </style>
 
 
 </resources>

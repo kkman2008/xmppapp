@@ -1,8 +1,6 @@
 package com.yyquan.jzh.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Transformation;
 import com.yyquan.jzh.R;
 import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.News_content;
@@ -69,7 +65,7 @@ public class TitleListViewAdapter extends BaseAdapter {
         String[] str=list.get(position).getCimage().split(";");
         holder.tv_title.setText(list.get(position).getCtitle());
       //  holder.tv_zhaiyao.setText(list.get(position).getCzhaiyao());
-        holder.tv_pinglun.setText(list.get(position).getCpinglun() + "评 ");
+        holder.tv_pinglun.setText(list.get(position).getCpinglun() + "讨论 ");
         if(str[0].contains("http")){
             Picasso.with(context).load(str[0]).resize(200,200).centerInside().placeholder(R.mipmap.aio_image_default_round).error(R.mipmap.aio_image_default_round).into(holder.iv_icon);
 

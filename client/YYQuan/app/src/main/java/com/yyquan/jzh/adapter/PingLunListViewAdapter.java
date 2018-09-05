@@ -112,19 +112,8 @@ public class PingLunListViewAdapter extends BaseAdapter {
         holder.tv_content.setText(news.get(position).getPcontent());
         holder.tv_zan.setText(news.get(position).getPzan() + " ");
         holder.tv_lou.setVisibility(View.GONE);
-        if (news.get(position).getPlocation().equals("")) {
-            holder.tv_location.setVisibility(View.GONE);
-        } else {
-
-            holder.tv_location.setVisibility(View.VISIBLE);
-            if (news.get(position).getPlocation().contains("null")) {
-                holder.tv_location.setText(" 未知星球");
-            } else {
-
-                holder.tv_location.setText(news.get(position).getPlocation());
-
-            }
-        }
+        // 本项目中地理位置不需要
+        holder.tv_location.setVisibility(View.GONE);
 
         Drawable nav_up = null;
         if (news.get(position).getIspzan().equals("1")) {

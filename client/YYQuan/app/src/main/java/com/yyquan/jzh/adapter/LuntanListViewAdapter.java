@@ -1,44 +1,28 @@
 package com.yyquan.jzh.adapter;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
-import android.text.method.ScrollingMovementMethod;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
 import com.yyquan.jzh.activity.MainActivity;
 import com.yyquan.jzh.activity.ShowImageActivity;
-import com.yyquan.jzh.activity.ShowLuntanActivity;
 import com.yyquan.jzh.activity.ShowMessageActivity;
 import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.News_luntan;
-import com.yyquan.jzh.entity.News_pinglun;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import cz.msebera.android.httpclient.Header;
 
 /**
  * Created by jzh on 2015/9/28.
@@ -106,7 +90,7 @@ public class LuntanListViewAdapter extends BaseAdapter {
 //            }
 //        });
         holder.tv_name.setText(news.get(position).getUser().getNickname());
-        holder.tv_pinglun.setText(news.get(position).getPinglun() + "评 ");
+        holder.tv_pinglun.setText(news.get(position).getPinglun() + "讨论 ");
         holder.tv_time.setText(news.get(position).getTime());
         holder.tv_content.setText(news.get(position).getContent());
         if (news.get(position).getLocation().equals("")) {
@@ -123,7 +107,7 @@ public class LuntanListViewAdapter extends BaseAdapter {
         }
 
 
-        // holder.tv_zan.setText(news.get(position).getZan());
+       // holder.tv_zan.setText(news.get(position).getZan());
 
         if (news.get(position).getUser().getIcon().equals("")) {
             if (news.get(position).getUser().getSex().equals("男")) {

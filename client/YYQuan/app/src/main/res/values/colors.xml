@@ -2,7 +2,7 @@
 <resources>
     <color name="title">#1ed6ff</color>
     <color name="title_bg">#aa72d572</color>
-    <color name="tab_text_bg">#FFFFFF</color>
+    <color name="tab_text_bg">#12AF4D</color>
     <color name="pinglun_name">#238123</color>
 
 
@@ -36,5 +36,6 @@
 
 
     <color name="red_btn_color_normal">#ffff5454</color>
+    <color name="base_color_text_white">#ffffff</color>
 
 </resources>

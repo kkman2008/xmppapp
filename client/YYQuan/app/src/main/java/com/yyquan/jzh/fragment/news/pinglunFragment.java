@@ -148,7 +148,7 @@ public class pinglunFragment extends Fragment implements SwipeRefreshLayout.OnRe
                                 }
 
 
-                                tv_total.setText("热门评论(" + pinglun_size + ")");
+                                tv_total.setText("热门研讨(" + pinglun_size + ")");
                                 ((NewsContentActivity) getActivity()).pl_size = pinglun_size;
                                 if (index == 0) {
                                     adapter = new PingLunListViewAdapter(getActivity(), list, user.getUser());

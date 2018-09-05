@@ -4,9 +4,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-
-    >
+    android:fitsSystemWindows="true">
 
 
     <LinearLayout
@@ -86,10 +84,14 @@
                 android:src="@mipmap/addd"
                 android:visibility="gone" />
 
-
         </RelativeLayout>
 
-
+        <com.yyquan.jzh.view.ResizableImageView
+            android:id="@+id/iv_banner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:src="@drawable/homebanner" />
         <FrameLayout
             android:id="@+id/fg_content"
             android:layout_width="match_parent"
@@ -118,8 +120,6 @@
                 android:gravity="center"
                 android:text="首页"
                 android:textColor="@color/tab_text_bg" />
-
-
             <TextView
                 android:id="@+id/tv_friend"
                 android:layout_width="0dp"

@@ -144,6 +144,8 @@ public class LogoActivity extends Activity {
             User user = SaveUserUtil.loadAccount(LogoActivity.this);
             login(user.getUser(), user.getPassword());
         } else {
+            // 切换登录界面前，logo界面停留
+            Thread.sleep(2000);
             startActivity(new Intent(LogoActivity.this, LoginActivity.class));
             finish();
         }

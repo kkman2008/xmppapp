@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:drawableLeft="@mipmap/message_icon_friend"
-                android:text="热门评论"
+                android:text="热门研讨"
                 android:textColor="@android:color/black"
                 android:textSize="17dp" />
 

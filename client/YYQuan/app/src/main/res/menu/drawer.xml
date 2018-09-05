@@ -19,7 +19,7 @@
         <item
             android:id="@+id/item_3"
             android:icon="@mipmap/aboutme"
-            android:title="关于作者"></item>
+            android:title="关于我们"></item>
 
 
     </group>

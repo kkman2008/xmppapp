@@ -110,7 +110,6 @@ public class XmppChat implements Serializable {
         this.viewType = viewType;
         this.time = time;
     }
-
     public XmppChat() {
     }
 }

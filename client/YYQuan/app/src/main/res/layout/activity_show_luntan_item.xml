@@ -134,7 +134,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
 
-                    android:text="暂无评论" />
+                    android:text="暂无讨论" />
 
                 <View style="@style/view_lines_vertical"
 

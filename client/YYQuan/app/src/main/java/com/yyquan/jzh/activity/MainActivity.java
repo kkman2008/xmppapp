@@ -52,6 +52,7 @@ import com.yyquan.jzh.util.PhotoSelectedHelper;
 import com.yyquan.jzh.util.SetImageUtil;
 import com.yyquan.jzh.util.SharedPreferencesUtil;
 import com.yyquan.jzh.view.CircleImageView;
+import com.yyquan.jzh.view.ResizableImageView;
 import com.yyquan.jzh.xmpp.XmppReceiver;
 import com.yyquan.jzh.xmpp.XmppService;
 import com.yyquan.jzh.xmpp.XmppTool;
@@ -62,6 +63,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -132,6 +135,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     PopupWindow pop;
     PopupWindow pops;
     PopupWindow popss;
+    ResizableImageView bannerImage;
     private static int code = 1;
     private static int codes = 2;
     private static int codess = 3;
@@ -142,8 +146,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     //xmpp
     public XmppReceiver receiver;
-
-
+    private Timer timer;
+    private TimerTask task;
+    private long bannerCount = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,7 +162,24 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         initialView();
         initialPopup();
         initialDialog();
-
+        initialHomeBannerSwipper();
+    }
+    // 首页条幅轮换
+    private void initialHomeBannerSwipper() {
+        task = new TimerTask() {
+            @Override
+            public void run() {
+                Message message = new Message();
+                message.what = 2;
+                message.obj = System.currentTimeMillis();
+                h.sendMessage(message);
+            }
+        };
+        timer = new Timer();
+        // 参数：
+        // 2000，延时2秒后执行。
+        // 3000，每隔3秒执行1次task。
+        timer.schedule(task, 2000, 3000);
     }
 
 
@@ -165,7 +187,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
      * 初始化状态框
      */
     private void initialDialog() {
-
         try {
             pDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
             pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
@@ -175,7 +196,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             e.printStackTrace();
             Log.d(TAG, "initialDialog: ");
         }
-
     }
 
     /**
@@ -210,6 +230,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         tv_tianqi = (TextView) mNavigationView.findViewById(R.id.main_textview_tianqi);
         tv_date = (TextView) mNavigationView.findViewById(R.id.main_textview_date);
 
+        bannerImage = (ResizableImageView)findViewById(R.id.iv_banner);
+
         tv_me_name.setText(user.getNickname());
         if (user.getIcon().equals("")) {//加载默认头像
             if (user.getSex().equals("女")) {
@@ -227,7 +249,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 Picasso.with(MainActivity.this).load(url_icon + user.getIcon()).resize(200, 200).centerInside().into(iv_me);
                 Picasso.with(MainActivity.this).load(url_icon + user.getIcon()).resize(200, 200).centerInside().into(iv_mes);
             }
-
         }
         iv_mes.setOnClickListener(this);
         iv_addfriend.setOnClickListener(this);
@@ -238,8 +259,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         tv_message.setOnClickListener(this);
         tv_question.setOnClickListener(this);
         ll_to.setOnClickListener(this);
-
-        selection(0);
+        // 默认选择在首页，选项卡
+        selection(2);
     }
 
     /**
@@ -442,18 +463,15 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         tv_friend.setTextColor(getResources().getColor(R.color.tab_text_bg));
         tv_message.setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.mipmap.tab_move_icon, 0, 0);
         tv_message.setTextColor(getResources().getColor(R.color.tab_text_bg));
-
-
+        tv_question.setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.mipmap.tab_conference_icon, 0, 0);
+        tv_question.setTextColor(getResources().getColor(R.color.tab_text_bg));
     }
 
 
     XmppReceiver.updateActivity ua = new XmppReceiver.updateActivity() {
         @Override
         public void update(String type) {
-
             switch (type) {
-
-
                 case "status":
                     if (friend_fragment != null) {
                         friend_fragment.getData();
@@ -491,7 +509,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
      */
     private void selection(int index) {
         if(index == 5){
-            // 通过inetent实现页面 跳转
+            // 通过inetent实现页面 跳转提交问题
             Intent intent = new Intent(MainActivity.this, RaiseQuestionActivity.class);
             startActivity(intent);
             return;
@@ -532,7 +550,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                     ft.show(fragment);
                 }
                 break;
-
+            // 主题、问题列表
             case 2:
                 iv_addfriend.setVisibility(View.GONE);
                 tv_news.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.tab_comprehensive_pressed_icon, 0, 0);
@@ -580,18 +598,34 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             // 5是题问题
             case R.id.tv_raiseQuestion:
                 selection(5);
+                initialImage();
+                tv_question.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.tab_me_pressed_icon,0,0);
+                tv_question.setTextColor(tv_question.getResources().getColor(R.color.title));
+                bannerImage.setVisibility(View.GONE);
                 break;
-            case R.id.tv_news:
+            case R.id.tv_news:  // now it's home page
                 selection(2);
+                bannerImage.setVisibility(View.VISIBLE);
                 break;
+            // “我的” 则直接跳转到个人信息部分， 并标亮当前选项
             case R.id.tv_luntan:
-                selection(3);
+                Intent intent = new Intent(MainActivity.this, MyselfMessageActivity.class);
+                startActivity(intent);
+                initialImage();
+                tv_luntan.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.tab_me_pressed_icon, 0, 0);
+                tv_luntan.setTextColor(tv_luntan.getResources().getColor(R.color.title));
                 break;
+                // 通知
             case R.id.tv_message:
                 selection(0);
+                bannerImage.setVisibility(View.GONE);
                 break;
             case R.id.tv_friend:
-                selection(1);
+                selection(2); // the theme list
+                initialImage();
+                tv_friend.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.tab_found_pressed_icon, 0, 0);
+                tv_friend.setTextColor(tv_friend.getResources().getColor(R.color.title));
+                bannerImage.setVisibility(View.GONE);
                 break;
             case R.id.main_imageView_addfriend:
                 startActivity(new Intent(MainActivity.this, AddFriendActivity.class));
@@ -609,16 +643,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             case R.id.third_popupwindow_layout_null:
                 if (pop != null) {
                     pop.dismiss();
-
                 }
-
                 break;
             case R.id.third_popupwindow_layout_nulls:
                 if (pops != null) {
                     pops.dismiss();
-
                 }
-
                 break;
             case R.id.third_popupwindow_layout_nullss:
                 if (popss != null) {
@@ -962,25 +992,45 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     Handler h = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            if (msg.what == 0) {
-                pDialog.dismiss();
-                if (luntan_fragment != null) {
-                    luntan_fragment.updateData(user.getIcon());
-                }
-                if (luntan_fragment != null) {
-                    luntan_fragment.update();
-                }
+            switch (msg.what) {
+                case 0:
+                    pDialog.dismiss();
+                    if (luntan_fragment != null) {
+                        luntan_fragment.updateData(user.getIcon());
+                    }
+                    if (luntan_fragment != null) {
+                        luntan_fragment.update();
+                    }
 
-                String filename = (String) msg.obj;
-                Toast.makeText(MainActivity.this, "头像修改成功", Toast.LENGTH_SHORT).show();
-                Picasso.with(MainActivity.this).load(new File(filename)).resize(200, 200).centerCrop().into(iv_mes);
-                Picasso.with(MainActivity.this).load(new File(filename)).resize(200, 200).centerCrop().into(iv_me);
-            } else if (msg.what == 1) {
-                pDialog.dismiss();
-                Toast.makeText(MainActivity.this, "头像修改失败", Toast.LENGTH_SHORT).show();
+                    String filename = (String) msg.obj;
+                    Toast.makeText(MainActivity.this, "头像修改成功", Toast.LENGTH_SHORT).show();
+                    Picasso.with(MainActivity.this).load(new File(filename)).resize(200, 200).centerCrop().into(iv_mes);
+                    Picasso.with(MainActivity.this).load(new File(filename)).resize(200, 200).centerCrop().into(iv_me);
+                    break;
+                case 1:
+                    pDialog.dismiss();
+                    Toast.makeText(MainActivity.this, "头像修改失败", Toast.LENGTH_SHORT).show();
+                    break;
+                case 2:
+                    //update the home banner image
+                    if(bannerCount%2 == 0 ) {
+                        bannerImage.setImageResource(R.drawable.homebanner1);
+                    }
+                    else{
+                        bannerImage.setImageResource(R.drawable.homebanner);
+                    }
+                    bannerCount++;
+                    if(bannerCount ==  Long.MAX_VALUE) {
+                        bannerCount = 0 ;
+                    }
+                    break;
+                default:
+                    break;
+
             }
         }
     };
+
 
 
     @Override
