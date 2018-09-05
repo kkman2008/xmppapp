@@ -1,16 +1,6 @@
 package com.yyquan.jzh.xmpp;
 
-import org.jivesoftware.smack.PacketListener;
-
-import org.jivesoftware.smack.XMPPConnection;
-import org.jivesoftware.smack.XMPPException;
-import org.jivesoftware.smack.packet.Message;
-import org.jivesoftware.smack.packet.Packet;
-import org.jivesoftware.smack.packet.Presence;
-import org.jivesoftware.smackx.OfflineMessageManager;
-
 import android.app.Service;
-import android.content.AsyncQueryHandler;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -31,9 +21,14 @@ import com.yyquan.jzh.util.SaveUserUtil;
 import com.yyquan.jzh.util.SharedPreferencesUtil;
 import com.yyquan.jzh.util.TimeUtil;
 
+import org.jivesoftware.smack.PacketListener;
+import org.jivesoftware.smack.XMPPConnection;
+import org.jivesoftware.smack.packet.Message;
+import org.jivesoftware.smack.packet.Packet;
+import org.jivesoftware.smack.packet.Presence;
+
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -142,7 +137,7 @@ public class XmppService extends Service {
                         }
                         List<XmppUser> list_xu = XmppTool.getInstance().searchUsers(msg.getFrom().split("@")[0]);
                         User users = new Gson().fromJson(list_xu.get(0).getName(), User.class);
-                        Log.i("serviceeeeee", list_xu.get(0).getName());
+                        Log.i("service", list_xu.get(0).getName());
                         XmppChat xc = new XmppChat(user + users.getUser(), users.getUser(), users.getNickname(), users.getIcon(), 2, msg.getBody().toString(), users.getSex(), user, viewType, new Date().getTime());
                         XmppFriendMessageProvider.add_message(xc);
                         sendBroad("chat", xc);

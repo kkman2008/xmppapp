@@ -1,106 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- 
+   Copyright (c) 2013 The CCP project authors. All Rights Reserved.
+ 
+   Use of this source code is governed by a Beijing Speedtong Information Technology Co.,Ltd license
+   that can be found in the LICENSE file in the root of the web site.
+ 
+    				http://www.yuntongxun.com
+ 
+   An additional intellectual property rights grant can be found
+   in the file PATENTS.  All contributing project authors may
+   be found in the AUTHORS file in the root of the source tree.
+ -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/logo_bg"
-    android:orientation="vertical" >
+    android:background="@color/red_btn_color_normal"
+    android:scrollbars="none" >
 
-    <TextView
-        android:id="@+id/copy_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:padding="12dip"
-        android:text="Copyright © 2018-2020 CAASSEE. All Rights Reserved."
-        android:textColor="@android:color/white"
-        android:textSize="11sp" />
-
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/welcome_icon_ll"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96.0dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible" >
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/welcome_logo_iv_dest"
+            android:layout_width="236.0dip"
+            android:layout_height="236.0dip"
+            android:src="@drawable/hua" />
+
+        <TextView
+            android:id="@+id/welcome_hint1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            android:orientation="vertical" >
+            android:layout_marginTop="32.0dip"
+            android:text="@string/app_name"
+            android:textColor="#ffd9ffcc"
+            android:textSize="24.0dip"
+            android:visibility="gone" />
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" >
+        <TextView
+            android:id="@+id/welcome_hint2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffd9ffcc"
+            android:textSize="24.0dip" />
+    </LinearLayout>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/logo2" />
-            </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="10.0dip" >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="Evolution process"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#ffffffff"
+            android:textSize="15.0sp" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp" >
+        <TextView
+            android:id="@+id/tvCopyRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/copyright"
+            android:textColor="#ffffffff"
+            android:textSize="13.0sp" />
+    </LinearLayout>
 
-                <TextView
-                    android:id="@+id/app_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="6dip"
-                    android:text="@string/app_name"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
-
-                <!--
-                     <TextView
-                    android:id="@+id/version_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:gravity="bottom"
-                    android:paddingBottom="6dip"
-                    android:text="@string/versionnum"
-                    android:textSize="14sp" />
-                -->
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1px"
-                android:layout_marginLeft="20dip"
-                android:layout_marginRight="20dip"
-                android:background="#dddddd" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:padding="6dip"
-                android:text="智库研讨平台"
-                android:textColor="@color/white"
-                android:textSize="13sp" />
-            android:textColor="#3399ff"
-
-            <ProgressBar
-                android:id="@+id/refresh_list_footer_progressbar"
-                android:layout_width="16dip"
-                android:layout_height="16dip"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dip"
-                android:indeterminate="true"
-                android:indeterminateBehavior="repeat"
-                android:indeterminateDrawable="@drawable/logo_loading" />
-        </LinearLayout>
-    </RelativeLayout>
-
-</RelativeLayout>
+</FrameLayout>

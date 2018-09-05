@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="#ededed"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_message_button"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="@string/cancel_back"
+            android:textColor="@color/tab_indicator" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="@string/upload_title"
+            android:textColor="@color/blank" />
+
+        <TextView
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_message_button"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="@string/upload_begin"
+            android:textColor="@color/tab_indicator" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/file_upload" />
+
+                <EditText
+                    android:id="@+id/file_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonLoadPicture"
+                android:layout_width="100dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/selector_message_button"
+                android:text="@string/look_pictrue" >
+            </Button>
+
+            <Button
+                android:id="@+id/buttonBrowseFile"
+                android:layout_width="100dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/selector_message_button"
+                android:text="浏览文件" >
+            </Button>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000" >
+
+            <RelativeLayout
+                android:id="@+id/show"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#30000000"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:id="@+id/show_pb"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:indeterminateDrawable="@drawable/progressbar" />
+            </RelativeLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

@@ -13,11 +13,14 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:textColor="@color/white"
-            android:text="登  录"
+            android:text="智库研讨"
             android:textSize="18dp" />
     </RelativeLayout>
-
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="110dp"
+       android:background="@mipmap/banner"
+       />
     <EditText
         android:id="@+id/login_editText_user"
         android:layout_width="match_parent"
@@ -115,7 +118,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="使用QQ,微博账号登录" />
+                android:text="使用第三方验证方式登录" />
 
             <ImageView
                 android:layout_width="wrap_content"

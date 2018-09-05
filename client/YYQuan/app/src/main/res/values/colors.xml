@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="title">#1ed6ff</color>
-    <color name="tab_text_bg">#bababa</color>
+    <color name="title_bg">#aa72d572</color>
+    <color name="tab_text_bg">#FFFFFF</color>
     <color name="pinglun_name">#238123</color>
 
 
@@ -33,5 +34,7 @@
     <color name="tab_indicator">#CCCCCC</color>
     <color name="blank">#CCCCCC</color>
 
+
+    <color name="red_btn_color_normal">#ffff5454</color>
 
 </resources>

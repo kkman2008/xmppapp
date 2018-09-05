@@ -3,6 +3,7 @@ package com.yyquan.jzh.activity;
 import android.content.AsyncQueryHandler;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.rockerhieu.emojicon.EmojiconEditText;
 import com.rockerhieu.emojicon.EmojiconGridFragment;
 import com.rockerhieu.emojicon.EmojiconTextView;
@@ -59,7 +61,6 @@ import butterknife.ButterKnife;
  */
 public class ChatActivity extends FragmentActivity implements View.OnClickListener, EmojiconGridFragment.OnEmojiconClickedListener, EmojiconsFragment.OnEmojiconBackspaceClickedListener, MsgListView.IXListViewListener {
 
-
     @Bind(R.id.msg_listView)
     MsgListView msgListView;
     @Bind(R.id.iv_icon)
@@ -89,15 +90,16 @@ public class ChatActivity extends FragmentActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat);
-
-        ca = this;
-        ButterKnife.bind(this);
-        initialView();
-        initialData();
-        connection_chat();
-
-
+        try {
+            setContentView(R.layout.activity_chat);
+            ca = this;
+            ButterKnife.bind(this);
+            initialView();
+            initialData();
+            connection_chat();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -120,19 +122,28 @@ public class ChatActivity extends FragmentActivity implements View.OnClickListen
         btnSend.setEnabled(false);
         editEmojicon.setOnClickListener(this);
         xf = (XmppFriend) getIntent().getSerializableExtra("xmpp_friend");
-        tvTitle.setText(xf.getUser().getNickname());
+        if(xf == null){
+            //hardcode one user
+            User users = new Gson().fromJson("{\"id\":0,\"user\":\"13810721824\"}", User.class);
+            Intent intent = new Intent(this, ChatActivity.class);
+            intent.putExtra("xmpp_friend", new XmppFriend(users));
+            //retrieve the user again
+            xf = new XmppFriend(users) ;
+        }
+        if(xf.getUser() != null)
+            tvTitle.setText(xf.getUser().getNickname());
+        else
+            tvTitle.setText("主持人1");
         setEmojiconFragment(false);
         msgListView.setPullLoadEnable(false);
         msgListView.setPullRefreshEnable(false);
         editEmojicon.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -148,8 +159,6 @@ public class ChatActivity extends FragmentActivity implements View.OnClickListen
             }
         });
     }
-
-
     /**
      * 初始化数据
      */

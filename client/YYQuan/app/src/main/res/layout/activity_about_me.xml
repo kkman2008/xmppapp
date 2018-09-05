@@ -64,13 +64,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="加入QQ群"
+                android:text="中国航天系统科学与工程研究院"
                 android:textSize="16dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="群号：462082397" />
+                android:text="地址：阜成路14号院" />
 
 
         </LinearLayout>
@@ -95,7 +95,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="邮箱：383001264@qq.com" />
+                android:text="邮箱：admin@caecc.com.cn
+传真：010-68372416" />
 
 
         </LinearLayout>
