@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.entity.News_content;
 
 import java.util.ArrayList;
@@ -70,10 +70,9 @@ public class TitleListViewAdapter extends BaseAdapter {
             Picasso.with(context).load(str[0]).resize(200,200).centerInside().placeholder(R.mipmap.aio_image_default_round).error(R.mipmap.aio_image_default_round).into(holder.iv_icon);
 
         }else{
-            Picasso.with(context).load(Ip.ip+str[0]).resize(200,200).centerInside().placeholder(R.mipmap.aio_image_default_round).error(R.mipmap.aio_image_default_round).into(holder.iv_icon);
+            Picasso.with(context).load(((GlobalApplication) context.getApplicationContext()).ifURL +str[0]).resize(200,200).centerInside().placeholder(R.mipmap.aio_image_default_round).error(R.mipmap.aio_image_default_round).into(holder.iv_icon);
 
         }
-
 
         return convertView;
     }

@@ -27,7 +27,6 @@ import com.tencent.android.tpush.XGPushClickedResult;
 import com.tencent.android.tpush.XGPushManager;
 import com.yyquan.jzh.R;
 import com.yyquan.jzh.adapter.LunTanPingLunListViewAdapter;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.News_luntan;
 import com.yyquan.jzh.entity.News_pinglun;
 import com.yyquan.jzh.entity.User;
@@ -57,7 +56,7 @@ public class ShowLuntanActivity extends Activity implements View.OnClickListener
 
     View footerLayout;
 
-    String url_icon = Ip.ip + "/YfriendService/DoGetIcon?name=";
+    String url_icon = ((GlobalApplication) getApplication()).ifURL  + "/YfriendService/DoGetIcon?name=";
     Intent intent;
     News_luntan news_luntan;
     //String user;
@@ -72,7 +71,7 @@ public class ShowLuntanActivity extends Activity implements View.OnClickListener
     private TextView tv_name;
     private TextView tv_time;
     private TextView tv_content;
-    String url = Ip.ip + "/YfriendService/DoGetLunTan";
+    String url = ((GlobalApplication) getApplication()).ifURL  + "/YfriendService/DoGetLunTan";
     ArrayList<News_pinglun> list;
     LunTanPingLunListViewAdapter adapter;
     private TextView tv_more;
@@ -188,7 +187,7 @@ public class ShowLuntanActivity extends Activity implements View.OnClickListener
                         holder = (ViewHolder) convertView.getTag();
                     }
 
-                    final String urlpath = Ip.ip + "/YfriendService/DoGetLunTan?action=search_image&name=" + grid_img[position];
+                    final String urlpath = ((GlobalApplication) getApplication()).ifURL + "/YfriendService/DoGetLunTan?action=search_image&name=" + grid_img[position];
                     Picasso.with(ShowLuntanActivity.this)
                             .load(urlpath)
                             .resize(200, 200).centerCrop()

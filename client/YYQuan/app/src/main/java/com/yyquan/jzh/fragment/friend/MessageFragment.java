@@ -14,36 +14,29 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
 import com.yyquan.jzh.activity.ChatActivity;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.activity.MainActivity;
 import com.yyquan.jzh.activity.TransactionFriendActivity;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.entity.XmppFriend;
 import com.yyquan.jzh.entity.XmppMessage;
 import com.yyquan.jzh.entity.XmppUser;
 import com.yyquan.jzh.util.RecyclerViewDividerItemDecoration;
 import com.yyquan.jzh.util.SaveUserUtil;
-import com.yyquan.jzh.util.TimeUtil;
-import com.yyquan.jzh.util.ToastUtil;
 import com.yyquan.jzh.view.BadgeView;
 import com.yyquan.jzh.view.CircleImageView;
 import com.yyquan.jzh.xmpp.XmppContentProvider;
 import com.yyquan.jzh.xmpp.XmppService;
-import com.yyquan.jzh.xmpp.XmppTool;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -54,7 +47,7 @@ public class MessageFragment extends Fragment {
     RecyclerView rv;
     List<XmppMessage> list;
     List<XmppMessage> list_add;
-    String url_icon = Ip.ip + "/YfriendService/DoGetIcon?name=";
+    String url_icon;
     MyAdapter adapter;
     String user;
 
@@ -63,7 +56,7 @@ public class MessageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (view == null) {
-
+            url_icon = ((GlobalApplication) getActivity().getApplication()).ifURL + "/YfriendService/DoGetIcon?name=";
             user = SaveUserUtil.loadAccount(getActivity()).getUser();
             Log.i("message", "user=" + user);
             view = inflater.inflate(R.layout.fragment_message, container, false);
@@ -72,10 +65,7 @@ public class MessageFragment extends Fragment {
             rv.setLayoutManager(new LinearLayoutManager(getActivity()));//设置排列方式
             rv.addItemDecoration(new RecyclerViewDividerItemDecoration(getActivity(), RecyclerViewDividerItemDecoration.VERTICAL_LIST));
             initialData();
-
         }
-
-
         return view;
     }
 
@@ -163,7 +153,6 @@ public class MessageFragment extends Fragment {
                     public void onClick(DialogInterface dialog, int which) {
                         XmppService.resolver.delete(XmppContentProvider.CONTENT_MESSAGES_URI, "id=?", new String[]{list.get(position).getId() + ""});
                         initialData();
-
                     }
                 });
                 dialog.setNegativeButton("否", null);
@@ -210,7 +199,8 @@ public class MessageFragment extends Fragment {
 
             return null;
         }
-        public  boolean isNullOrBlank(String param) {
+
+        public boolean isNullOrBlank(String param) {
             return param == null || param.trim().length() == 0;
         }
 
@@ -255,8 +245,8 @@ public class MessageFragment extends Fragment {
                         friendHolder.tv_ts.setText(list.get(position).getResult() + "");
                         break;
                 }
-                if ( isNullOrBlank(users.getIcon())) {
-                    if ( isNullOrBlank(users.getSex()) || users.getSex().equals("男")) {
+                if (isNullOrBlank(users.getIcon())) {
+                    if (isNullOrBlank(users.getSex()) || users.getSex().equals("男")) {
                         friendHolder.iv.setImageResource(R.mipmap.me_icon_man);
                     } else {
                         friendHolder.iv.setImageResource(R.mipmap.me_icon_woman);

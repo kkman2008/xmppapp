@@ -1,7 +1,5 @@
 package com.yyquan.jzh.fragment.friend;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -9,14 +7,10 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,14 +18,11 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.activity.ChatActivity;
-import com.yyquan.jzh.activity.MainActivity;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.activity.ShowMessageActivity;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.entity.XmppFriend;
 import com.yyquan.jzh.entity.XmppUser;
-import com.yyquan.jzh.util.SLog;
 import com.yyquan.jzh.util.ToastUtil;
 import com.yyquan.jzh.view.CircleImageView;
 import com.yyquan.jzh.view.DialogView;
@@ -42,14 +33,11 @@ import org.jivesoftware.smack.RosterEntry;
 import org.jivesoftware.smack.RosterGroup;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import me.nereo.multi_image_selector.bean.Image;
 
 /**
  * Created by Administrator on 2016/1/1.
@@ -370,7 +358,7 @@ public class FriendFragment extends Fragment implements SwipeRefreshLayout.OnRef
                 if (xf.getUser().getIcon().substring(0, 4).equals("http")) {
                     Picasso.with(getActivity()).load(xf.getUser().getIcon()).resize(200, 200).placeholder(R.mipmap.qq_addfriend_search_friend).error(R.mipmap.qq_addfriend_search_friend).centerInside().into(holder.cv_icon);
                 } else {
-                    Picasso.with(getActivity()).load(Ip.ip_icon + xf.getUser().getIcon()).resize(200, 200).placeholder(R.mipmap.qq_addfriend_search_friend).error(R.mipmap.qq_addfriend_search_friend).centerInside().into(holder.cv_icon);
+                    Picasso.with(getActivity()).load(((GlobalApplication) getActivity().getApplicationContext()).ip_icon + xf.getUser().getIcon()).resize(200, 200).placeholder(R.mipmap.qq_addfriend_search_friend).error(R.mipmap.qq_addfriend_search_friend).centerInside().into(holder.cv_icon);
                 }
             }
 

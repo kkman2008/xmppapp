@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="title">#1ed6ff</color>
+    <color name="Logintitle">#f0f0f0</color>
     <color name="title_bg">#aa72d572</color>
     <color name="tab_text_bg">#12AF4D</color>
     <color name="pinglun_name">#238123</color>
-
 
     <color name="white">#FFFFFF</color>
     <color name="topbar_bg">#12AF4D</color>
@@ -37,5 +37,9 @@
 
     <color name="red_btn_color_normal">#ffff5454</color>
     <color name="base_color_text_white">#ffffff</color>
+
+    <!--<color name="duola_bg_color">#f7f7f7</color>-->
+    <color name="color_app_main_write">#ffffff</color>
+
 
 </resources>

@@ -13,21 +13,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.yyquan.jzh.R;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.activity.PhoneRegsterActivity;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.location.Location;
 import com.yyquan.jzh.view.DialogView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
-import cn.smssdk.SMSSDK;
 import cz.msebera.android.httpclient.Header;
 
 /**
@@ -53,7 +50,7 @@ public class PhoneRegsterToMessageFragment extends Fragment implements View.OnCl
     boolean bool_nickname;
     boolean bool_password;
     boolean bool_password_again;
-    private String url = Ip.ip + "/YfriendService/DoGetUser";
+    private String url = ((GlobalApplication) getActivity().getApplication()).ifURL  + "/YfriendService/DoGetUser";
     private Location lt;
 
 

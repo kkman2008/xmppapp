@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,13 +19,11 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.activity.LuntanToStateActivity;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.activity.ShowLuntanActivity;
 import com.yyquan.jzh.adapter.LuntanListViewAdapter;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.News_luntan;
 import com.yyquan.jzh.entity.User;
-import com.yyquan.jzh.util.ToastUtil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -113,7 +110,7 @@ public class UserStatusFragment extends Fragment implements View.OnClickListener
         params.put("user", user.getUser());
         params.put("action", "search_user");
         params.put("limit", limit);
-        client.post(Ip.ip_user_status, params, new AsyncHttpResponseHandler() {
+        client.post( ((GlobalApplication) getActivity().getApplication()).ip_user_status, params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
 

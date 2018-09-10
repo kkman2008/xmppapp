@@ -2,14 +2,9 @@ package com.yyquan.jzh.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -18,15 +13,12 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-
 import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushManager;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.location.Location;
 import com.yyquan.jzh.util.SaveUserUtil;
@@ -36,13 +28,11 @@ import com.yyquan.jzh.view.DialogView;
 import com.yyquan.jzh.xmpp.XmppService;
 import com.yyquan.jzh.xmpp.XmppTool;
 
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
 import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.PlatformActionListener;
 import cn.sharesdk.framework.ShareSDK;
@@ -59,7 +49,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Pla
     TextView tv_login;
     TextView tv_password;
 
-    private String url = Ip.ip + "/YfriendService/DoGetUser";
+    private String url ;
 
     String user = "";
     String password = "";
@@ -71,16 +61,19 @@ public class LoginActivity extends Activity implements View.OnClickListener, Pla
     private final int XMPP_LOGIN = 3;
     private final int CREATE_USER = 4;
 
-
+    private static  final  String TAG = "LoginActivity";
+    private GlobalApplication application;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        application = (GlobalApplication)getApplication();
+        Log.d(TAG, "onCreate: AppVersionValue = " + application.getAppVersionValue());
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_login);
         ShareSDK.initSDK(this);
         lt = new Location(this);
-
-
+        url= ((GlobalApplication)getApplication()).ifURL + "/YfriendService/DoGetUser";
     }
 
     @Override
@@ -265,7 +258,8 @@ public class LoginActivity extends Activity implements View.OnClickListener, Pla
 
                         @Override
                         public void run() {
-                            boolean result = XmppTool.getInstance().login(users.getUser(), users.getPassword(), LoginActivity.this);
+                            // 第一个调用XMPP的入口，与初始化
+                            boolean result = XmppTool.getInstance( ((GlobalApplication)getApplication()).getServerIP()  ).login(users.getUser(), users.getPassword(), LoginActivity.this);
                             if (result) {
 
                                 runOnUiThread(new Runnable() {

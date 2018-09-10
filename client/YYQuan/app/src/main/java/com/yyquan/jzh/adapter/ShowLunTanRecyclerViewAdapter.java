@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
-
-import android.support.v7.widget.RecyclerView.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +17,8 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.activity.ShowImageActivity;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.News_luntan;
 import com.yyquan.jzh.entity.News_pinglun;
 import com.yyquan.jzh.view.CircleImageView;
@@ -40,7 +38,7 @@ public class ShowLunTanRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
     News_luntan news_luntan;
     String user;
     String nickname;
-    String url_icon = Ip.ip + "/YfriendService/DoGetIcon?name=";
+    String url_icon ;
     private static final int TYPE_STATE = 0;
     private static final int TYPE_PINGLUN = 1;
     LayoutInflater minflater;
@@ -81,6 +79,7 @@ public class ShowLunTanRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
 
+        url_icon = ((GlobalApplication)context.getApplicationContext()).ifURL + "/YfriendService/DoGetIcon?name=";
         int type = getItemViewType(position);
         switch (type) {
             case TYPE_STATE:
@@ -152,7 +151,7 @@ public class ShowLunTanRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
                                 holder = (ViewHolders) convertView.getTag();
                             }
 
-                            final String urlpath = Ip.ip + "/YfriendService/DoGetLunTan?action=search_image&name=" + grid_img[position];
+                            final String urlpath = ((GlobalApplication)context.getApplicationContext()).ifURL  + "/YfriendService/DoGetLunTan?action=search_image&name=" + grid_img[position];
                             Picasso.with(context)
                                     .load(urlpath)
                                     .resize(200, 200).centerCrop()
@@ -279,7 +278,7 @@ public class ShowLunTanRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
         params.put("user", user);
         //Toast.makeText(context, pid + "", Toast.LENGTH_SHORT).show();
         AsyncHttpClient client = new AsyncHttpClient();
-        client.post(Ip.ip + "/YfriendService/DoGetLunTan", params, new AsyncHttpResponseHandler() {
+        client.post(((GlobalApplication)context.getApplicationContext()).ifURL + "/YfriendService/DoGetLunTan", params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 news.get(position).setIspzan("1");

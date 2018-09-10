@@ -17,9 +17,9 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.yyquan.jzh.R;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.activity.NewsContentActivity;
 import com.yyquan.jzh.adapter.PingLunListViewAdapter;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.News_content;
 import com.yyquan.jzh.entity.News_pinglun;
 import com.yyquan.jzh.entity.User;
@@ -52,7 +52,7 @@ public class pinglunFragment extends Fragment implements SwipeRefreshLayout.OnRe
     View footerLayout;
     private TextView tv_more;
     private ProgressBar pb;
-    private String search_url = Ip.ip + "/YfriendService/DoGetPingLun";
+    private String search_url = ((GlobalApplication) getActivity().getApplication()).ifURL + "/YfriendService/DoGetPingLun";
     int pinglun_size;
     int index = 0;
 

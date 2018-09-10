@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.entity.XmppMessage;
 import com.yyquan.jzh.util.SharedPreferencesUtil;
@@ -35,7 +34,7 @@ public class TransactionFriendActivity extends BaseActivity implements View.OnCl
 
 
     XmppMessage message;
-    String url_icon = Ip.ip + "/YfriendService/DoGetIcon?name=";
+    String url_icon =((GlobalApplication) getApplication()).ifURL + "/YfriendService/DoGetIcon?name=";
     @Bind(R.id.layout_back)
     LinearLayout ll_Back;
     @Bind(R.id.imageview_icon)
@@ -168,14 +167,14 @@ public class TransactionFriendActivity extends BaseActivity implements View.OnCl
 
                 presence1 = new Presence(Presence.Type.subscribed);// 同意是subscribed
                 // 拒绝是unsubscribe
-                presence1.setTo(message.getUser().getUserName() + "@" + XmppTool.getInstance().getCon().getServiceName());// 接收方jid
-                presence1.setFrom(message.getTo() + "@" + XmppTool.getInstance().getCon().getServiceName());// 发送方jid
+                presence1.setTo(message.getUser().getUserName() + "@" + XmppTool.getInstance(this).getCon().getServiceName());// 接收方jid
+                presence1.setFrom(message.getTo() + "@" + XmppTool.getInstance(this).getCon().getServiceName());// 发送方jid
                 XmppTool.getInstance().getCon().sendPacket(presence1);// connection是你自己的XMPPConnection链接
                 if (XmppTool.getInstance().addUser(
-                        message.getUser().getUserName() + "@" + XmppTool.getInstance().getCon().getServiceName(),
+                        message.getUser().getUserName() + "@" + XmppTool.getInstance(this).getCon().getServiceName(),
                         message.getUser().getName(), "我的好友")) {
                     XmppTool.getInstance().addUserToGroup(
-                            message.getUser().getUserName() + "@" + XmppTool.getInstance().getCon().getServiceName(),
+                            message.getUser().getUserName() + "@" + XmppTool.getInstance(this).getCon().getServiceName(),
                             "我的好友");
                     Log.i("transaction", "添加好友");
 
@@ -196,7 +195,7 @@ public class TransactionFriendActivity extends BaseActivity implements View.OnCl
                 presence1 = new Presence(Presence.Type.unsubscribe);// 同意是subscribed
                 // 拒绝是unsubscribe
                 presence1.setTo(message.getUser().getUserName() + "@" + XmppTool.getInstance().getCon().getServiceName());// 接收方jid
-                presence1.setFrom(message.getTo() + "@" + XmppTool.getInstance().getCon().getServiceName());// 发送方jid
+                presence1.setFrom(message.getTo() + "@" + XmppTool.getInstance(this).getCon().getServiceName());// 发送方jid
                 XmppTool.getInstance().getCon().sendPacket(presence1);// connection是你自己的XMPPConnection链接
                 ContentValues valuess = new ContentValues();
                 valuess.put("result", -1);

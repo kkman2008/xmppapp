@@ -1,6 +1,5 @@
 package com.yyquan.jzh.fragment.news;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -9,14 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.yyquan.jzh.R;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.adapter.MainFragmentPagerAdapter;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.News_type;
-import com.yyquan.jzh.fragment.news.titleFragment;
 import com.yyquan.jzh.view.DialogView;
 
 import org.json.JSONArray;
@@ -38,8 +35,7 @@ public class NewsFragment extends Fragment {
 
     private List<Fragment> childFragments;
     private List<News_type> list;
-    private String url = Ip.ip + "/YfriendService/DoGetType";
-
+    private String url ;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -48,9 +44,8 @@ public class NewsFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_news, container, false);
 
         initialView();
+        url = ((GlobalApplication) getActivity().getApplication()).ifURL  + "/YfriendService/DoGetType";
         getNewsTitle();
-
-
         return view;
 
     }

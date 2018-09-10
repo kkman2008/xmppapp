@@ -3,13 +3,11 @@ package com.yyquan.jzh.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,10 +16,9 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.activity.ShowMessageActivity;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.News_pinglun;
-import com.yyquan.jzh.view.CircleImageView;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -35,15 +32,12 @@ public class LunTanPingLunListViewAdapter extends BaseAdapter {
     Context context;
     ArrayList<News_pinglun> news;
     String user;
-    String url_icon = Ip.ip + "/YfriendService/DoGetIcon?name=";
-
-
+    String url_icon ;
     public LunTanPingLunListViewAdapter(Context context, ArrayList<News_pinglun> news, String user) {
         this.context = context;
         this.news = news;
         this.user = user;
-
-
+        url_icon = ((GlobalApplication) context.getApplicationContext()).ifURL+ "/YfriendService/DoGetIcon?name=";
     }
 
 
@@ -243,7 +237,7 @@ public class LunTanPingLunListViewAdapter extends BaseAdapter {
         params.put("user", user);
         //Toast.makeText(context, pid + "", Toast.LENGTH_SHORT).show();
         AsyncHttpClient client = new AsyncHttpClient();
-        client.post(Ip.ip + "/YfriendService/DoGetLunTan", params, new AsyncHttpResponseHandler() {
+        client.post(((GlobalApplication) context.getApplicationContext() ).ifURL + "/YfriendService/DoGetLunTan", params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 news.get(position).setIspzan("1");

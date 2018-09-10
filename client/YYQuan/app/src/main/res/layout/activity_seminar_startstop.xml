@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/duola_bg_color"
+              android:fitsSystemWindows="false"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/title">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/web_bar_back_press"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp" />
+
+        </LinearLayout>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="研讨设定"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:id="@+id/myself_layout_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp">
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            style="@style/setting_layout_style"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/tv_print_copies"
+                style="@style/setting_text_style"
+                android:text="研讨主题："/>
+　
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_print_range"
+            style="@style/setting_layout_style">
+
+            <TextView
+                style="@style/setting_text_style"
+                android:text="研讨主题text"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_print_type"
+            style="@style/setting_layout_style"
+            >
+            <!--主题内容基本显示两行-->
+            <TextView
+                style="@style/setting_text_style"
+                android:text="主题内容:"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_print_paper_type"
+            style="@style/setting_layout_style"
+            android:layout_gravity="top"
+            android:layout_height="120dp">
+
+            <TextView
+                style="@style/setting_text_style"
+                android:text="主题内容text"/>
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:layout_height="wrap_content"
+            android:minHeight="70dp"
+            android:layout_marginTop="1dp"
+            android:layout_width="fill_parent">
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:layout_gravity="center_vertical|right"
+                android:orientation="vertical">
+                <!--启停研讨按钮-->
+                <Button
+                    android:id="@+id/btn_seminar_start"
+                    style="@style/Coder.Button.theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="开始研讨"/>
+
+                <Button
+                    android:id="@+id/btn_seminar_stop"
+                    style="@style/Coder.Button.logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="结束研讨"/>
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

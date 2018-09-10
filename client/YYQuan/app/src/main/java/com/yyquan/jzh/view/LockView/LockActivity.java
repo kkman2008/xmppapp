@@ -1,8 +1,5 @@
 package com.yyquan.jzh.view.LockView;
 
-import java.util.HashMap;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -21,18 +18,19 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.yyquan.jzh.R;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.activity.LoginActivity;
 import com.yyquan.jzh.activity.MainActivity;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.util.SaveUserUtil;
 import com.yyquan.jzh.util.SharedPreferencesUtil;
-import com.yyquan.jzh.view.DialogView;
 import com.yyquan.jzh.xmpp.XmppService;
 import com.yyquan.jzh.xmpp.XmppTool;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -45,7 +43,7 @@ import cz.msebera.android.httpclient.Header;
 public class LockActivity extends Activity implements
         LockPatternView.OnPatternListener {
     private static final String TAG = "LockActivity";
-    private String url = Ip.ip + "/YfriendService/DoGetUser";
+    private String url =   ((GlobalApplication)getApplication()).ifURL + "/YfriendService/DoGetUser";
     private List<LockPatternView.Cell> lockPattern;
     private LockPatternView lockPatternView;
 

@@ -65,13 +65,35 @@ public class XmppTool {
     private String tag = "XmppTool";
     private static XmppTool instance;
     //public static final String HOST = "123.207.145.194";
-    public static final String HOST = "192.168.196.134";
-    public static final int PORT = 5222;
+    public static String HOST = "";
+    // the default port would change
+    public static int PORT = 5222;
     private static XMPPConnection con;
     Context context;
-
-
-    public static XmppTool getInstance() {
+    public  static  final  String TAG="XmppTool";
+    public static XmppTool getInstance(String Host) {
+        HOST = Host;
+        Log.d(TAG, "getInstance: Set the host to" + Host);
+        if (null == instance)
+            instance = new XmppTool(false);
+        return instance;
+    }
+    public static XmppTool getInstance(Context context ) {
+        Log.d(TAG, "getInstance: className =" + context.getApplicationInfo().className);
+        Log.d(TAG, "getInstance:  getPackageName = " + context.getPackageName());
+        Log.d(TAG, "getInstance: current host =" + HOST);
+        if("".equalsIgnoreCase(HOST)){
+            return null;
+        }
+        if (null == instance)
+            instance = new XmppTool(false);
+        return instance;
+    }
+    public static XmppTool getInstance( )
+    {
+        if("".equalsIgnoreCase(HOST)){
+            return null;
+        }
         if (null == instance)
             instance = new XmppTool(false);
         return instance;
@@ -145,6 +167,7 @@ public class XmppTool {
         }
     }
     private XmppTool(Boolean SASLAuthentication) {
+        // init the ip and port first, get the value from the global application
         Init(SASLAuthentication);
     }
 

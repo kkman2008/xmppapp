@@ -31,8 +31,6 @@ public class SharedPreferencesUtil {
         SharedPreferences preferences = context.getSharedPreferences(type, context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(key, value).commit();
-
-
     }
 
     public static String getString(Context context, String type, String key) {

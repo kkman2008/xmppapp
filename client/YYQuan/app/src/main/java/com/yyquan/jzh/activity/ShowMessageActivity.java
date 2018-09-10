@@ -20,7 +20,6 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.entity.XmppFriend;
 import com.yyquan.jzh.entity.XmppUser;
@@ -89,7 +88,7 @@ public class ShowMessageActivity extends FragmentActivity implements View.OnClic
      */
     void getUserMessage() {
 
-        List<XmppUser> list = XmppTool.getInstance().searchUsers(user);
+        List<XmppUser> list = XmppTool.getInstance(this).searchUsers(user);
         name = list.get(0).getName();
 
 
@@ -97,7 +96,7 @@ public class ShowMessageActivity extends FragmentActivity implements View.OnClic
         RequestParams params = new RequestParams();
         params.put("user", user);
         params.put("action", "search_meeesage");
-        client.post(Ip.ip_user_message, params, new AsyncHttpResponseHandler() {
+        client.post(((GlobalApplication) getApplication()).ip_user_message, params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
 
@@ -126,7 +125,7 @@ public class ShowMessageActivity extends FragmentActivity implements View.OnClic
                             if (users.getIcon().substring(0, 4).equals("http")) {
                                 Picasso.with(ShowMessageActivity.this).load(users.getIcon()).resize(200, 200).placeholder(R.mipmap.qq_addfriend_search_friend).error(R.mipmap.qq_addfriend_search_friend).centerInside().into(ivIcon);
                             } else {
-                                Picasso.with(ShowMessageActivity.this).load(Ip.ip_icon + users.getIcon()).resize(200, 200).placeholder(R.mipmap.qq_addfriend_search_friend).error(R.mipmap.qq_addfriend_search_friend).centerInside().into(ivIcon);
+                                Picasso.with(ShowMessageActivity.this).load(((GlobalApplication) getApplication()).ip_icon + users.getIcon()).resize(200, 200).placeholder(R.mipmap.qq_addfriend_search_friend).error(R.mipmap.qq_addfriend_search_friend).centerInside().into(ivIcon);
                             }
                         }
                         ivIcon.setOnClickListener(ShowMessageActivity.this);
@@ -202,11 +201,11 @@ public class ShowMessageActivity extends FragmentActivity implements View.OnClic
                     //15612610827;江城北望丶;15612610827_20151202_232508.jpg;男
 
                     Log.i("search>>>>", name + "\t" + users.getUser());
-                    if (XmppTool.getInstance().addUser(
-                            users.getUser() + "@" + XmppTool.getInstance().getCon().getServiceName(),
+                    if (XmppTool.getInstance(this).addUser(
+                            users.getUser() + "@" + XmppTool.getInstance(this).getCon().getServiceName(),
                             name, null)) {
-                        XmppTool.getInstance().addUserToGroup(
-                                users.getUser() + "@" + XmppTool.getInstance().getCon().getServiceName(),
+                        XmppTool.getInstance(this).addUserToGroup(
+                                users.getUser() + "@" + XmppTool.getInstance(this).getCon().getServiceName(),
                                 "我的好友");
                         Log.i("search",
                                 "申请添加" + users.getUser() + "@"

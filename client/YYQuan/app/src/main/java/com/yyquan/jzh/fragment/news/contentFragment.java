@@ -20,15 +20,12 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.activity.NewsContentActivity;
 import com.yyquan.jzh.activity.ShowImageActivity;
-import com.yyquan.jzh.adapter.TitleListViewAdapter;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.News_content;
-import com.yyquan.jzh.entity.News_type;
 import com.yyquan.jzh.view.DialogView;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -88,7 +85,7 @@ public class contentFragment extends Fragment {
         RequestParams params = new RequestParams();
         params.put("action", "search_content");
         params.put("cid", cid);
-        client.post(Ip.ip + url, params, new AsyncHttpResponseHandler() {
+        client.post(((GlobalApplication)getActivity().getApplication()).ifURL + url, params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
 
@@ -149,7 +146,7 @@ public class contentFragment extends Fragment {
                             if (str[i].substring(0, 4).equals("http")) {
                                 Picasso.with(getActivity()).load(str[i]).resize(500, 500).centerInside().placeholder(R.mipmap.aio_image_default_round).error(R.mipmap.aio_image_default_round).into(iv);
                             } else {
-                                Picasso.with(getActivity()).load(Ip.ip + str[i]).resize(500, 500).centerInside().placeholder(R.mipmap.aio_image_default_round).error(R.mipmap.aio_image_default_round).into(iv);
+                                Picasso.with(getActivity()).load(((GlobalApplication)getActivity().getApplication()).ifURL + str[i]).resize(500, 500).centerInside().placeholder(R.mipmap.aio_image_default_round).error(R.mipmap.aio_image_default_round).into(iv);
                             }
 
                         }

@@ -3,10 +3,6 @@ package com.yyquan.jzh.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
@@ -17,7 +13,6 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.util.SaveUserUtil;
 import com.yyquan.jzh.view.DialogView;
@@ -26,7 +21,6 @@ import com.yyquan.jzh.xmpp.XmppTool;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
 import cz.msebera.android.httpclient.Header;
 
 public class ChangePasswordActivity extends Activity implements View.OnClickListener {
@@ -39,7 +33,7 @@ public class ChangePasswordActivity extends Activity implements View.OnClickList
     Intent intent;
     String yuan_password;
     String user;
-    String url = Ip.ip + "/YfriendService/DoGetUser";
+    String url = ((GlobalApplication) getApplicationContext()).ifURL  + "/YfriendService/DoGetUser";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

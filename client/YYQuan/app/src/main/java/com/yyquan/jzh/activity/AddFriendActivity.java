@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,14 +18,11 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.entity.XmppUser;
 import com.yyquan.jzh.util.ToastUtil;
 import com.yyquan.jzh.view.CircleImageView;
 import com.yyquan.jzh.xmpp.XmppTool;
-
-import org.jivesoftware.smack.XMPPConnection;
 
 import java.util.List;
 
@@ -65,7 +61,7 @@ public class AddFriendActivity extends BaseActivity implements AdapterView.OnIte
 
             @Override
             public void onClick(View v) {
-                if (XmppTool.getInstance().isConnection() == false) {
+                if (XmppTool.getInstance(AddFriendActivity.this).isConnection() == false) {
                     ToastUtil.show(AddFriendActivity.this, "已断开,正在重连中....");
                     return;
                 }
@@ -143,7 +139,7 @@ public class AddFriendActivity extends BaseActivity implements AdapterView.OnIte
                 if (user.getIcon().substring(0, 4).equals("http")) {
                     Picasso.with(AddFriendActivity.this).load(user.getIcon()).resize(200, 200).placeholder(R.mipmap.qq_addfriend_search_friend).error(R.mipmap.qq_addfriend_search_friend).centerInside().into(imageview_icon);
                 } else {
-                    Picasso.with(AddFriendActivity.this).load(Ip.ip_icon + user.getIcon()).resize(200, 200).placeholder(R.mipmap.qq_addfriend_search_friend).error(R.mipmap.qq_addfriend_search_friend).centerInside().into(imageview_icon);
+                    Picasso.with(AddFriendActivity.this).load(((GlobalApplication)getApplication()).ip_icon + user.getIcon()).resize(200, 200).placeholder(R.mipmap.qq_addfriend_search_friend).error(R.mipmap.qq_addfriend_search_friend).centerInside().into(imageview_icon);
                 }
             }
             return view;
@@ -152,7 +148,7 @@ public class AddFriendActivity extends BaseActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> arg0, View arg1, int pos, long arg3) {
-        if (XmppTool.getInstance().isConnection() == false) {
+        if (XmppTool.getInstance(this).isConnection() == false) {
             ToastUtil.show(AddFriendActivity.this, "已断开,正在重连中....");
             return;
         }

@@ -2,27 +2,22 @@ package com.yyquan.jzh.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-
 import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushManager;
-
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.util.SaveUserUtil;
 import com.yyquan.jzh.util.SharedPreferencesUtil;
-
 import com.yyquan.jzh.view.LockView.LockActivity;
 import com.yyquan.jzh.xmpp.XmppService;
 import com.yyquan.jzh.xmpp.XmppTool;
@@ -32,24 +27,55 @@ import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
 
-
 public class LogoActivity extends Activity {
 
     boolean bool_login;
     boolean bool_lock;
-
-    private String url = Ip.ip + "/YfriendService/DoGetUser";
+    private String url ;
     private final int AUTO_LOGIN = 1;
     private final int XMPP_LOGIN = 3;
     public  static String TAG = "LogoActivity";
 
+    TextView tvAppVersion ;
+    private GlobalApplication application;
+     TextView tvServerIP;
+     TextView tvServerPort;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try
         {
             super.onCreate(savedInstanceState);
+            application = (GlobalApplication)getApplication();
             setContentView(R.layout.activity_logo);
+            tvAppVersion = (TextView) findViewById( R.id.tv_app_version);
+            tvServerIP =(TextView) findViewById( R.id.tv_server_ip);
+            tvServerPort = (TextView) findViewById( R.id.tv_server_port);
+            String appVersion = tvAppVersion.getText().toString().trim();
+            // save to local to tracking and set to the global value too
+            if("1".equalsIgnoreCase(appVersion)){
+                SharedPreferencesUtil.setInt(this,"AppVersion", "AppVersion",1);
+                application.setAppVersionValue(1);
+            }else{
+                SharedPreferencesUtil.setInt(this,"AppVersion", "AppVersion",2);
+                application.setAppVersionValue(2);
+            }
+            // if the server configuration didn't be configured by user retrieve from default setting
+            String savedServerIP = SharedPreferencesUtil.getString(this, "IPAddress", "IPAddress");
+            String savedServerPort =SharedPreferencesUtil.getString(this, "IPAddress", "Port");
+            if( savedServerIP== null || "".equalsIgnoreCase(savedServerIP)) {
+                application.setServerIP(tvServerIP.getText().toString().trim());
+                SharedPreferencesUtil.setString(this, "IPAddress", "IPAddress",tvServerIP.getText().toString().trim());
+            }else{
+                application.setServerIP(savedServerIP.trim());
+            }
+            if( savedServerPort == null || "".equalsIgnoreCase(savedServerPort.trim())){
+                application.setServerPort(Long.valueOf(  tvServerPort.getText().toString().trim()));
+            }else{
+                application.setServerPort(Long.valueOf(savedServerPort));
+            }
+            // initialize the server side interface url
+            application.InterfaceURL(application.getServerIP(), application.getServerPort());
             bool_login = SharedPreferencesUtil.getBoolean(this, "user_message", "login");
             bool_lock = SharedPreferencesUtil.getBoolean(this, "user_message", "lock");
             thread.start();
@@ -57,7 +83,6 @@ public class LogoActivity extends Activity {
             e.printStackTrace();
             Log.d(TAG, "onCreate: ");
         }
-
     }
     Thread thread = new Thread() {
         @Override
@@ -68,8 +93,10 @@ public class LogoActivity extends Activity {
                 startActivity(intent);
                 finish();
             } else {
-                Message m = h.obtainMessage(AUTO_LOGIN);
-                h.sendMessage(m);
+                if("".equalsIgnoreCase( application.ifURL) == false) {
+                    Message m = h.obtainMessage(AUTO_LOGIN);
+                    h.sendMessage(m);
+                }
             }
         }
     };
@@ -91,7 +118,7 @@ public class LogoActivity extends Activity {
 
                         @Override
                         public void run() {
-                            boolean result = XmppTool.getInstance().login(users.getUser(), users.getPassword(), LogoActivity.this);
+                            boolean result = XmppTool.getInstance( ((GlobalApplication)getApplication()).getServerIP()).login(users.getUser(), users.getPassword(), LogoActivity.this);
                             if (result) {
 
                                 runOnUiThread(new Runnable() {
@@ -138,14 +165,14 @@ public class LogoActivity extends Activity {
     /**
      * 先判断有没有自动登录
      */
-    private void is_auto_login() {
+    private void is_auto_login(){
         try{
+            // 切换登录界面前，logo界面停留
+            Thread.sleep(2000);
         if (bool_login) {
             User user = SaveUserUtil.loadAccount(LogoActivity.this);
             login(user.getUser(), user.getPassword());
         } else {
-            // 切换登录界面前，logo界面停留
-            Thread.sleep(2000);
             startActivity(new Intent(LogoActivity.this, LoginActivity.class));
             finish();
         }
@@ -166,7 +193,7 @@ public class LogoActivity extends Activity {
         params.put("password", password);
         params.put("action", "login");
         AsyncHttpClient client = new AsyncHttpClient();
-
+        url = application.ip_user_message;
         client.post(url, params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {

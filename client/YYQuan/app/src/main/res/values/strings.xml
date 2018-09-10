@@ -45,7 +45,7 @@
     <string name="look_pictrue">浏览</string>
     <string name="file_upload">文件上传：</string>CAASSEE
     <string name="cancel_back">返回</string>
-
+    <string name="update">更新</string>
 
     <string name="copyright">©Copyright 航天科技 CAASSEE</string>
 </resources>

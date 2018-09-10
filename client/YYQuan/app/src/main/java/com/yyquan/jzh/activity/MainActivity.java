@@ -39,7 +39,6 @@ import com.amap.api.location.AMapLocalWeatherLive;
 import com.amap.api.location.LocationManagerProxy;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.entity.XmppChat;
 import com.yyquan.jzh.fragment.friend.FriendFragment;
@@ -83,6 +82,7 @@ import cz.msebera.android.httpclient.util.EntityUtils;
 public class MainActivity extends FragmentActivity implements View.OnClickListener, PopupWindow.OnDismissListener, AMapLocalWeatherListener {
     private static final String TAG = "MainActivity";
     public static MainActivity main;
+    public GlobalApplication application;
     @Bind(R.id.main_iv_status)
     ImageView mainIvStatus;
     ImageView iv_me_status;
@@ -141,7 +141,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private static int codess = 3;
     String path;
     PhotoSelectedHelper mPhotoSelectedHelper;
-    String url_icon = Ip.ip + "/YfriendService/DoGetIcon?name=";
+    String url_icon;
     private LocationManagerProxy mLocationManagerProxy;
 
     //xmpp
@@ -152,6 +152,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        application = (GlobalApplication)getApplication();
+        Log.d(TAG, "onCreate: AppVersionValue = " + application.getAppVersionValue());
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
@@ -163,6 +165,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         initialPopup();
         initialDialog();
         initialHomeBannerSwipper();
+        url_icon = ((GlobalApplication) getApplication()).ifURL + "/YfriendService/DoGetIcon?name=";
     }
     // 首页条幅轮换
     private void initialHomeBannerSwipper() {
@@ -210,7 +213,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 LocationManagerProxy.WEATHER_TYPE_LIVE, this);
         mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
         iv_me_status = (ImageView) mNavigationView.findViewById(R.id.me_status);
-        XmppTool.getInstance().setPresence(mainIvStatus, iv_me_status, this, user.getUser());
+        XmppTool.getInstance(this).setPresence(mainIvStatus, iv_me_status, this, user.getUser());
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (mNavigationView != null) {
             setupDrawerContent(mNavigationView);
@@ -950,7 +953,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         formparams.add(new BasicNameValuePair("user", user.getUser()));
         formparams.add(new BasicNameValuePair("action", "update_icon"));
 
-        HttpPost post = new HttpPost(Ip.ip + "/YfriendService/DoGetUser");
+        HttpPost post = new HttpPost(((GlobalApplication)getApplication()).ifURL + "/YfriendService/DoGetUser");
         UrlEncodedFormEntity entity;
         try {
             entity = new UrlEncodedFormEntity(formparams, "UTF-8");
@@ -1076,9 +1079,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
 
     private void setPresence(int status) {
-        XmppTool.getInstance().setPresence(status);
+        XmppTool.getInstance(this).setPresence(status);
         SharedPreferencesUtil.setInt(MainActivity.this, "status", user.getUser() + "status", status);
-        XmppTool.getInstance().setPresence(mainIvStatus, iv_me_status, this, user.getUser());
+        XmppTool.getInstance(this).setPresence(mainIvStatus, iv_me_status, this, user.getUser());
 
     }
 

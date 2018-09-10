@@ -2,45 +2,34 @@ package com.yyquan.jzh.fragment.luntan;
 
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-
-
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
-
 import android.support.v4.widget.SwipeRefreshLayout;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.demievil.library.RefreshLayout;
-
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.melnykov.fab.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.activity.LuntanToStateActivity;
 import com.yyquan.jzh.activity.ShowLuntanActivity;
 import com.yyquan.jzh.adapter.LuntanListViewAdapter;
-import com.yyquan.jzh.entity.Ip;
-import com.yyquan.jzh.entity.News_content;
 import com.yyquan.jzh.entity.News_luntan;
 import com.yyquan.jzh.entity.User;
-import com.yyquan.jzh.util.ToastUtil;
 import com.yyquan.jzh.view.CircleImageView;
 import com.yyquan.jzh.view.DialogView;
 
@@ -73,8 +62,10 @@ public class LuntanFragment extends Fragment implements View.OnClickListener, Ad
     public User user;
 
     CircleImageView iv_icon;
-    String url_icon = Ip.ip + "/YfriendService/DoGetIcon?name=";
-    String url = Ip.ip + "/YfriendService/DoGetLunTan";
+    String url_icon ;
+    String url ;
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -82,6 +73,9 @@ public class LuntanFragment extends Fragment implements View.OnClickListener, Ad
         if (view == null) {
             DialogView.Initial(getActivity(), "正在加载动态......");
             intent = getActivity().getIntent();
+            url_icon =  ((GlobalApplication)getActivity().getApplication()).ifURL +  "/YfriendService/DoGetIcon?name=";
+            url = ((GlobalApplication)getActivity().getApplication()).ifURL + "/YfriendService/DoGetLunTan";
+
             user = (User) intent.getSerializableExtra("user");
             view = inflater.inflate(R.layout.fragment_luntan, container, false);
             footerLayout = getActivity().getLayoutInflater().inflate(R.layout.luntan_list_item_more, null);

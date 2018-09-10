@@ -1,34 +1,25 @@
 package com.yyquan.jzh.activity;
 
 import android.app.Activity;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-
 import android.support.design.widget.Snackbar;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
-
-
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-
-
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.util.SaveUserUtil;
 import com.yyquan.jzh.view.DataPickerView.OptionsPopupWindow;
@@ -36,7 +27,6 @@ import com.yyquan.jzh.view.DataPickerView.TimePopupWindow;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -62,7 +52,7 @@ public class MyselfMessageActivity extends Activity implements View.OnClickListe
     LinearLayout ll_back;
     LinearLayout ll_enter;
     User users;
-    String url = Ip.ip + "/YfriendService/DoGetUser";
+    String url ;
     String user;
     boolean bool;
     AlertDialog.Builder mMaterialDialog;
@@ -74,6 +64,7 @@ public class MyselfMessageActivity extends Activity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        url = ((GlobalApplication) getApplication()).ifURL +   "/YfriendService/DoGetUser";
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_myself_message);
         initialView();

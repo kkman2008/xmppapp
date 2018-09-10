@@ -30,7 +30,6 @@ import com.rockerhieu.emojicon.EmojiconsFragment;
 import com.rockerhieu.emojicon.emoji.Emojicon;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.entity.XmppChat;
 import com.yyquan.jzh.entity.XmppFriend;
@@ -199,9 +198,9 @@ public class ChatActivity extends FragmentActivity implements View.OnClickListen
      * 建立聊天
      */
     private void connection_chat() {
-        chatManager = XmppTool.getInstance().getCon().getChatManager();
-        chat = chatManager.createChat(xf.getUser().getUser().toLowerCase() + "@" + XmppTool.getInstance().getCon().getServiceName(), null);
-        Log.i("chat》》》》》》》》》》》", xf.getUser().getUser().toLowerCase() + "@" + XmppTool.getInstance().getCon().getServiceName());
+        chatManager = XmppTool.getInstance(this).getCon().getChatManager();
+        chat = chatManager.createChat(xf.getUser().getUser().toLowerCase() + "@" + XmppTool.getInstance(this).getCon().getServiceName(), null);
+        Log.i("chat》》》》》》》》》》》", xf.getUser().getUser().toLowerCase() + "@" + XmppTool.getInstance(this).getCon().getServiceName());
 
     }
 
@@ -346,7 +345,7 @@ public class ChatActivity extends FragmentActivity implements View.OnClickListen
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            String url_icon = Ip.ip + "/YfriendService/DoGetIcon?name=";
+            String url_icon = ((GlobalApplication)getApplication()).ifURL + "/YfriendService/DoGetIcon?name=";
             ViewHolder viewHolder;
             int type = list.get(position).getType();
             if (convertView == null || convertView.getTag(R.mipmap.ic_launcher + type) == null) {

@@ -1,6 +1,5 @@
 package com.yyquan.jzh.fragment.regster;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -18,15 +17,10 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.yyquan.jzh.R;
 import com.yyquan.jzh.activity.PhoneRegsterActivity;
-import com.yyquan.jzh.entity.Ip;
-import com.yyquan.jzh.location.Location;
 import com.yyquan.jzh.view.DialogView;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
-import cn.smssdk.SMSSDK;
 import cz.msebera.android.httpclient.Header;
 
 /**
@@ -45,7 +39,7 @@ public class PasswordFragment extends Fragment implements View.OnClickListener {
 
     boolean bool_password;
     boolean bool_password_again;
-    private String url = Ip.ip + "/YfriendService/DoGetUser";
+    private String url;
 
 
 
@@ -207,8 +201,6 @@ public class PasswordFragment extends Fragment implements View.OnClickListener {
                     tv_enter.setEnabled(true);
                 }
             }
-
-
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                 Toast.makeText(getActivity(), "网络连接失败，请查看网络设置", Toast.LENGTH_SHORT).show();
@@ -217,8 +209,4 @@ public class PasswordFragment extends Fragment implements View.OnClickListener {
             }
         });
     }
-
-
-
-
 }

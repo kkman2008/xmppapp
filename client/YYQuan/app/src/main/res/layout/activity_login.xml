@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="@color/title">
+        android:background="@color/Logintitle">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -16,9 +16,9 @@
             android:text="智库研讨"
             android:textSize="18dp" />
     </RelativeLayout>
-   <ImageView
-       android:layout_width="match_parent"
-       android:layout_height="110dp"
+    <com.yyquan.jzh.view.ResizableImageView
+       android:layout_width="fill_parent"
+       android:layout_height="150dp"
        android:background="@mipmap/banner"
        />
     <EditText
@@ -118,7 +118,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="使用第三方验证方式登录" />
+                android:text="第三方登录" />
 
             <ImageView
                 android:layout_width="wrap_content"

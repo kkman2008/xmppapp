@@ -18,7 +18,6 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.yyquan.jzh.R;
 import com.yyquan.jzh.adapter.ContentFragmentPageAadpter;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.News_content;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.fragment.news.contentFragment;
@@ -54,7 +53,7 @@ public class NewsContentActivity extends FragmentActivity implements View.OnClic
     Intent intent;
     public User user;
     public News_content content;
-    String url = Ip.ip + "/YfriendService/DoGetPingLun";
+    String url = ((GlobalApplication) getApplication()).ifURL + "/YfriendService/DoGetPingLun";
     InputMethodManager imm;//键盘管理器
 
     Location lt;
@@ -239,11 +238,10 @@ public class NewsContentActivity extends FragmentActivity implements View.OnClic
     public void onPageSelected(int position) {
         page_select = position;
         if (page_select == 0) {
-            tv_pinglun.setText(pl_size + "讨论");
+            tv_pinglun.setText(pl_size + "研讨");
 
         } else {
             tv_pinglun.setText("原文");
-
         }
     }
 

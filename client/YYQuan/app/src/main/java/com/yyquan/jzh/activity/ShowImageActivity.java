@@ -14,7 +14,6 @@ import android.widget.TextView;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
 
@@ -26,7 +25,7 @@ public class ShowImageActivity extends Activity {
     String[] patharr;
     int pagerNumber;
     PhotoViewAttacher mAttacher;
-    String url_icon = Ip.ip + "/YfriendService/DoGetIcon?name=";
+    String url_icon = ((GlobalApplication) getApplication()).ifURL + "/YfriendService/DoGetIcon?name=";
     ViewPager viewPager;
     TextView text;
 
@@ -68,7 +67,7 @@ public class ShowImageActivity extends Activity {
                 public Object instantiateItem(ViewGroup container, final int position) {
                     final ImageView imageView = new ImageView(ShowImageActivity.this);
                     Picasso.with(ShowImageActivity.this)
-                            .load(Ip.ip + "/YfriendService/DoGetLunTan?action=search_image&name=" + patharr[position])
+                            .load(((GlobalApplication) getApplication()).ifURL+ "/YfriendService/DoGetLunTan?action=search_image&name=" + patharr[position])
                             .placeholder(R.mipmap.aio_image_default_round)
                             .error(R.mipmap.aio_image_default_round)
                             .into(imageView, new Callback() {

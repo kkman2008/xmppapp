@@ -106,11 +106,11 @@
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
-    <orderEntry type="jdk" jdkName="Android API 22 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: com.squareup.picasso:picasso:2.5.2@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.android.support:support-v4-22.0.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.android.support:support-annotations:22.0.0@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7-22.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-v4-23.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-annotations:23.0.1@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7-23.0.1" level="project" />
   </component>
 </module>

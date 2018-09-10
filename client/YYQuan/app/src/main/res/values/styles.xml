@@ -3,6 +3,12 @@
     <!-- Base application theme. -->
 
 
+    <color name="duola_text_color">#333333</color>
+    <color name="duola_text_color32">#323232</color>
+    <color name="duola_text_color99">#999999</color>
+    <color name="duola_text_color98">#989898</color>
+    <color name="duola_bg_color">#f7f7f7</color>
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:colorPrimaryDark">@color/title</item>
@@ -113,6 +119,22 @@
     </style>
     <style name="Coder.Button.logout" parent="Coder.TextView.White">
         <item name="android:background">@drawable/btn_logout_selector</item>
+    </style>
+
+    <style name="setting_layout_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:background">@color/color_app_main_write</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+
+    <style name="setting_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/duola_text_color</item>
+        <item name="android:layout_gravity">center_vertical</item>
     </style>
 
 

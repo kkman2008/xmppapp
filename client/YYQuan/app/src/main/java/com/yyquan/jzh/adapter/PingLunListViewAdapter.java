@@ -16,7 +16,7 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.entity.News_pinglun;
 
 import java.util.ArrayList;
@@ -31,13 +31,13 @@ public class PingLunListViewAdapter extends BaseAdapter {
     Context context;
     ArrayList<News_pinglun> news;
     String user;
-    String url_icon = Ip.ip + "/YfriendService/DoGetIcon?name=";
+    String url_icon;
 
     public PingLunListViewAdapter(Context context, ArrayList<News_pinglun> news, String user) {
         this.context = context;
         this.news = news;
         this.user = user;
-
+        url_icon =  ((GlobalApplication)context.getApplicationContext()).ifURL +  "/YfriendService/DoGetIcon?name=";
     }
 
     public void setList(ArrayList<News_pinglun> list) {
@@ -139,7 +139,6 @@ public class PingLunListViewAdapter extends BaseAdapter {
                     holder.tv_zan.setCompoundDrawables(null, null, nav_upp, null);
                     holder.tv_zan.setText(Integer.parseInt((news.get(position).getPzan())) + 1 + " ");
                     update_zan(news.get(position).getPid(), position, holder.tv_zan);
-
                 }
 
             }
@@ -185,7 +184,7 @@ public class PingLunListViewAdapter extends BaseAdapter {
         params.put("user", user);
         //Toast.makeText(context, pid + "", Toast.LENGTH_SHORT).show();
         AsyncHttpClient client = new AsyncHttpClient();
-        client.post(Ip.ip + "/YfriendService/DoGetPingLun", params, new AsyncHttpResponseHandler() {
+        client.post( ((GlobalApplication)context.getApplicationContext()).ifURL  + "/YfriendService/DoGetPingLun", params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 news.get(position).setIspzan("1");

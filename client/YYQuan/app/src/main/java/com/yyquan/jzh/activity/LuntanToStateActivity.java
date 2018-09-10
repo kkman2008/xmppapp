@@ -4,7 +4,6 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,7 +11,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -31,11 +29,9 @@ import android.widget.Toast;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.User;
 import com.yyquan.jzh.util.Base64Coder;
 import com.yyquan.jzh.util.ImageCompressUtils;
@@ -52,7 +48,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
 import cz.msebera.android.httpclient.Header;
 import me.nereo.multi_image_selector.MultiImageSelectorActivity;
 import me.nereo.multi_image_selector.adapter.MainGridAdapter;
@@ -85,7 +80,7 @@ public class LuntanToStateActivity extends Activity implements View.OnClickListe
     public User user;
     TextView tv_location;
 
-    String url = Ip.ip + "/YfriendService/DoGetLunTan?";
+    String url =((GlobalApplication) getApplicationContext()).ifURL  + "/YfriendService/DoGetLunTan?";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

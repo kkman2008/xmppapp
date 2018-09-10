@@ -16,10 +16,10 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.yyquan.jzh.R;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.activity.MainActivity;
 import com.yyquan.jzh.activity.ShowImageActivity;
 import com.yyquan.jzh.activity.ShowMessageActivity;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.entity.News_luntan;
 
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ import java.util.ArrayList;
 public class LuntanListViewAdapter extends BaseAdapter {
     Context context;
     ArrayList<News_luntan> news;
-    String url_icon = Ip.ip + "/YfriendService/DoGetIcon?name=";
+    String url_icon = ((GlobalApplication) context.getApplicationContext()).ifURL  + "/YfriendService/DoGetIcon?name=";
     Activity activity;
 
     public LuntanListViewAdapter(Context context, ArrayList<News_luntan> news) {
@@ -148,7 +148,7 @@ public class LuntanListViewAdapter extends BaseAdapter {
             final String[] grid_img = news.get(position).getImage().split(";");
             for (int i = 0; i < grid_img.length; i++) {
                 imageView = new ImageView(context);
-                final String urlpath = Ip.ip + "/YfriendService/DoGetLunTan?action=search_image&name=" + grid_img[i];
+                final String urlpath = ((GlobalApplication)context.getApplicationContext()).ifURL + "/YfriendService/DoGetLunTan?action=search_image&name=" + grid_img[i];
                 imageView.setLayoutParams(new LinearLayout.LayoutParams(
                         (int) getRawSize(TypedValue.COMPLEX_UNIT_DIP, 100),
                         (int) getRawSize(TypedValue.COMPLEX_UNIT_DIP, 100)));

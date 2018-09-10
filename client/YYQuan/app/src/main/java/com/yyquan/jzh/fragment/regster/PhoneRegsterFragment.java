@@ -1,7 +1,6 @@
 package com.yyquan.jzh.fragment.regster;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,14 +16,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.yyquan.jzh.R;
-import com.yyquan.jzh.activity.MyApplication;
+import com.yyquan.jzh.activity.GlobalApplication;
 import com.yyquan.jzh.activity.PhoneRegsterActivity;
-import com.yyquan.jzh.entity.Ip;
 import com.yyquan.jzh.util.Randoms;
 import com.yyquan.jzh.util.SmsComm;
 import com.yyquan.jzh.view.DialogView;
@@ -34,7 +31,6 @@ import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
 import cz.msebera.android.httpclient.Header;
@@ -56,7 +52,7 @@ public class PhoneRegsterFragment extends Fragment implements View.OnClickListen
     String phone;//手机号码
     String checkNum = "1234"; // 验证码
     int i = 60;//发送短信倒计时
-    String url = Ip.ip + "/YfriendService/DoGetUser";
+    String url = ((GlobalApplication) getActivity().getApplication() ).ifURL  + "/YfriendService/DoGetUser";
 
     LinearLayout ll_back;
     String type;
