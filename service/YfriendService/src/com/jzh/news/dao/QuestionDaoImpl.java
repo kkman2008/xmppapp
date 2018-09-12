@@ -3,12 +3,14 @@
  */
 package com.jzh.news.dao;
 
+import java.util.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
+import com.jzh.news.entity.News_content;
 import com.jzh.news.entity.tb_problem;
 import com.jzh.news.entity.ytQuestion;
 
@@ -51,6 +53,39 @@ public class QuestionDaoImpl  extends BaseDaoImpl {
 		} finally {
 			this.closeAll(null, pstmt, conn);
 		}
+	}
+	
+	public List<tb_problem> getListbyType(String questionSatusType){
+		List<tb_problem> list = new ArrayList<>();
+		conn = this.getYantaodbConnection();
+		try {
+			String whereClausestr = ""; // "0" is all status
+			if( questionSatusType.equalsIgnoreCase("-1") == false){
+				whereClausestr = " where Phase = " + questionSatusType;
+			}
+			String sqlStatement = "select * from tb_problem " + whereClausestr;
+			System.out.println(sqlStatement);
+			pstmt = conn
+					.prepareStatement(sqlStatement);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				tb_problem questionContent = new tb_problem();
+				questionContent.setQuestionid( rs.getString("questionid"));
+				questionContent.setProblemname( rs.getString("problemname"));
+				questionContent.setProblemcontent( rs.getString("problemcontent")); 
+				questionContent.setAskthetime( rs.getDate( "askthetime"));
+				questionContent.setConclusion( rs.getString("conclusion")); 
+				list.add(questionContent);
+			}
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		} finally {
+			this.closeAll(rs, pstmt, conn);
+
+		}
+		return list; 
 	}
 	
 	public  void main(){

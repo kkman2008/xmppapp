@@ -2,7 +2,6 @@ package com.yyquan.jzh.fragment.news;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
@@ -52,7 +51,7 @@ public class pinglunFragment extends Fragment implements SwipeRefreshLayout.OnRe
     View footerLayout;
     private TextView tv_more;
     private ProgressBar pb;
-    private String search_url = ((GlobalApplication) getActivity().getApplication()).ifURL + "/YfriendService/DoGetPingLun";
+    private String search_url  ;
     int pinglun_size;
     int index = 0;
 
@@ -86,6 +85,8 @@ public class pinglunFragment extends Fragment implements SwipeRefreshLayout.OnRe
             tv_author.setText(content.getCauthor());
             tv_time.setText(content.getCtime());
             user = ((NewsContentActivity) getActivity()).user;
+            search_url = ((GlobalApplication) getActivity().getApplication()).ifURL + "/YfriendService/DoGetPingLun";
+
             getData(content.getCid(), 0);
 
         }

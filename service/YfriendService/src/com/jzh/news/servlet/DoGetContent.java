@@ -33,9 +33,9 @@ public class DoGetContent extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		request.setCharacterEncoding("utf-8");
 		String action = request.getParameter("action");
+		PrintWriter out = response.getWriter();
 		if (action.equals("search_content")) {
-			String cid = request.getParameter("cid");
-			PrintWriter out = response.getWriter();
+			String cid = request.getParameter("cid"); 
 			News_contentDaoImpl ndi = new News_contentDaoImpl();
 			String content = ndi.getcontent(cid);
 			JSONObject array = new JSONObject();
@@ -57,7 +57,7 @@ public class DoGetContent extends HttpServlet {
 			String limit = request.getParameter("limit");
 			// System.out.println(type+limit);
 
-			PrintWriter out = response.getWriter();
+		
 			News_contentDaoImpl ndi = new News_contentDaoImpl();
 
 			List<News_content> list = new ArrayList<News_content>();
@@ -92,13 +92,12 @@ public class DoGetContent extends HttpServlet {
 				array.put("data", arrays.toString());
 				// System.out.println(array.toString());
 			}
-
+			
 			out.print(array);
 
 			out.flush();
 			out.close();
 		}
-
 	}
 
 }

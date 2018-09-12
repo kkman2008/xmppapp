@@ -2,10 +2,7 @@ package com.yyquan.jzh;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
-import android.test.FlakyTest;
 import android.util.Log;
-
-import com.yyquan.jzh.util.PropertiesUtil;
 
 import org.junit.Test;
 
@@ -47,5 +44,6 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
             e.printStackTrace();
         }
     }
+
 }
 

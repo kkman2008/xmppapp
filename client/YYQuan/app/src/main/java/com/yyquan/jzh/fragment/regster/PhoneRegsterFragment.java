@@ -52,7 +52,7 @@ public class PhoneRegsterFragment extends Fragment implements View.OnClickListen
     String phone;//手机号码
     String checkNum = "1234"; // 验证码
     int i = 60;//发送短信倒计时
-    String url = ((GlobalApplication) getActivity().getApplication() ).ifURL  + "/YfriendService/DoGetUser";
+    String url;
 
     LinearLayout ll_back;
     String type;
@@ -64,6 +64,7 @@ public class PhoneRegsterFragment extends Fragment implements View.OnClickListen
             type=intent.getStringExtra("type");
             view = inflater.inflate(R.layout.fragment_phone_regster, container, false);
             initialView();
+            url = ((GlobalApplication) getActivity().getApplication() ).ifURL  + "/YfriendService/DoGetUser";
         }
         return view;
     }
@@ -75,7 +76,7 @@ public class PhoneRegsterFragment extends Fragment implements View.OnClickListen
     private void initialView() {
         //iniSMSSDK();
         tv_title = (TextView) view.findViewById(R.id.phone_regster_textview_title);
-        if(type.equals("regster")){
+        if(type ==null || type.equals("regster")){
             tv_title.setText("注  册");
         }else if(type.equals("password")){
             tv_title.setText("找回密码");

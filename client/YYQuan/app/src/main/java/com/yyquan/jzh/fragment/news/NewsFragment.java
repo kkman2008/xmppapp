@@ -39,15 +39,11 @@ public class NewsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-
         view = inflater.inflate(R.layout.fragment_news, container, false);
-
         initialView();
-        url = ((GlobalApplication) getActivity().getApplication()).ifURL  + "/YfriendService/DoGetType";
+        url = ((GlobalApplication) getActivity().getApplication()).ifURL + "/YfriendService/DoGetType";
         getNewsTitle();
         return view;
-
     }
 
     /**

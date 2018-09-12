@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,7 +53,7 @@ public class titleFragment extends Fragment implements  View.OnClickListener, Ad
     private ProgressBar pb;
     int index = 0;
     int news_size;
-
+    private static final String TAG ="titleFragment";
 
 
 
@@ -131,6 +132,7 @@ public class titleFragment extends Fragment implements  View.OnClickListener, Ad
                             }
                             Message m = Message.obtain(h, 1);
                             h.sendMessage(m);
+                            Log.d(TAG, "onSuccess: sendMessage , Message.what =" + m.what);
                         }
                     } catch (JSONException e) {
                         mRefreshLayout.setLoading(false);
@@ -258,16 +260,12 @@ public class titleFragment extends Fragment implements  View.OnClickListener, Ad
 
         if (position < list.size()) {
             Intent intent = new Intent(getActivity(), NewsContentActivity.class);
-            intent.putExtra("news_content", list.get(position));
+            intent.putExtra("prolem_content", list.get(position));
             intent.putExtra("user", ((MainActivity) this.getActivity()).user);
             intent.putExtra("url", news.getType_url());
             startActivity(intent);
         }
-
-
         //Toast.makeText(getActivity(), position + "11", Toast.LENGTH_SHORT).show();
-
-
     }
 
     @Override

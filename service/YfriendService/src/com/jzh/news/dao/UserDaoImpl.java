@@ -23,19 +23,19 @@ public class UserDaoImpl extends BaseDaoImpl {
 	 * @return
 	 */
 	public List<User> Search() {
-		conn = this.getConnection();
+		conn = this.getYantaodbConnection();
 		try {
 
-			pstmt = conn.prepareStatement("select * from users");
+			pstmt = conn.prepareStatement("select * from tb_user");
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				User content = new User();
-				content.setId(rs.getInt("uid"));
-				content.setUser(rs.getString("user"));
+				content.setId(rs.getInt("UserID"));
+				content.setUser(rs.getString("Account"));
 				content.setPassword(rs.getString("password"));
 				//content.setQq(rs.getString("qq"));
-				content.setIcon(rs.getString("icon"));
-				content.setNickname(rs.getString("nickname"));
+				content.setIcon(rs.getString("HeadImagePath"));
+				content.setNickname(rs.getString("name"));
 				//content.setCity(rs.getString("city"));
 				content.setSex(rs.getString("sex"));
 				//content.setYears(rs.getString("years"));
@@ -60,20 +60,20 @@ public class UserDaoImpl extends BaseDaoImpl {
 	 * @return
 	 */
 	public User Search_xmpp_message(String user) {
-		conn = this.getConnection();
+		conn = this.getYantaodbConnection();
 		User content = null;
 		try {
 
-			pstmt = conn.prepareStatement("select * from users where user='"
+			pstmt = conn.prepareStatement("select * from tb_user where user='"
 					+ user + "'");
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				content = new User();
-				content.setId(rs.getInt("uid"));
-				content.setUser(rs.getString("user"));
+				content.setId(rs.getInt("UserID"));
+				content.setUser(rs.getString("Account"));
 				//content.setQq(rs.getString("qq"));
-				content.setIcon(rs.getString("icon"));
-				content.setNickname(rs.getString("nickname"));
+				content.setIcon(rs.getString("HeadImagePath"));
+				content.setNickname(rs.getString("name"));
 				//content.setCity(rs.getString("city"));
 				content.setSex(rs.getString("sex"));
 				//content.setYears(rs.getString("years"));
@@ -98,7 +98,7 @@ public class UserDaoImpl extends BaseDaoImpl {
 	 * @return
 	 */
 	public User Search_one(String user) {
-		conn = this.getConnection();
+		conn = this.getYantaodbConnection();
 		User content = null;
 		try {
 
@@ -107,8 +107,8 @@ public class UserDaoImpl extends BaseDaoImpl {
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				content = new User();
-				content.setIcon(rs.getString("icon"));
-				content.setNickname(rs.getString("nickname"));
+				content.setIcon(rs.getString("HeadImagePath"));
+				content.setNickname(rs.getString("name"));
 				content.setSex(rs.getString("sex"));
 
 			}
@@ -130,7 +130,7 @@ public class UserDaoImpl extends BaseDaoImpl {
 	 * @return
 	 */
 	public List<User> Search(String user) {
-		conn = this.getConnection();
+		conn = this.getYantaodbConnection();
 		User content = null;
 		try {
 
@@ -139,12 +139,12 @@ public class UserDaoImpl extends BaseDaoImpl {
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				content = new User();
-				content.setId(rs.getInt("uid"));
-				content.setUser(rs.getString("user"));
+				content.setId(rs.getInt("UserID"));
+				content.setUser(rs.getString("Account"));
 				content.setPassword(rs.getString("password"));
 				content.setQq(rs.getString("qq"));
-				content.setIcon(rs.getString("icon"));
-				content.setNickname(rs.getString("nickname"));
+				content.setIcon(rs.getString("HeadImagePath"));
+				content.setNickname(rs.getString("name"));
 				content.setCity(rs.getString("city"));
 				content.setSex(rs.getString("sex"));
 				content.setYears(rs.getString("years"));
@@ -170,21 +170,21 @@ public class UserDaoImpl extends BaseDaoImpl {
 	 * @return
 	 */
 	public List<User> Search(String user, String password) {
-		conn = this.getConnection();
+		conn = this.getYantaodbConnection();
 		User content = null;
 		try {
 
-			pstmt = conn.prepareStatement("select * from users where user='"
+			pstmt = conn.prepareStatement("select * from tb_user where Account='"
 					+ user + "'and password='" + password + "'");
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				content = new User();
-				content.setId(rs.getInt("uid"));
-				content.setUser(rs.getString("user"));
+				content.setId(rs.getInt("UserID"));
+				content.setUser(rs.getString("Account"));
 				content.setPassword(rs.getString("password"));
 				content.setQq(rs.getString("qq"));
-				content.setIcon(rs.getString("icon"));
-				content.setNickname(rs.getString("nickname"));
+				content.setIcon(rs.getString("HeadImagePath"));
+				content.setNickname(rs.getString("name"));
 				content.setCity(rs.getString("city"));
 				content.setLocation(rs.getString("location"));
 				content.setSex(rs.getString("sex"));
@@ -211,10 +211,10 @@ public class UserDaoImpl extends BaseDaoImpl {
 	 * @param news
 	 */
 	public boolean Save(User user) {
-		conn = this.getConnection();
+		conn = this.getYantaodbConnection();
 		try {
 			pstmt = conn
-					.prepareStatement("insert into users(user,password,qq,icon,nickname,city,sex,years,location,qianming)values(?,?,?,?,?,?,?,?,?,?)");
+					.prepareStatement("insert into tb_user(Account,password,qq,HeadImagePath,name,city,sex,years,location,qianming)values(?,?,?,?,?,?,?,?,?,?)");
 			pstmt.setString(1, user.getUser());
 			pstmt.setString(2, user.getPassword());
 			pstmt.setString(3, user.getQq());
@@ -242,10 +242,10 @@ public class UserDaoImpl extends BaseDaoImpl {
 	 * @param news
 	 */
 	public boolean update_message(User user) {
-		conn = this.getConnection();
+		conn = this.getYantaodbConnection();
 		try {
 			pstmt = conn
-					.prepareStatement("update users set qq=?,nickname=?,city=?,sex=?,years=?,qianming=? where user='"
+					.prepareStatement("update tb_user set qq=?,nickname=?,city=?,sex=?,years=?,qianming=? where Account='"
 							+ user.getUser() + "'");
 
 			pstmt.setString(1, user.getQq());
@@ -271,10 +271,10 @@ public class UserDaoImpl extends BaseDaoImpl {
 	 * @param news
 	 */
 	public boolean update_qianming(String user) {
-		conn = this.getConnection();
+		conn = this.getYantaodbConnection();
 		try {
 			pstmt = conn
-					.prepareStatement("update users set location=? where user='"
+					.prepareStatement("update tb_user set location=? where Account='"
 							+ user + "'");
 
 			pstmt.setString(1, "Î´ÖªÐÇÇò");
@@ -322,10 +322,10 @@ public class UserDaoImpl extends BaseDaoImpl {
 	 * @param news
 	 */
 	public boolean update_message(String user, String password) {
-		conn = this.getConnection();
+		conn = this.getYantaodbConnection();
 		try {
 			pstmt = conn
-					.prepareStatement("update users set password=? where user='"
+					.prepareStatement("update tb_user set password=? where Account='"
 							+ user + "'");
 
 			pstmt.setString(1, password);
@@ -346,14 +346,14 @@ public class UserDaoImpl extends BaseDaoImpl {
 	 * 
 	 * @param news
 	 */
-	public boolean update_icon(String user, String icon) {
-		conn = this.getConnection();
+	public boolean update_icon(String user, String HeadImagePath) {
+		conn = this.getYantaodbConnection();
 		try {
 			pstmt = conn
-					.prepareStatement("update users set icon=? where user='"
+					.prepareStatement("update tb_user set HeadImagePath=? where Account='"
 							+ user + "'");
 
-			pstmt.setString(1, icon);
+			pstmt.setString(1, HeadImagePath);
 
 			pstmt.executeUpdate();
 			return true;

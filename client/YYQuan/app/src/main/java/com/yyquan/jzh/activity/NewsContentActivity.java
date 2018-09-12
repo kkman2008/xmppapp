@@ -53,7 +53,7 @@ public class NewsContentActivity extends FragmentActivity implements View.OnClic
     Intent intent;
     public User user;
     public News_content content;
-    String url = ((GlobalApplication) getApplication()).ifURL + "/YfriendService/DoGetPingLun";
+    String url  ;
     InputMethodManager imm;//键盘管理器
 
     Location lt;
@@ -73,8 +73,8 @@ public class NewsContentActivity extends FragmentActivity implements View.OnClic
         //  Toast.makeText(this,user.getNickname(),Toast.LENGTH_SHORT).show();
         setContentView(R.layout.activity_news_content);
         initialView();
+        url = ((GlobalApplication) getApplication()).ifURL + "/YfriendService/DoGetPingLun";
         lt = new Location(this);
-
     }
 
     @Override

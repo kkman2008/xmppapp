@@ -194,6 +194,7 @@ public class LogoActivity extends Activity {
         params.put("action", "login");
         AsyncHttpClient client = new AsyncHttpClient();
         url = application.ip_user_message;
+        Log.d(TAG, "login: url =" + url );
         client.post(url, params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -255,7 +256,6 @@ public class LogoActivity extends Activity {
             }
         });
     }
-
 
     /**
      * 注册信鸽
