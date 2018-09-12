@@ -45,6 +45,7 @@ import com.yyquan.jzh.fragment.friend.FriendFragment;
 import com.yyquan.jzh.fragment.friend.MessageFragment;
 import com.yyquan.jzh.fragment.luntan.LuntanFragment;
 import com.yyquan.jzh.fragment.news.NewsFragment;
+import com.yyquan.jzh.fragment.question.QuestionListFragment;
 import com.yyquan.jzh.util.Base64Coder;
 import com.yyquan.jzh.util.ImageCompressUtils;
 import com.yyquan.jzh.util.PhotoSelectedHelper;
@@ -97,6 +98,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private CircleImageView iv_mes;
     private TextView tv_me_name;
 
+    private QuestionListFragment questionListFragment;
     private NewsFragment news_fragment;
     private LuntanFragment luntan_fragment;
     private FriendFragment friend_fragment;
@@ -263,7 +265,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         tv_question.setOnClickListener(this);
         ll_to.setOnClickListener(this);
         // 默认选择在首页，选项卡
-        selection(2);
+        selection(6);
     }
 
     /**
@@ -529,6 +531,19 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         Fragment fragment;
         switch (index) {
 
+            // 问题列表， 单一职能原则
+            case 6:
+                iv_addfriend.setVisibility(View.GONE);
+                tv_news.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.tab_comprehensive_pressed_icon, 0, 0);
+                tv_news.setTextColor(tv_news.getResources().getColor(R.color.title));
+                fragment = getSupportFragmentManager().findFragmentByTag("question_fragment");
+                if (fragment == null) {
+                    questionListFragment = new QuestionListFragment();
+                    ft.add(R.id.fg_content, questionListFragment, "question_fragment");
+                } else {
+                    ft.show(fragment);
+                }
+                break;
             case 0:
                 iv_addfriend.setVisibility(View.GONE);
                 tv_message.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.tab_move_pressed_icon, 0, 0);

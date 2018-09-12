@@ -4,8 +4,7 @@ import java.util.Date;
 
 import com.jzh.news.dao.QuestionDaoImpl;
 import com.jzh.news.entity.User;
-import com.jzh.news.entity.tb_problem;
-import com.jzh.news.entity.ytQuestion;
+import com.jzh.news.entity.tb_problem; 
 import com.jzh.news.xmpp.XmppTool;
 
 public class testComponent {

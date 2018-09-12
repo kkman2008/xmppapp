@@ -11,7 +11,7 @@ public class GlobalApplication extends Application {
     private static final String VALUE = "123456";
     private String value;
     private int appVersionValue;
-    private String serverIP ="192.168.196.162";
+    private String serverIP ="192.168.197.53";
     private Long ServerPort;
 
     public String getIfURL() {
@@ -22,7 +22,7 @@ public class GlobalApplication extends Application {
         this.ifURL = ifURL;
     }
 
-    public String ifURL ="http://192.168.196.162:8080";
+    public String ifURL ="http://192.168.197.53:8080";
     public String ip_icon = ifURL + "/YfriendService/DoGetIcon?name=";
     public String ip_user_message = ifURL + "/YfriendService/DoGetUser";
     public String ip_user_status = ifURL + "/YfriendService/DoGetLunTan";

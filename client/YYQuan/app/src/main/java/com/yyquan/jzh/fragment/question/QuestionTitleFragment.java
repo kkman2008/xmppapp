@@ -21,8 +21,7 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.yyquan.jzh.R;
 import com.yyquan.jzh.activity.GlobalApplication;
-import com.yyquan.jzh.activity.MainActivity;
-import com.yyquan.jzh.activity.NewsContentActivity;
+import com.yyquan.jzh.activity.QuestionContentActivity;
 import com.yyquan.jzh.adapter.QuestionTitleListViewAdapter;
 import com.yyquan.jzh.entity.CommonConstant;
 import com.yyquan.jzh.entity.tb_problem;
@@ -255,9 +254,10 @@ public class QuestionTitleFragment extends Fragment implements  View.OnClickList
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         if (position < list.size()) {
-            Intent intent = new Intent(getActivity(), NewsContentActivity.class);
-            intent.putExtra("news_content", list.get(position));
-            intent.putExtra("user", ((MainActivity) this.getActivity()).user);
+            Intent intent = new Intent(getActivity(),QuestionContentActivity.class);
+            intent.putExtra("question_content", list.get(position));
+            // [tbd]
+            //intent.putExtra("user", ((MainActivity) this.getActivity()).user);
             startActivity(intent);
         }
 

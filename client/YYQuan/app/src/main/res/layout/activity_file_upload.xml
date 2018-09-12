@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/selector_message_button"
+            android:background="@drawable/selector_button"
             android:gravity="center"
             android:padding="5dip"
             android:text="@string/cancel_back"
@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/selector_message_button"
+            android:background="@drawable/selector_button"
             android:gravity="center"
             android:padding="5dip"
             android:text="@string/upload_begin"
@@ -88,7 +88,7 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dip"
                 android:layout_marginTop="30dip"
-                android:background="@drawable/selector_message_button"
+                android:background="@drawable/selector_button"
                 android:text="@string/look_pictrue" >
             </Button>
 
@@ -99,7 +99,7 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dip"
                 android:layout_marginTop="30dip"
-                android:background="@drawable/selector_message_button"
+                android:background="@drawable/selector_button"
                 android:text="浏览文件" >
             </Button>
 

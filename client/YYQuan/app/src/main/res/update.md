@@ -11,5 +11,7 @@
        [listview的adapter类是TitleListViewAdapter]
 #3 单元测试取问题列表 
     http://localhost:8080/YfriendService/DoGetQuestion?action=get_question_list&type=-1
+    http://localhost:8080/YfriendService/DoGetSeminar?action=get_seminartopic_list&type=-1
+    
       -1 全部，0 未开始，1进行中，2已结束
     

@@ -79,7 +79,7 @@ public class QuestionListFragment extends Fragment {
     private void initialData() {
         childFragments = new ArrayList<Fragment>();
         for(int i =0 ; i< questionStateList.size(); i++){
-           // [tbd] childFragments.add(QuestionTitleFragment.newInstance(questionStateList.get(i)));
+           childFragments.add(QuestionTitleFragment.newInstance(questionStateList.get(i)));
         }
         mPagerAdapter = new MainFragmentQuestionListPagerAdapter(getChildFragmentManager(), questionStateList, childFragments);
         mViewpager.setAdapter(mPagerAdapter);

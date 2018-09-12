@@ -141,7 +141,7 @@
             android:layout_height="30dip"
             android:layout_gravity="top"
             android:layout_marginLeft="5dp"
-            android:background="@drawable/selector_message_button"
+            android:background="@drawable/selector_button"
             android:text="选取文件"></Button>
     </LinearLayout>
 

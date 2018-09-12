@@ -59,7 +59,12 @@ public class QuestionTitleListViewAdapter  extends BaseAdapter {
             holder =(ViewHolder) convertView.getTag();
         }
         holder.tv_title.setText( list.get(position).getProblemname());
-        holder.tv_content.setText( list.get(position).getProblemcontent());
+        String questioContentHint = list.get(position).getProblemcontent().replace("null","");
+        if(questioContentHint.length()>12)
+        {
+            questioContentHint = questioContentHint.substring(0,11) + "...";
+        }
+        holder.tv_content.setText(questioContentHint );
 
         return convertView;
     }

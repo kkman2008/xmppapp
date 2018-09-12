@@ -17,7 +17,6 @@ public class MainFragmentQuestionListPagerAdapter extends FragmentPagerAdapter {
         this.childFragments = childFragments;
     }
 
-
     @Override
     public Fragment getItem(int position) {
         return childFragments.get(position);

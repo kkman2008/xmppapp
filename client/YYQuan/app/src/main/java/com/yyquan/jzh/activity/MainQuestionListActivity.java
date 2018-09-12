@@ -31,9 +31,8 @@ public class MainQuestionListActivity extends FragmentActivity implements View.O
     private void SetFragment(){
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-        //mQuestionList = new QuestionListFragment();
-        mlistviewFragment = new QuestionTitleFragment();
-        transaction.replace(R.id.fg_content, mlistviewFragment);
+        mQuestionList = new QuestionListFragment();
+        transaction.replace(R.id.fg_content, mQuestionList);
         transaction.commit();
     }
 
