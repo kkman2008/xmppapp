@@ -53,20 +53,8 @@ public class DoGetQuestion extends HttpServlet {
 		case "get_question_list": 
 			array.put("code", "success");
 			array.put("msg", "有问题数据");
-			List<tb_problem> list = questiondao.getListbyType(questionlisttype); 
-//			JSONArray arrays = new JSONArray();
-//			DateTime dt = new DateTime(); 
-//			for (int i = 0; i < list.size(); i++) {
-//				JSONObject object = new JSONObject();
-//				object.put("questionid", list.get(i).getQuestionid() );
-//				object.put("problemname", list.get(i).getProblemname()); 
-//				object.put("problemcontent", list.get(i).getProblemcontent());
-//				dt = new DateTime( list.get(i).getAskthetime());
-//				object.put("askthetime", dt.toString("yyyy-MM-dd HH:mm:ss"));
-//				arrays.add(object);
-//			}
-			array.put("data", list);
-			//array.put("data", arrays.toString()); 
+			List<tb_problem> list = questiondao.getListbyType(questionlisttype);  
+			array.put("data", list); 
 			String str = JSONObject.toJSONString(array,SerializerFeature.WriteMapNullValue);  
 			out.print(str);
 			break;

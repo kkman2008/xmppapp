@@ -102,7 +102,7 @@ public class UserDaoImpl extends BaseDaoImpl {
 		User content = null;
 		try {
 
-			pstmt = conn.prepareStatement("select * from users where user='"
+			pstmt = conn.prepareStatement("select * from tb_user where user='"
 					+ user + "'");
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
@@ -134,7 +134,7 @@ public class UserDaoImpl extends BaseDaoImpl {
 		User content = null;
 		try {
 
-			pstmt = conn.prepareStatement("select * from users where user='"
+			pstmt = conn.prepareStatement("select * from tb_user where user='"
 					+ user + "'");
 			rs = pstmt.executeQuery();
 			while (rs.next()) {

@@ -2,6 +2,10 @@ package com.jzh.news.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
 public class tb_topicforumprocess {
     /**
      *
@@ -10,7 +14,8 @@ public class tb_topicforumprocess {
      *
      * @mbg.generated
      */
-    private Integer id;
+	@Column(name="id")
+    private String id;
 
     /**
      *
@@ -19,6 +24,7 @@ public class tb_topicforumprocess {
      *
      * @mbg.generated
      */
+	@Column(name="userid")
     private String userid;
 
     /**
@@ -28,6 +34,7 @@ public class tb_topicforumprocess {
      *
      * @mbg.generated
      */
+	@Column(name="username")
     private String username;
 
     /**
@@ -37,6 +44,7 @@ public class tb_topicforumprocess {
      *
      * @mbg.generated
      */
+	@Column(name="themeid")
     private String themeid;
 
     /**
@@ -46,6 +54,7 @@ public class tb_topicforumprocess {
      *
      * @mbg.generated
      */
+	@Column(name="discusscontent")
     private String discusscontent;
 
     /**
@@ -55,6 +64,7 @@ public class tb_topicforumprocess {
      *
      * @mbg.generated
      */
+	@Column(name="discusscontenttype")
     private String discusscontenttype;
 
     /**
@@ -64,6 +74,7 @@ public class tb_topicforumprocess {
      *
      * @mbg.generated
      */
+	@Column(name="praisecount")
     private Integer praisecount;
 
     /**
@@ -73,6 +84,7 @@ public class tb_topicforumprocess {
      *
      * @mbg.generated
      */
+	@Column(name="referenceid")
     private Integer referenceid;
 
     /**
@@ -82,6 +94,7 @@ public class tb_topicforumprocess {
      *
      * @mbg.generated
      */
+	@Column(name="referencecount")
     private Integer referencecount;
 
     /**
@@ -91,6 +104,7 @@ public class tb_topicforumprocess {
      *
      * @mbg.generated
      */
+	@Column(name="discusstime")
     private Date discusstime;
 
     /**
@@ -101,7 +115,7 @@ public class tb_topicforumprocess {
      *
      * @mbg.generated
      */
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
@@ -113,7 +127,7 @@ public class tb_topicforumprocess {
      *
      * @mbg.generated
      */
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

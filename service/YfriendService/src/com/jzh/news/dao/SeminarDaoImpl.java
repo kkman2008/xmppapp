@@ -39,6 +39,7 @@ public class SeminarDaoImpl extends BaseDaoImpl {
 				seminarContent.setIsdelete(rs.getString("isdelete"));
 				seminarContent.setPhase(rs.getInt("phase") );
 				seminarContent.setManualorder(rs.getString("manualorder"));
+				seminarContent.setSpeechmode(rs.getInt("speechmode"));
 				list.add(seminarContent);
 			}
 
@@ -50,6 +51,27 @@ public class SeminarDaoImpl extends BaseDaoImpl {
 
 		}
 		return list; 
+	}
+	
+	public void UpdateSeminarTopicPhase(String topicID, String phase, String speechMode){
+		
+		conn = this.getYantaodbConnection();
+		try {
+			pstmt = conn
+					.prepareStatement("update tb_theme set phase=? , speechmode = ? where SubjectID='"
+							+ topicID + "'");
+
+			pstmt.setString(1, phase);
+			pstmt.setString(2, speechMode);
+
+			pstmt.executeUpdate();
+			System.out.println("状态已修改成功, topicID = " +topicID + ", phase =" + phase + ", speechMode =" + speechMode); 
+		} catch (SQLException e) { 
+			e.printStackTrace(); 
+		} finally {
+			this.closeAll(null, pstmt, conn);
+		}
+		
 	}
 
 }

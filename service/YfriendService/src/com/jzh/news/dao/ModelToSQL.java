@@ -78,6 +78,10 @@ public class ModelToSQL {
 		                      sb2.append("'");
 		                      sb2.append(value);
 		                      sb2.append("'");
+	                    }else if(field.getType().equals(Boolean.class)){
+	                    	  Boolean value = (Boolean) field.get(model);
+		                        sb2.append(",");
+		                        sb2.append(value);
 	                    }
                 	}
                 } else if (type == 2) {
@@ -103,6 +107,10 @@ public class ModelToSQL {
 	                      sb2.append("'");
 	                      sb2.append(value);
 	                      sb2.append("'");
+                    }else if(field.getType().equals(Boolean.class)){
+                  	  Boolean value = (Boolean) field.get(model);
+                      sb2.append(",");
+                      sb2.append(value);
                     }
                   }
                 }

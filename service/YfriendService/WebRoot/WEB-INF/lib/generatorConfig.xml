@@ -37,7 +37,7 @@
       <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
     <!-- table+ -->
-    <table schema="" tableName="tb_theme" domainObjectName="tb_theme" ></table>
+    <table schema="" tableName="tb_topicprocessuserpraise" domainObjectName="tb_topicprocessuserpraise" ></table>
 
   </context>
 </generatorConfiguration>
