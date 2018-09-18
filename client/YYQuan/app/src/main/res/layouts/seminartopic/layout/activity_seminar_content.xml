@@ -64,7 +64,7 @@
 
     <!--用viewpager切换正文和研讨内容-->
     <android.support.v4.view.ViewPager
-        android:id="@+id/news_content_vPager"
+        android:id="@+id/discuss_content_vPager"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="center"

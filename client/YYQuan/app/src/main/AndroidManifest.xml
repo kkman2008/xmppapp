@@ -193,15 +193,17 @@
         <activity android:name=".activity.ActivityUnitTest">
         </activity>
         <activity android:name=".activity.QuestionContentActivity">
-
         </activity>
         <activity android:name=".activity.MainQuestionListActivity">
 
         </activity>
         <!--设置APP版本在此处设定-->
+        <activity android:name=".activity.SeminarTopic.ActivitySeminarStartStop"></activity>
+        <activity android:name=".activity.SeminarTopic.TopicContentActivity"></activity>
         <activity
             android:name=".activity.LogoActivity"
             android:label="@string/app_name" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

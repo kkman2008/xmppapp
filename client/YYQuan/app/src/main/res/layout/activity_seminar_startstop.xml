@@ -77,6 +77,7 @@
             style="@style/setting_layout_style">
 
             <TextView
+                android:id="@+id/tv_seminar_title"
                 style="@style/setting_text_style"
                 android:text="研讨主题text"/>
         </FrameLayout>
@@ -99,6 +100,7 @@
             android:layout_height="120dp">
 
             <TextView
+                android:id="@+id/tv_seminar_content"
                 style="@style/setting_text_style"
                 android:text="主题内容text"/>
         </FrameLayout>
@@ -118,6 +120,12 @@
                 android:layout_marginRight="12dp"
                 android:layout_gravity="center_vertical|right"
                 android:orientation="vertical">
+                <Spinner
+                    android:id="@+id/spn_seminar_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"/>
                 <!--启停研讨按钮-->
                 <Button
                     android:id="@+id/btn_seminar_start"

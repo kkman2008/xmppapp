@@ -1,6 +1,7 @@
 package com.yyquan.jzh.fragment.seminartopic;
 /*
  * Created by JHL, 2018/9/12
+ * 具体子页的内容listview事件
  */
 
 import android.content.Intent;
@@ -25,8 +26,9 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.yyquan.jzh.R;
 import com.yyquan.jzh.activity.GlobalApplication;
-import com.yyquan.jzh.activity.QuestionContentActivity;
+import com.yyquan.jzh.activity.MainActivity;
 import com.yyquan.jzh.activity.SeminarTopic.ActivitySeminarStartStop;
+import com.yyquan.jzh.activity.SeminarTopic.TopicContentActivity;
 import com.yyquan.jzh.adapter.seminartopic.SeminarTopicListViewAdapter;
 import com.yyquan.jzh.entity.CommonConstant;
 import com.yyquan.jzh.entity.tb_theme;
@@ -240,7 +242,9 @@ public class SeminarTopicFragment  extends Fragment implements  View.OnClickList
                 intent.putExtra("seminar_item_content", list.get(position));
             }else {
                 // 已经开始的进行中的、已结束的，直接显示其内容
-                intent = new Intent(getActivity(), QuestionContentActivity.class);
+                intent = new Intent(getActivity(), TopicContentActivity.class);
+                intent.putExtra("user", ((MainActivity) this.getActivity()).user);
+                intent.putExtra("seminar_item_content", list.get(position));
             }
             startActivity(intent);
         }

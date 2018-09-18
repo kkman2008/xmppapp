@@ -260,7 +260,7 @@ public class titleFragment extends Fragment implements  View.OnClickListener, Ad
 
         if (position < list.size()) {
             Intent intent = new Intent(getActivity(), NewsContentActivity.class);
-            intent.putExtra("prolem_content", list.get(position));
+            intent.putExtra("news_content", list.get(position));
             intent.putExtra("user", ((MainActivity) this.getActivity()).user);
             intent.putExtra("url", news.getType_url());
             startActivity(intent);

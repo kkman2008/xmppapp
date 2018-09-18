@@ -46,6 +46,7 @@ import com.yyquan.jzh.fragment.friend.MessageFragment;
 import com.yyquan.jzh.fragment.luntan.LuntanFragment;
 import com.yyquan.jzh.fragment.news.NewsFragment;
 import com.yyquan.jzh.fragment.question.QuestionListFragment;
+import com.yyquan.jzh.fragment.seminartopic.SeminarListFragment;
 import com.yyquan.jzh.util.Base64Coder;
 import com.yyquan.jzh.util.ImageCompressUtils;
 import com.yyquan.jzh.util.PhotoSelectedHelper;
@@ -265,7 +266,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         tv_question.setOnClickListener(this);
         ll_to.setOnClickListener(this);
         // 默认选择在首页，选项卡
-        selection(6);
+        if( application.getAppVersionValue() == 1) {
+            selection(6);
+        }else{
+            selection(7);
+        }
+        //selection(2);
     }
 
     /**
@@ -530,7 +536,19 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
         Fragment fragment;
         switch (index) {
-
+            // 主题列表， 单一职能原则
+            case 7:
+                iv_addfriend.setVisibility(View.GONE);
+                tv_news.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.tab_comprehensive_pressed_icon, 0, 0);
+                tv_news.setTextColor(tv_news.getResources().getColor(R.color.title));
+                fragment = getSupportFragmentManager().findFragmentByTag("seminar_fragment");
+                if (fragment == null) {
+                    SeminarListFragment seminarListFragment = new SeminarListFragment();
+                    ft.add(R.id.fg_content, seminarListFragment, "seminar_fragment");
+                } else {
+                    ft.show(fragment);
+                }
+                break;
             // 问题列表， 单一职能原则
             case 6:
                 iv_addfriend.setVisibility(View.GONE);
@@ -622,7 +640,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 bannerImage.setVisibility(View.GONE);
                 break;
             case R.id.tv_news:  // now it's home page
-                selection(2);
+                // 默认选择在首页，选项卡
+                if( application.getAppVersionValue() == 1) {
+                    selection(6);
+                }else{
+                    selection(7);
+                }
                 bannerImage.setVisibility(View.VISIBLE);
                 break;
             // “我的” 则直接跳转到个人信息部分， 并标亮当前选项
@@ -638,8 +661,15 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 selection(0);
                 bannerImage.setVisibility(View.GONE);
                 break;
+                // 问题列表或研讨主题列表
             case R.id.tv_friend:
-                selection(2); // the theme list
+                // 默认选择在首页，选项卡
+                if( application.getAppVersionValue() == 1) {
+                    selection(6);
+                }else{
+                    selection(7);
+                }
+                // the theme list
                 initialImage();
                 tv_friend.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.tab_found_pressed_icon, 0, 0);
                 tv_friend.setTextColor(tv_friend.getResources().getColor(R.color.title));

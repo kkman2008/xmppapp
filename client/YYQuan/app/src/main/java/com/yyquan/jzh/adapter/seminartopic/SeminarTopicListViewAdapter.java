@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.yyquan.jzh.R;
 import com.yyquan.jzh.entity.tb_theme;
+import com.yyquan.jzh.util.DateTool;
 
 import java.util.ArrayList;
 
@@ -54,6 +55,7 @@ public class SeminarTopicListViewAdapter extends BaseAdapter {
             holder.iv_icon = (ImageView) convertView.findViewById(R.id.listview_item_imageview_icon);
             holder.tv_title = (TextView) convertView.findViewById(R.id.listview_item_textView_title);
             holder.tv_content = (TextView) convertView.findViewById(R.id.listview_item_textView_pinglun);
+            holder.tv_time = (TextView) convertView.findViewById(R.id.tv_seminar_topic_time);
             convertView.setTag(holder);
         }else{
             holder =(SeminarTopicListViewAdapter.ViewHolder) convertView.getTag();
@@ -65,12 +67,14 @@ public class SeminarTopicListViewAdapter extends BaseAdapter {
             questioContentHint = questioContentHint.substring(0,11) + "...";
         }
         holder.tv_content.setText(questioContentHint );
-
+        if( topiclist.get(position).getDisintegratortime() != null)
+           holder.tv_time.setText(DateTool.DateToString( topiclist.get(position).getDisintegratortime(), "yyyy-MM-dd"));
         return convertView;
     }
     private class ViewHolder {
         TextView tv_title;
         TextView tv_content;
         ImageView iv_icon;
+        TextView  tv_time;
     }
 }

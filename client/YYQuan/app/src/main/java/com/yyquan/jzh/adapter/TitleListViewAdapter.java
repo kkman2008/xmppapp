@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 /**
  * Created by jzh on 2018/8/27.
+ * 可参考 PingLunListViewAdapter
  */
 public class TitleListViewAdapter extends BaseAdapter {
 
@@ -71,17 +72,10 @@ public class TitleListViewAdapter extends BaseAdapter {
 
         }else{
             Picasso.with(context).load(((GlobalApplication) context.getApplicationContext()).ifURL +str[0]).resize(200,200).centerInside().placeholder(R.mipmap.aio_image_default_round).error(R.mipmap.aio_image_default_round).into(holder.iv_icon);
-
         }
 
         return convertView;
     }
-
-
-
-
-
-
 
     private class ViewHolder {
         TextView tv_title;

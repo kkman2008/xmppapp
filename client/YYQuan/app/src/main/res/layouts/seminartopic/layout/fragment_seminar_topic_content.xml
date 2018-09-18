@@ -12,12 +12,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/news_content_textView_title"
+                android:id="@+id/seminar_content_textView_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
-                android:text=""
+                android:text="文章标题"
                 android:textColor="@android:color/black"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -33,11 +33,11 @@
                     android:layout_marginRight="10dp"
                     android:text="" />
                 <TextView
-                    android:id="@+id/news_content_textView_time"
+                    android:id="@+id/seminar_content_textView_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="" />
+                    android:text="2018-09-11" />
             </LinearLayout>
             <ImageView
                 android:layout_width="match_parent"
@@ -51,6 +51,14 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_seminar_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Content"
+
+                    android:textSize="16dp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

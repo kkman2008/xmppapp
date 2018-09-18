@@ -1,6 +1,7 @@
 package com.yyquan.jzh.fragment.seminartopic;
 /*
  * Created by JHL, 2018/9/12
+ * 研讨主题，列表页分四个选项卡viewpager
  */
 
 import android.os.Bundle;

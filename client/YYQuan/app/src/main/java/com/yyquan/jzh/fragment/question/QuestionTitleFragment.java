@@ -167,7 +167,7 @@ public class QuestionTitleFragment extends Fragment implements  View.OnClickList
                     if (index == 0) {
                         mAdapter  = new QuestionTitleListViewAdapter(getActivity(), list);
                         mlistview.setAdapter(mAdapter);
-                        mlistview.deferNotifyDataSetChanged();
+                       // mlistview.deferNotifyDataSetChanged();
                         mRefreshLayout.setRefreshing(false);
                     } else {
                         mAdapter.setList(list);

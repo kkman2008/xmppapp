@@ -16,8 +16,8 @@
         </afterSyncTasks>
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
-        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
-        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/src/main/res" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res/layouts/seminartopic" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/src/main/res/layouts/seminartopic;file://$MODULE_DIR$/src/main/res" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
       </configuration>
     </facet>
@@ -63,6 +63,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/res/layouts/seminartopic" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/assets" type="java-resource" />
@@ -134,6 +135,7 @@
     <orderEntry type="library" name="Gradle: __local_aars__:D.\workspace\mobile\xmpp-master\client\YYQuan\app\libs\AMap_3DMap_v2.6.0_20150914.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:D.\workspace\mobile\xmpp-master\client\YYQuan\app\libs\AMap_Location_v1.4.1_20150917.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:D.\workspace\mobile\xmpp-master\client\YYQuan\app\libs\Xg_sdk_v2.39_20150915_1121.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: joda-time:joda-time:2.10@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.picasso:picasso:2.5.2@jar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:D.\workspace\mobile\xmpp-master\client\YYQuan\app\libs\MobLogCollector.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:D.\workspace\mobile\xmpp-master\client\YYQuan\app\libs\ShareSDK-Core-2.6.3.jar:unspecified@jar" level="project" />

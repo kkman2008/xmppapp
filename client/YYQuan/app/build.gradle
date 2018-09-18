@@ -24,6 +24,11 @@ android {
     sourceSets {
         main {
             jniLibs.srcDirs = ['jniLibs']
+//            每次都需要添加layout新加的目录
+            res.srcDirs = [
+                    'src/main/res/layouts/seminartopic',
+                    'src/main/res'
+            ]
         }
     }
 }
@@ -31,6 +36,7 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
+    compile'joda-time:joda-time:2.10'
     compile 'com.alibaba:fastjson:1.2.9'
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'

@@ -80,6 +80,8 @@ public class DoGetSeminar extends HttpServlet {
 			array.put("data", discusslist); 
 			String discussstr = JSONObject.toJSONString(array,SerializerFeature.WriteMapNullValue);  
 			out.print(discussstr);	
+			System.out.println(discussstr);
+			break;
 		// 研讨主题讨论表态
 		case "create_discuss_comment":
 			String jsonmodelcomment = request.getParameter("discusscomment"); 
@@ -90,10 +92,11 @@ public class DoGetSeminar extends HttpServlet {
 			array.put("code", "success");
 			array.put("msg", "有研讨主题讨论表态数据");
 			String topicprocessid = request.getParameter("topicprocessid"); 
-			List<tb_topicprocessuserpraise> commentlist = commentdaoimpl.getListbyTopicProcessID(topicprocessid);  
+			List<tb_topicprocessuserpraise> commentlist = commentdaoimpl.getListbyTopicProcessID(topicprocessid); 
 			array.put("data", commentlist); 
 			String discussstr1 = JSONObject.toJSONString(array,SerializerFeature.WriteMapNullValue);  
 			out.print(discussstr1);	
+			break;
 		default:
 			break;
 		}
