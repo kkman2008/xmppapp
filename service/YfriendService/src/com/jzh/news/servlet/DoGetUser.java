@@ -10,11 +10,15 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import net.sf.json.JSONObject;
 
@@ -22,9 +26,23 @@ import com.google.gson.Gson;
 import com.jzh.news.dao.UserDaoImpl;
 import com.jzh.news.entity.User;
 import com.jzh.news.util.Base64Coder;
-import com.jzh.news.xmpp.XmppTool;
+import com.jzh.news.util.LogFactory;
+import com.jzh.news.util.LogUtil;
+import com.jzh.news.xmpp.XmppTool; 
 
 public class DoGetUser extends HttpServlet {
+	private static final Logger llog = LoggerFactory.getLogger("MainLogger");
+    private static java.util.logging.Logger log = java.util.logging.Logger.getLogger(DoGetUser.class.getName());
+    
+    // 自定义的全局log
+    private static java.util.logging.Logger jdklog = LogFactory.getGlobalLog();
+    // Jdk1.7以后自带的全局log（后面我添加了FileHandler，用于写入文件日志）
+    private static java.util.logging.Logger sysLog = java.util.logging.Logger.getGlobal();
+
+    static {
+//由于jdk自带的全局log没有写入文件的功能，这里手动添加了文件handler
+LogUtil.addFileHandler(sysLog, Level.INFO, LogFactory.LOG_FOLDER + File.separator + "sys.log");
+    }
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -34,7 +52,9 @@ public class DoGetUser extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		log.info("调用用户接口，call DoGetUser ...");
+		llog.info("调用用户接口，call DoGetUser ...");
+		jdklog.info("jdk log util, 调用用户接口，call DoGetUser ...");
 		response.setCharacterEncoding("utf-8");
 		request.setCharacterEncoding("utf-8");
 
@@ -47,7 +67,8 @@ public class DoGetUser extends HttpServlet {
 		if (action.equals("login")) {// 用户登录
 			String user = request.getParameter("user");
 			String password = request.getParameter("password");
-
+			System.out.println("user = "+ user);
+			System.out.println("password = "+ password);
 			List<User> list = new ArrayList<User>();
 			if (password.equals("QQSJHAAJSHAJSH")) {
 				list = ndi.Search(user);

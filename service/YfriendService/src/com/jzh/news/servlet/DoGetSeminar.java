@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,6 +19,7 @@ import net.sf.json.JSONArray;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.jzh.news.dao.ModelToSQL;
 import com.jzh.news.dao.News_pinglunDaoImpl;
 import com.jzh.news.dao.QuestionDaoImpl;
 import com.jzh.news.dao.SeminarDaoImpl;
@@ -31,6 +33,9 @@ import com.jzh.news.entity.tb_topicprocessuserpraise;
 
 @WebServlet("/DoGetSeminar")
 public class DoGetSeminar extends HttpServlet {
+	
+    private static Logger log = Logger.getLogger(DoGetSeminar.class.getName());
+    
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -40,6 +45,7 @@ public class DoGetSeminar extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("开始查询研讨主题...");
+		log.info("开始查询研讨主题...");
 		response.setCharacterEncoding("utf-8");
 		request.setCharacterEncoding("utf-8");
 		String action = request.getParameter("action");
@@ -70,6 +76,7 @@ public class DoGetSeminar extends HttpServlet {
 		// 研讨主题讨论	
 		case "create_seminar_topic_discuss":
 			String jsonmodel = request.getParameter("seminardiscuss"); 
+			System.out.println("jsonmodel =" + jsonmodel);
 			tb_topicforumprocess seminardiscuss = (tb_topicforumprocess)JSON.parseObject(jsonmodel, tb_topicforumprocess.class);
 			discussdaoimpl.CreateQuestion(seminardiscuss);
 			break;

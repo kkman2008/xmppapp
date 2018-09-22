@@ -8,7 +8,8 @@ public class ModelToSQL {
     public static final int INSERTSQL = 1;
     public static final int UPDATESQL = 2;
     private static Logger log = Logger.getLogger(ModelToSQL.class.getName());
-
+    
+    
     /**
      * ªÒ»°InsertSQL
      * 

@@ -1,5 +1,9 @@
 package com.jzh.news.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
 public class tb_domain {
     /**
      *
@@ -8,6 +12,7 @@ public class tb_domain {
      *
      * @mbg.generated
      */
+	@Column(name="domainid")
     private String domainid;
 
     /**
@@ -17,6 +22,7 @@ public class tb_domain {
      *
      * @mbg.generated
      */
+	@Column(name="name")
     private String name;
 
     /**
@@ -26,6 +32,7 @@ public class tb_domain {
      *
      * @mbg.generated
      */
+	@Column(name="isdelete")
     private String isdelete;
 
     /**
@@ -35,6 +42,7 @@ public class tb_domain {
      *
      * @mbg.generated
      */
+	@Column(name="represent")
     private String represent;
 
     /**

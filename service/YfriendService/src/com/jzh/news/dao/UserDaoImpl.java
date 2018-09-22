@@ -30,7 +30,7 @@ public class UserDaoImpl extends BaseDaoImpl {
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				User content = new User();
-				content.setId(rs.getInt("UserID"));
+				content.setId(rs.getString("UserID"));
 				content.setUser(rs.getString("Account"));
 				content.setPassword(rs.getString("password"));
 				//content.setQq(rs.getString("qq"));
@@ -69,7 +69,7 @@ public class UserDaoImpl extends BaseDaoImpl {
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				content = new User();
-				content.setId(rs.getInt("UserID"));
+				content.setId(rs.getString("UserID"));
 				content.setUser(rs.getString("Account"));
 				//content.setQq(rs.getString("qq"));
 				content.setIcon(rs.getString("HeadImagePath"));
@@ -133,13 +133,15 @@ public class UserDaoImpl extends BaseDaoImpl {
 		conn = this.getYantaodbConnection();
 		User content = null;
 		try {
-
-			pstmt = conn.prepareStatement("select * from tb_user where user='"
-					+ user + "'");
+// the account as the login id
+			String sqlstr = "select * from tb_user where Account='"
+					+ user + "'";
+			System.out.println("sqlstr = " + sqlstr);
+			pstmt = conn.prepareStatement(sqlstr);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				content = new User();
-				content.setId(rs.getInt("UserID"));
+				content.setId(rs.getString("UserID"));
 				content.setUser(rs.getString("Account"));
 				content.setPassword(rs.getString("password"));
 				content.setQq(rs.getString("qq"));
@@ -179,7 +181,7 @@ public class UserDaoImpl extends BaseDaoImpl {
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				content = new User();
-				content.setId(rs.getInt("UserID"));
+				content.setId(rs.getString("UserID"));
 				content.setUser(rs.getString("Account"));
 				content.setPassword(rs.getString("password"));
 				content.setQq(rs.getString("qq"));
@@ -194,12 +196,10 @@ public class UserDaoImpl extends BaseDaoImpl {
 
 			}
 
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+		} catch (SQLException e) { 
 			e.printStackTrace();
 		} finally {
 			this.closeAll(rs, pstmt, conn);
-
 		}
 		return list;
 
