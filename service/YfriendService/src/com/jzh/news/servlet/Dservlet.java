@@ -15,10 +15,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
  
+
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.IOUtils;
+
+import com.jzh.news.util.jdkLog;
  
  
 @WebServlet("/Dservlet")
@@ -30,7 +33,10 @@ public class Dservlet extends HttpServlet {
 
  
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-     // 1. 创建配置工厂
+    	
+    	System.out.println("Start file uploading...");
+    	jdkLog.log.info("Start file uploading...");
+    	// 1. 创建配置工厂
         DiskFileItemFactory factory = new DiskFileItemFactory();
         // 2. 根据配置工厂创建解析请求中文件上传内容的解析器
         ServletFileUpload upload = new ServletFileUpload(factory);
@@ -84,8 +90,8 @@ public class Dservlet extends HttpServlet {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            jdkLog.log.info(e.toString());
         }       
-
     }    
 }
 @WebServlet("/Dservlet1")

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="GBK">
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/dao/ModelToSQL.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/dao/News_luntanDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/dao/News_pinglunDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/dao/News_typeDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/dao/QuestionDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/dao/SeminarDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/dao/SeminarDicussCommentDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/dao/SeminarDiscussProccessDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/dao/UserDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/servlet/DoGetContent.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/servlet/DoGetSeminar.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/servlet/Dservlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/jzh/news/testComponent.java" charset="GBK" />
+  </component>
+</project>

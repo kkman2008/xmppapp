@@ -28,21 +28,12 @@ import com.jzh.news.entity.User;
 import com.jzh.news.util.Base64Coder;
 import com.jzh.news.util.LogFactory;
 import com.jzh.news.util.LogUtil;
+import com.jzh.news.util.jdkLog;
 import com.jzh.news.xmpp.XmppTool; 
 
-public class DoGetUser extends HttpServlet {
-	private static final Logger llog = LoggerFactory.getLogger("MainLogger");
-    private static java.util.logging.Logger log = java.util.logging.Logger.getLogger(DoGetUser.class.getName());
-    
-    // 自定义的全局log
-    private static java.util.logging.Logger jdklog = LogFactory.getGlobalLog();
-    // Jdk1.7以后自带的全局log（后面我添加了FileHandler，用于写入文件日志）
-    private static java.util.logging.Logger sysLog = java.util.logging.Logger.getGlobal();
+public class DoGetUser extends HttpServlet { 
 
-    static {
-//由于jdk自带的全局log没有写入文件的功能，这里手动添加了文件handler
-LogUtil.addFileHandler(sysLog, Level.INFO, LogFactory.LOG_FOLDER + File.separator + "sys.log");
-    }
+ 
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -51,13 +42,14 @@ LogUtil.addFileHandler(sysLog, Level.INFO, LogFactory.LOG_FOLDER + File.separato
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		log.info("调用用户接口，call DoGetUser ...");
-		llog.info("调用用户接口，call DoGetUser ...");
-		jdklog.info("jdk log util, 调用用户接口，call DoGetUser ...");
+			throws ServletException, IOException { 
+		jdkLog.log.info("调用用户接口，call DoGetUser ...");
+		jdkLog.log.info("jdk log util, 调用用户接口，call DoGetUser ...");
 		response.setCharacterEncoding("utf-8");
 		request.setCharacterEncoding("utf-8");
 
+		try
+		{
 		String action = request.getParameter("action");
 		PrintWriter out = response.getWriter();
 		JSONObject array = new JSONObject();
@@ -69,6 +61,9 @@ LogUtil.addFileHandler(sysLog, Level.INFO, LogFactory.LOG_FOLDER + File.separato
 			String password = request.getParameter("password");
 			System.out.println("user = "+ user);
 			System.out.println("password = "+ password);
+			jdkLog.log.info("action =" + action );
+			jdkLog.log.info("user = "+ user);
+			jdkLog.log.info("password = "+ password);
 			List<User> list = new ArrayList<User>();
 			if (password.equals("QQSJHAAJSHAJSH")) {
 				list = ndi.Search(user);
@@ -87,6 +82,11 @@ LogUtil.addFileHandler(sysLog, Level.INFO, LogFactory.LOG_FOLDER + File.separato
 				System.out.println("\n用户名：" + user + "\n在" + time + "登录了");
 				array.put("code", "success");
 				array.put("msg", "登录成功");
+				// [tbd]针对后台开通的帐号，检查openfire里是否有数据，如果没有就创建. 这是种偷懒的方法，已注册的，返回冲突的exception
+//				try{
+//					XmppTool.create(list.get(0));
+//				}catch(Exception e){}
+				
 				array.put("data", list.get(0));
 			}
 
@@ -251,8 +251,11 @@ LogUtil.addFileHandler(sysLog, Level.INFO, LogFactory.LOG_FOLDER + File.separato
 		}
 
 		out.print(array);
-
 		out.flush();
 		out.close();
+		}catch(Exception e){
+			e.printStackTrace();
+			jdkLog.log.info(e.toString());
+		}
 	}
 }

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.UUID;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,6 +19,8 @@ import org.apache.commons.fileupload.RequestContext;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.fileupload.servlet.ServletRequestContext;
+
+import com.jzh.news.util.jdkLog;
 
 /**
  * Servlet implementation class UploadServlet
@@ -45,40 +48,54 @@ public class UploadServlet extends HttpServlet {
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Start to receive file...");
-		RequestContext req = new ServletRequestContext(request);
-		if (FileUpload.isMultipartContent(req)) {
-			DiskFileItemFactory factory = new DiskFileItemFactory();
-			ServletFileUpload fileUpload = new ServletFileUpload(factory);
-			fileUpload.setFileSizeMax(1024 * 1024 * 1024);
-
-			List items = new ArrayList();
-			try {
-				items = fileUpload.parseRequest(request);
-			} catch (Exception e) {
-				e.printStackTrace(); 
-			}
-
-			Iterator it = items.iterator();
-			while (it.hasNext()) {
-				FileItem fileItem = (FileItem) it.next();
-				if (fileItem.isFormField()) {
-					System.out.println(fileItem.getFieldName() + " " + fileItem.getName() + " " + new String(fileItem.getString().getBytes("ISO-8859-1"), "GBK"));
-				} else {
-					System.out.println(fileItem.getFieldName() + " " + fileItem.getName() + " " + fileItem.isInMemory() + " " + fileItem.getContentType() + " " + fileItem.getSize());
-					if (fileItem.getName() != null && fileItem.getSize() != 0) {
-						File fullFile = new File(fileItem.getName());
-						File newFile = new File("d:\\upload\\" + fullFile.getName());
-						try {
-							fileItem.write(newFile);
-							System.out.println("File uploaded...");
-						} catch (Exception e) {
-							e.printStackTrace(); 
-						}
+		jdkLog.log.info("Start file uploading...");
+		try{
+			RequestContext req = new ServletRequestContext(request);
+			if (FileUpload.isMultipartContent(req)) {
+				String filenameuuid = request.getParameter("filenameuuid");
+				
+				DiskFileItemFactory factory = new DiskFileItemFactory();
+				ServletFileUpload fileUpload = new ServletFileUpload(factory);
+				fileUpload.setFileSizeMax(1024 * 1024 * 1024);
+	
+				List items = new ArrayList();
+				try {
+					items = fileUpload.parseRequest(request);
+				} catch (Exception e) {
+					e.printStackTrace(); 
+					jdkLog.log.info(e.toString());
+				}
+	
+				Iterator it = items.iterator();
+				while (it.hasNext()) {
+					FileItem fileItem = (FileItem) it.next();
+					if (fileItem.isFormField()) {
+						System.out.println(fileItem.getFieldName() + " " + fileItem.getName() + " " + new String(fileItem.getString().getBytes("ISO-8859-1"), "GBK"));
 					} else {
-						System.out.println("no file choosen or empty file");
+						System.out.println(fileItem.getFieldName() + " " + fileItem.getName() + " " + fileItem.isInMemory() + " " + fileItem.getContentType() + " " + fileItem.getSize());
+						if (fileItem.getName() != null && fileItem.getSize() != 0) { 
+							String fileExtension =  "";
+							if(filenameuuid == null || ("").equals(filenameuuid)){
+								filenameuuid = UUID.randomUUID().toString();
+								int i   = fileItem.getName().lastIndexOf(".");
+							    fileExtension = fileItem.getName().substring(i);
+							}
+							File newFile = new File("D:\\yantaosoftware\\" + filenameuuid +  fileExtension); 
+							try {
+								fileItem.write(newFile);
+								System.out.println("File uploaded...");
+							} catch (Exception e) {
+								e.printStackTrace(); 
+							}
+						} else {
+							System.out.println("no file choosen or empty file");
+						}
 					}
 				}
 			}
+		}catch(Exception e){
+			e.printStackTrace();
+			jdkLog.log.info(e.toString());
 		}
 	}
 

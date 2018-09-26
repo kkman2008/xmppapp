@@ -1,21 +1,18 @@
 package com.jzh.news.xmpp;
 
 import java.util.HashMap;
-
 import java.util.Map;
 
 import org.jivesoftware.smack.AccountManager;
-
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.ConnectionConfiguration;
-
 import org.jivesoftware.smack.Roster;
-
 import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
 
 import com.google.gson.Gson;
 import com.jzh.news.entity.User;
+import com.jzh.news.util.jdkLog;
 
 /**
  * <b>function:</b> 利用Smack框架完成 XMPP 协议通信
@@ -63,7 +60,7 @@ public class XmppTool {
 
 			Map<String, String> map = new HashMap<String, String>();
 			map.put("name", strs);
-			map.put("email", "admin@jzh.com");
+			map.put("email", "113531420@qq.com");
 			accountManager.createAccount(userAttributeFilter.getUser(), pswd,
 					map);
 			System.out.println(user.getUser() + "\t" + pswd + "在xmpp注册成功");
@@ -71,7 +68,7 @@ public class XmppTool {
 			/** 修改密码 */
 			// accountManager.changePassword("abc");
 		} catch (XMPPException e) {
-
+			jdkLog.log.info(e.toString());
 			e.printStackTrace();
 			return true;
 		}

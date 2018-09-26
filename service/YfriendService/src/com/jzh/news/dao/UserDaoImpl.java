@@ -6,10 +6,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import com.jzh.news.entity.News_content;
 import com.jzh.news.entity.News_pinglun;
 import com.jzh.news.entity.User;
+import com.jzh.news.util.jdkLog;
 
 public class UserDaoImpl extends BaseDaoImpl {
 	List<User> list = new ArrayList<User>();
@@ -214,21 +216,22 @@ public class UserDaoImpl extends BaseDaoImpl {
 		conn = this.getYantaodbConnection();
 		try {
 			pstmt = conn
-					.prepareStatement("insert into tb_user(Account,password,qq,HeadImagePath,name,city,sex,years,location,qianming)values(?,?,?,?,?,?,?,?,?,?)");
-			pstmt.setString(1, user.getUser());
-			pstmt.setString(2, user.getPassword());
-			pstmt.setString(3, user.getQq());
-			pstmt.setString(4, user.getIcon());
-			pstmt.setString(5, user.getNickname());
-			pstmt.setString(6, user.getCity());
-			pstmt.setString(7, user.getSex());
-			pstmt.setString(8, user.getYears());
-			pstmt.setString(9, user.getLocation());
-			pstmt.setString(10, user.getQianming());
+					.prepareStatement("insert into tb_user(UserID, Account,password,qq,HeadImagePath,name,city,sex,years,location,qianming)values(?,?,?,?,?,?,?,?,?,?,?)");
+			pstmt.setString(1, UUID.randomUUID().toString());
+			pstmt.setString(2, user.getUser());
+			pstmt.setString(3, user.getPassword());
+			pstmt.setString(4, user.getQq());
+			pstmt.setString(5, user.getIcon());
+			pstmt.setString(6, user.getNickname());
+			pstmt.setString(7, user.getCity());
+			pstmt.setString(8, user.getSex());
+			pstmt.setString(9, user.getYears());
+			pstmt.setString(10, user.getLocation());
+			pstmt.setString(11, user.getQianming());
 			pstmt.executeUpdate();
 			return true;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			jdkLog.log.info(e.toString());
 			e.printStackTrace();
 			return false;
 		} finally {
