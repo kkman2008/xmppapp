@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="#000000"
 
-    tools:context="com.yyquan.jzh.activity.ShowImageActivity">
+    tools:context="com.yyquan.zkzx.activity.ShowImageActivity">
 
     <ImageView
 

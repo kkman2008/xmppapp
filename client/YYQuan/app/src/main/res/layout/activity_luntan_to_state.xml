@@ -99,7 +99,7 @@
                 android:orientation="vertical">
 
 
-                <com.yyquan.jzh.view.NoScrollGridView
+                <com.yyquan.zkzx.view.NoScrollGridView
                     android:id="@+id/luntan_state_gridview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

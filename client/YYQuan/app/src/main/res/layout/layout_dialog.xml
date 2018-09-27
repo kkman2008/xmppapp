@@ -10,7 +10,7 @@
     android:layout_height="match_parent">
 
 
-    <com.yyquan.jzh.view.loadingview.LoadingView
+    <com.yyquan.zkzx.view.loadingview.LoadingView
         android:id="@+id/loadView"
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"

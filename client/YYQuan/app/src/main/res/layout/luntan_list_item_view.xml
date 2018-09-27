@@ -13,7 +13,7 @@
         android:layout_height="256dp"
         android:background="@mipmap/luntan_back">
 
-        <com.yyquan.jzh.view.CircleImageView
+        <com.yyquan.zkzx.view.CircleImageView
             android:id="@+id/luntan_imageview_icon"
             android:layout_width="70dp"
             android:layout_height="70dp"

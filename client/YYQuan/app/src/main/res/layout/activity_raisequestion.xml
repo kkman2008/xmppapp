@@ -73,10 +73,10 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/selector_login_edittext"
-        android:drawableLeft="@mipmap/denglu_tb1"
+        android:drawableLeft="@mipmap/tab_comprehensive_icon"
         android:hint="标题"
         android:inputType="text"
-        android:maxLength="11"
+        android:maxLength="56"
         android:padding="10dp" />
 
     <TextView
@@ -90,7 +90,7 @@
         android:id="@+id/et_questionContent"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_gravity="center_horizontal"
+        android:gravity="top"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
@@ -119,7 +119,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:visibility="gone"
         android:orientation="horizontal">
 
         <TextView
@@ -130,19 +129,26 @@
             android:text="背景资料:" />
 
         <ImageView
+            android:id="@+id/iv_browse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
             android:background="@mipmap/folder" />
 
         <Button
             android:id="@+id/buttonBrowseFile"
             android:layout_width="wrap_content"
-            android:layout_height="30dip"
+            android:layout_height="40dp"
             android:layout_gravity="top"
             android:layout_marginLeft="5dp"
-            android:background="@drawable/selector_button"
             android:text="选取文件"></Button>
+        <TextView
+            android:id="@+id/tv_filename"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:text=""
+            />
     </LinearLayout>
 
     <Button

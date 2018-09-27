@@ -84,12 +84,15 @@
             android:layout_height="fill_parent"
             android:text="2"/>
             <!--1-问题端APP； 2-研讨端APP-->
+        <!--android:text="39.108.118.37"-->
         <TextView
             android:id="@+id/tv_server_ip"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:visibility="gone"
-            android:text="192.168.1.103"/>
+            android:text="192.168.43.150"
+            />
+
         <TextView
             android:id="@+id/tv_server_port"
             android:layout_width="wrap_content"

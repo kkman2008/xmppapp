@@ -1,7 +1,7 @@
 # 1、 protocol test
       http://127.0.0.1:8080/YfriendService/DoGetUser?user=jim&password=123&action=login
       所有的IP和Port，现在的程序可配置的。
-      
+
 # 2、 一些code说明与备注
     原资讯list，默认部分为newsFragment
     1. newsFragment里面含有viewpager
@@ -15,4 +15,14 @@
      http://localhost:8080/YfriendService/DoGetSeminar?action=get_seminar_discuss_list&discusstype=327e2fb7-2c3c-4d64-bbc5-0f00ae80d2bd
     
       -1 全部，0 未开始，1进行中，2已结束
+
+-----
+ extension日志
+  1.   - [x] 用户问题，附件问题
+  2.  研讨主题，与研讨组关系
+  3.  研讨过程，用户问题状态问题
+  4.  开始研讨无响应问题
+
+
+      
     

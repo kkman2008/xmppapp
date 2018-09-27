@@ -31,7 +31,7 @@
                 android:layout_gravity="center"
                 android:gravity="center">
 
-                <com.yyquan.jzh.view.CircleImageView
+                <com.yyquan.zkzx.view.CircleImageView
 
                     android:id="@+id/me_icon"
                     android:layout_width="60dp"

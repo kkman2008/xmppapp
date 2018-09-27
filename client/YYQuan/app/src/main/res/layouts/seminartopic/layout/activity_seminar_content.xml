@@ -93,14 +93,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-
             <EditText
                 android:id="@+id/news_content_editText_pinglun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="4"
-
                 android:background="@drawable/shape_edittext"
                 android:hint="我也说两句"
                 android:padding="8dp"
@@ -108,7 +106,7 @@
 
 
             <TextView
-                android:id="@+id/news_content_text_enterpinglun"
+                android:id="@+id/tv_update_discuss"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -134,14 +132,18 @@
             android:gravity="end"
             android:orientation="horizontal">
 
+            <Spinner
+                android:id="@+id/spn_discuss_type"
+                android:layout_width="259dp"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" />
             <TextView
-                android:id="@+id/news_content_text_showpinglun"
+                android:id="@+id/tv_switch_content_discuss"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-
-
                 android:layout_gravity="center"
                 android:background="@drawable/shape_edittext"
                 android:drawableRight="@mipmap/comment_lajiao2_icon"

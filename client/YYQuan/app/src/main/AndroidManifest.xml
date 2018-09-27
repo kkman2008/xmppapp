@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.yyquan.jzh">
+    package="com.yyquan.zkzx">
 
     <!-- 高德定位权限开始 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -175,7 +175,7 @@
             android:name="com.tencent.android.tpush.rpc.XGRemoteService"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.yyquan.jzh.PUSH_ACTION" />
+                <action android:name="com.yyquan.zkzx.PUSH_ACTION" />
             </intent-filter>
         </service>
 
@@ -289,13 +289,13 @@
         </service>
 
         <provider
-            android:name="com.yyquan.jzh.xmpp.XmppContentProvider"
-            android:authorities="com.yyquan.jzh.xmpp"
+            android:name="com.yyquan.zkzx.xmpp.XmppContentProvider"
+            android:authorities="com.yyquan.zkzx.xmpp"
             android:exported="true" />
 
         <provider
-            android:name="com.yyquan.jzh.xmpp.XmppFriendMessageProvider"
-            android:authorities="com.yyquan.jzh.xmpp.chat"
+            android:name="com.yyquan.zkzx.xmpp.XmppFriendMessageProvider"
+            android:authorities="com.yyquan.zkzx.xmpp.chat"
             android:exported="true" />
     </application>
 

@@ -21,7 +21,7 @@
 
             android:orientation="horizontal">
 
-            <com.yyquan.jzh.view.CircleImageView
+            <com.yyquan.zkzx.view.CircleImageView
                 android:id="@+id/listview_pinglun_item_imageview_icon"
                 android:layout_width="45dp"
                 android:layout_height="45dp"

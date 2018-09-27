@@ -6,7 +6,7 @@
     android:background="@drawable/while_blue"
     android:padding="5dp">
 
-    <com.yyquan.jzh.view.CircleImageView
+    <com.yyquan.zkzx.view.CircleImageView
         android:id="@+id/fragment_message_imageview_icon"
         android:layout_width="45dp"
         android:layout_height="45dp"
@@ -48,7 +48,7 @@
         android:layout_alignTop="@+id/fragment_message_textView_title"
          />
 
-    <com.yyquan.jzh.view.BadgeView
+    <com.yyquan.zkzx.view.BadgeView
         android:id="@+id/tv_tishi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

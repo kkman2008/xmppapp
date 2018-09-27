@@ -16,7 +16,7 @@
             android:text="智库研讨"
             android:textSize="18dp" />
     </RelativeLayout>
-    <com.yyquan.jzh.view.ResizableImageView
+    <com.yyquan.zkzx.view.ResizableImageView
        android:layout_width="fill_parent"
        android:layout_height="150dp"
        android:background="@mipmap/banner"

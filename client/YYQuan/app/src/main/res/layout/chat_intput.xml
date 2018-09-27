@@ -7,7 +7,7 @@
 
     android:padding="10dp">
 
-    <com.yyquan.jzh.view.CircleImageView
+    <com.yyquan.zkzx.view.CircleImageView
         android:id="@+id/iv_icon"
         android:layout_width="45dp"
         android:layout_height="45dp"

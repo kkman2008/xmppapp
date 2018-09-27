@@ -39,7 +39,7 @@
 
                         android:orientation="horizontal">
 
-                        <com.yyquan.jzh.view.CircleImageView
+                        <com.yyquan.zkzx.view.CircleImageView
                             android:id="@+id/show_luntan_imageview_icon"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -87,7 +87,7 @@
                                 android:textColor="#000000"
                                 android:textSize="15dp" />
 
-                            <com.yyquan.jzh.view.NoScrollGridView
+                            <com.yyquan.zkzx.view.NoScrollGridView
                                 android:id="@+id/show_luntan_gridview"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
                     />
 
 
-                <com.yyquan.jzh.view.MyListView
+                <com.yyquan.zkzx.view.MyListView
                     android:id="@+id/show_luntan_listview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -149,7 +149,7 @@
                     android:divider="@null"
                     android:scrollbars="none">
 
-                </com.yyquan.jzh.view.MyListView>
+                </com.yyquan.zkzx.view.MyListView>
 
 
             </LinearLayout>

@@ -3,43 +3,33 @@
 
     <item
         is-multidex="false"
-        jar="D:\workspace\mobile\xmpp-master\client\YYQuan\multi-image-selector\build\intermediates\intermediate-jars\release\classes.jar"
+        jar="D:\workspace\mobile\xmpp-master\client\YYQuan\multi-image-selector\build\intermediates\intermediate-jars\free\release\classes.jar"
         jumboMode="false"
-        min-sdk-version="15"
+        min-sdk-version="16"
         optimize="true"
         revision="27.0.3"
-        sha1="ca9ca5645387b39dd0cba59716481c19e03aa648">
-        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\release\34.jar" />
+        sha1="7701449981998a5517891c7d043563dcfa772bd7">
+        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\free\release\38.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Jaylon\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.9.1\84b4b7d1c4a238e7899972b7446c250691e65f1f\okhttp-3.9.1.jar"
+        jar="D:\workspace\mobile\xmpp-master\client\YYQuan\multi-image-selector\build\intermediates\intermediate-jars\pro\release\classes.jar"
         jumboMode="false"
-        min-sdk-version="15"
+        min-sdk-version="16"
         optimize="true"
         revision="27.0.3"
-        sha1="84b4b7d1c4a238e7899972b7446c250691e65f1f">
-        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\release\35.jar" />
+        sha1="d54267233e670b45ec06e44b80072edcac6adda1">
+        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\pro\release\38.jar" />
     </item>
     <item
         is-multidex="false"
         jar="D:\workspace\mobile\xmpp-master\client\YYQuan\app\libs\wup-1.0.0-SNAPSHOT.jar"
         jumboMode="false"
-        min-sdk-version="15"
+        min-sdk-version="16"
         optimize="true"
         revision="27.0.3"
         sha1="a0845068801a0b9a3a144b7cf57cb650b3d467e5">
-        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\release\14.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Jaylon\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
-        jumboMode="false"
-        min-sdk-version="15"
-        optimize="true"
-        revision="27.0.3"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\release\36.jar" />
+        <dex dex="D:\workspace\mobile\xmpp-master\client\YYQuan\app\build\intermediates\transforms\preDex\pro\release\14.jar" />
     </item>
 
 </items>

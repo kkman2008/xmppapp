@@ -6,7 +6,7 @@
     android:background="@drawable/while_blue"
     android:padding="5dp">
 
-    <com.yyquan.jzh.view.CircleImageView
+    <com.yyquan.zkzx.view.CircleImageView
         android:id="@+id/imageview_icon"
         android:layout_width="45dp"
         android:layout_height="45dp"

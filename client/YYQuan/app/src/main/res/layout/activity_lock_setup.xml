@@ -5,7 +5,7 @@
     android:background="@mipmap/shoushiback"
     android:orientation="vertical" >
 
-    <com.yyquan.jzh.view.LockView.LockPatternView
+    <com.yyquan.zkzx.view.LockView.LockPatternView
         android:id="@+id/lock_pattern"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
