@@ -56,7 +56,7 @@
         android:background="@drawable/selector_login_edittext"
         android:drawableLeft="@mipmap/ifc"
         android:maxLength="8"
-        android:hint="请输入昵称"
+        android:hint="请输入姓名"
         android:padding="10dp" />
 
 

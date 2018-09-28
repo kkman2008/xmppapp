@@ -27,6 +27,7 @@ android {
 //            每次都需要添加layout新加的目录
             res.srcDirs = [
                     'src/main/res/layouts/seminartopic',
+                    'src/main/res/layouts/personal',
                     'src/main/res'
             ]
         }

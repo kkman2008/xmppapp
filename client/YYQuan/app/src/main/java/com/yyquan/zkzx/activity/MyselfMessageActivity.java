@@ -11,6 +11,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -19,8 +20,10 @@ import android.widget.Toast;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.squareup.picasso.Picasso;
 import com.yyquan.zkzx.R;
 import com.yyquan.zkzx.entity.User;
+import com.yyquan.zkzx.entity.tb_user;
 import com.yyquan.zkzx.util.SaveUserUtil;
 import com.yyquan.zkzx.view.DataPickerView.OptionsPopupWindow;
 import com.yyquan.zkzx.view.DataPickerView.TimePopupWindow;
@@ -32,8 +35,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import cz.msebera.android.httpclient.Header;
-
 
 public class MyselfMessageActivity extends Activity implements View.OnClickListener {
 
@@ -59,20 +63,44 @@ public class MyselfMessageActivity extends Activity implements View.OnClickListe
     TimePopupWindow pwTime;
     OptionsPopupWindow pwOptions;
     private ArrayList<String> options1Items = new ArrayList<String>();
+    String TAG = "MyselfMessageActivity";
 
+    @Bind(R.id.iv_user_icon)
+    ImageView iv_user_icon;
+    @Bind(R.id.tv_userinfo_job)
+    TextView tvUserInfoJob;
+    @Bind(R.id.tv_userinfo_company_content)
+    TextView tvUserCompany;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        url = ((GlobalApplication) getApplication()).ifURL +   "/YfriendService/DoGetUser";
+        url = ((GlobalApplication) getApplication()).ifURL +   "/YfriendService/DoGetUserPro";
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_myself_message);
+        ButterKnife.bind(this);
         initialView();
-        getData();
-
+        getDataPro();
     }
 
-
+    private void getDataPro()
+    {
+        tb_user user = ((GlobalApplication) getApplication()).globalUser;
+        tv_id.setText(user.getUserid());
+        tv_nickname.setText(user.getName());
+        tv_sex.setText(user.getSex());
+        tv_years.setText(user.getYears());
+        tv_qq.setText(user.getQq());
+        tvUserInfoJob.setText(user.getJob());
+        tvUserCompany.setText(user.getCompany());
+        String iconurl = "";
+        if (user.getHeadimagepath().substring(0, 4).equals("http")) {
+            iconurl = user.getHeadimagepath();
+        }else{
+            iconurl = ((GlobalApplication) getApplication()).ip_icon + user.getHeadimagepath();
+        }
+        Picasso.with(MyselfMessageActivity.this).load(iconurl).resize(200, 200).centerInside().into(iv_user_icon);
+    }
     private void initialView() {
         bool = false;
         users = SaveUserUtil.loadAccount(this);
@@ -153,12 +181,12 @@ public class MyselfMessageActivity extends Activity implements View.OnClickListe
                         JSONObject object = new JSONObject(str);
                         if (object.getString("code").equals("success")) {
                             object = object.getJSONObject("data");
-                            users.setNickname(object.getString("nickname"));
+                            users.setNickname(object.getString("name"));
                             users.setSex(object.getString("sex"));
                             users.setYears(object.getString("years"));
                             users.setQq(object.getString("qq"));
                             users.setQianming(object.getString("qianming"));
-                            tv_id.setText(object.getInt("id") + "");
+                            tv_id.setText(object.getString("id") + "");
                             tv_nickname.setText(users.getNickname());
                             tv_sex.setText(users.getSex());
                             tv_years.setText(users.getYears());
@@ -187,7 +215,7 @@ public class MyselfMessageActivity extends Activity implements View.OnClickListe
                 contentView = new EditText(this);
                 contentView.setGravity(Gravity.CENTER);
 
-                mMaterialDialog = new AlertDialog.Builder(this).setTitle("修改昵称").setView(contentView);
+                mMaterialDialog = new AlertDialog.Builder(this).setTitle("修改姓名").setView(contentView);
                 mMaterialDialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -247,8 +275,6 @@ public class MyselfMessageActivity extends Activity implements View.OnClickListe
                 break;
             case R.id.myself_layout_enter:
                 if (bool) {
-
-
                     Snackbar.make(v, "确定修改资料吗？", Snackbar.LENGTH_LONG).setActionTextColor(getResources().getColor(R.color.title)).setAction("确定", new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -278,15 +304,12 @@ public class MyselfMessageActivity extends Activity implements View.OnClickListe
                                                 intent.putExtra("qq", users.getQq());
                                                 setResult(199, intent);
                                                 finish();
-
                                             }
                                             Toast.makeText(MyselfMessageActivity.this, jo.getString("msg"), Toast.LENGTH_SHORT).show();
                                         } catch (JSONException e) {
                                             e.printStackTrace();
                                         }
-
                                     }
-
                                     //  Toast.makeText(MyselfMessageActivity.this, new String(responseBody), Toast.LENGTH_SHORT).show();
                                 }
 

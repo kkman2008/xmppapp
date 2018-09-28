@@ -9,10 +9,38 @@
     <color name="duola_text_color98">#989898</color>
     <color name="duola_bg_color">#f7f7f7</color>
 
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:colorPrimaryDark">@color/title</item>
         <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Coder.TextView.Orange">
+        <item name="android:textColor">@color/dialog_color_title</item>
+    </style>
+
+    <style name="Coder.TextView.Black">
+        <item name="android:textColor">@color/base_color_text_black</item>
+    </style>
+
+
+
+    <style name="Register_Input">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/base_edit_input</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/base_action_bar_height</item>
+        <item name="android:layout_marginTop">@dimen/register_margin</item>
+        <item name="android:layout_marginLeft">@dimen/register_margin</item>
+        <item name="android:layout_marginRight">@dimen/register_margin</item>
+    </style>
+
+    <style name="Register_Edit">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:layout_marginLeft">@dimen/register_margin</item>
+        <item name="android:background">@color/transparent</item>
     </style>
 
     <style name="CustomTabPageIndicator" parent="Widget">

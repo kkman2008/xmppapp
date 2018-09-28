@@ -10,11 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:visibility="gone"/>
-
+    <!--关于我的背景图片-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-
         android:background="@mipmap/me_back">
 
         <LinearLayout
@@ -100,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:src="@mipmap/yu_60"
-
+                android:visibility="gone"
                 />
 
             <TextView

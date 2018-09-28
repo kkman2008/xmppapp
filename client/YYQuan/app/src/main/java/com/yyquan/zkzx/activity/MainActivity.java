@@ -41,6 +41,7 @@ import com.squareup.picasso.Picasso;
 import com.yyquan.zkzx.R;
 import com.yyquan.zkzx.entity.User;
 import com.yyquan.zkzx.entity.XmppChat;
+import com.yyquan.zkzx.entity.tb_user;
 import com.yyquan.zkzx.fragment.friend.FriendFragment;
 import com.yyquan.zkzx.fragment.friend.MessageFragment;
 import com.yyquan.zkzx.fragment.luntan.LuntanFragment;
@@ -57,10 +58,6 @@ import com.yyquan.zkzx.view.ResizableImageView;
 import com.yyquan.zkzx.xmpp.XmppReceiver;
 import com.yyquan.zkzx.xmpp.XmppService;
 import com.yyquan.zkzx.xmpp.XmppTool;
-import com.yyquan.zkzx.fragment.friend.FriendFragment;
-import com.yyquan.zkzx.fragment.friend.MessageFragment;
-import com.yyquan.zkzx.fragment.luntan.LuntanFragment;
-import com.yyquan.zkzx.fragment.seminartopic.SeminarListFragment;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -252,12 +249,19 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 iv_mes.setImageResource(R.mipmap.me_icon_man);
             }
         } else { //加载网络头像
-            if (user.getIcon().substring(0, 4).equals("http")) {
-                Picasso.with(MainActivity.this).load(user.getIcon()).resize(200, 200).centerInside().into(iv_me);
-                Picasso.with(MainActivity.this).load(user.getIcon()).resize(200, 200).centerInside().into(iv_mes);
-            } else {
-                Picasso.with(MainActivity.this).load(url_icon + user.getIcon()).resize(200, 200).centerInside().into(iv_me);
-                Picasso.with(MainActivity.this).load(url_icon + user.getIcon()).resize(200, 200).centerInside().into(iv_mes);
+
+            String iconurl = "";
+            tb_user tuser = ((GlobalApplication) getApplication()).globalUser;
+            if(tuser!=null && tuser.getHeadimagepath() !=null) {
+                if (tuser.getHeadimagepath().substring(0, 4).equals("http")) {
+                    iconurl = ((GlobalApplication) getApplication()).globalUser.getHeadimagepath();
+                } else {
+                    iconurl = ((GlobalApplication) getApplication()).ip_icon + ((GlobalApplication) getApplication()).globalUser.getHeadimagepath();
+                }
+                if (iconurl != null) {
+                    Picasso.with(MainActivity.this).load(iconurl).resize(200, 200).centerInside().into(iv_me);
+                    Picasso.with(MainActivity.this).load(iconurl).resize(200, 200).centerInside().into(iv_mes);
+                }
             }
         }
         iv_mes.setOnClickListener(this);

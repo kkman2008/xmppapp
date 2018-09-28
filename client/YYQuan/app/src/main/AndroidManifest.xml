@@ -275,17 +275,13 @@
         <activity android:name=".activity.AddFriendActivity"></activity>
         <activity android:name=".activity.TransactionFriendActivity"></activity>
         <activity android:name=".activity.ChatActivity">
-
-
         </activity>
         <activity android:name=".activity.ShowMessageActivity" />
 
         <service android:name=".xmpp.XmppService">
             <intent-filter>
                 <action android:name="xmppservice"></action>
-
             </intent-filter>
-
         </service>
 
         <provider

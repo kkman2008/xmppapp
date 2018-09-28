@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -16,6 +17,7 @@ import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushManager;
 import com.yyquan.zkzx.R;
 import com.yyquan.zkzx.entity.User;
+import com.yyquan.zkzx.entity.tb_user;
 import com.yyquan.zkzx.util.SaveUserUtil;
 import com.yyquan.zkzx.util.SharedPreferencesUtil;
 import com.yyquan.zkzx.view.LockView.LockActivity;
@@ -186,13 +188,12 @@ public class LogoActivity extends Activity {
      * 登录
      */
     private void login(String user, String password) {
-
         RequestParams params = new RequestParams();
         params.put("user", user);
         params.put("password", password);
         params.put("action", "login");
         AsyncHttpClient client = new AsyncHttpClient();
-        url = application.ip_user_message;
+        url = application.ip_user_message_pro;
         Log.d(TAG, "login: url =" + url );
         System.out.println("user =" + user);
         System.out.println("password =" + password);
@@ -205,33 +206,25 @@ public class LogoActivity extends Activity {
                     try {
                         JSONObject object = new JSONObject(str);
                         if (object.getString("code").equals("success")) {
-
-
                             object = object.getJSONObject("data");
+                            tb_user userpro =  JSON.parseObject(object.toString(), tb_user.class);
+                            application.InitialUser( userpro);
+
                             User user = new User();
-                            user.setUser(object.getString("user"));
-                            user.setPassword(object.getString("password"));
-                            user.setQq(object.getString("qq"));
-                            user.setIcon(object.getString("icon"));
-                            user.setNickname(object.getString("nickname"));
-                            user.setCity(object.getString("city"));
-                            user.setSex(object.getString("sex"));
-                            user.setYears(object.getString("years"));
-                            user.setQianming(object.getString("qianming"));
-                            regster_push(user.getUser());
-//                            if (!SharedPreferencesUtil.getBoolean(LogoActivity.this, "xmpp", "create" + user.getUser())) {
-//                                Message m = h.obtainMessage(IS_CREATE);
-//                                m.obj = user;
-//                                h.sendMessage(m);
-//
-//                            } else {
+                            user.setUser(userpro.getAccount());
+                            user.setPassword(userpro.getPassword());
+                            user.setQq(userpro.getQq());
+                            user.setIcon(userpro.getHeadimagepath());
+                            user.setNickname(userpro.getName());
+                            user.setCity(userpro.getCity());
+                            user.setSex(userpro.getSex());
+                            user.setYears(userpro.getYears());
+                            user.setQianming(userpro.getQianming());
+                            regster_push(userpro.getAccount());
 
                             Message m = h.obtainMessage(XMPP_LOGIN);
                             m.obj = user;
                             h.sendMessage(m);
-
-//                            }
-
 
                         } else {
                             startActivity(new Intent(LogoActivity.this, LoginActivity.class));

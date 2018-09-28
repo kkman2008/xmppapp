@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--个人资料-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -59,9 +60,28 @@
                 />
         </LinearLayout>
     </RelativeLayout>
-
+    <LinearLayout style="@style/Register_Input"
+        android:layout_height="50dp"
+        >
+        <TextView
+            style="@style/Coder.TextView.Black"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="头像"
+            android:textStyle="bold"/>
+        <Space
+            android:layout_width="70dp"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/iv_user_icon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:src="@mipmap/me_icon_man" />
+    </LinearLayout>
     <!--抬头框结束， 个人信息部分开始-->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -81,21 +101,19 @@
             android:padding="10dp"
             android:paddingLeft="5dp">
 
-
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_centerVertical="true"
                 android:text="姓名："
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/myself_textview_nickname_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/textView"
@@ -115,7 +133,6 @@
                 android:id="@+id/myself_textview_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_centerVertical="true"
                 android:text="用户ID："
                 android:textColor="#000000" />
@@ -124,7 +141,6 @@
                 android:id="@+id/myself_textview_id_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/myself_textview_id"
@@ -143,7 +159,7 @@
 
 
             <TextView
-                android:id="@+id/tv_userinfo_department"
+                android:id="@+id/tv_userinfo_company"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
@@ -152,13 +168,13 @@
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/tv_userinfo_department_content"
+                android:id="@+id/tv_userinfo_company_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/tv_userinfo_department"
+                android:layout_alignTop="@+id/tv_userinfo_company"
                 android:drawableRight="@mipmap/youjiantou"
                 android:gravity="center"
                 android:text="" />
@@ -183,7 +199,7 @@
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/tv_userinfo_position_content"
+                android:id="@+id/tv_userinfo_job"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
@@ -216,9 +232,7 @@
 
                 android:layout_centerVertical="true"
                 android:text="账号："
-
                 android:textColor="#000000" />
-
             <TextView
                 android:id="@+id/myself_textview_user_value"
                 android:layout_width="wrap_content"
@@ -382,7 +396,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:text="擅长领域："
-                android:textColor="#000000" />
+                android:textColor="@color/pinglun_name"
+                android:textStyle="bold"
+                />
 
         </RelativeLayout>
 
@@ -397,27 +413,60 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/grey_write_bg_normal"
                 android:gravity="start"
-                android:minHeight="168dp"
+                android:minHeight="48dp"
                 android:padding="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingTop="17dp"
-                android:text="1)具备*年化妆品专业线业务营销及团队管理工作经验，可独立开拓新市场。
-2)热爱销售行业，熟悉化妆品行业销售流程以及市场开发维护工作，对市场有敏锐洞察力。
-3)成熟稳重，能承受工作压力，可适应长期出差，有较强的沟通交流、业务拓展以及团队管理能力。"
                 android:textColor="#000000" />
         </LinearLayout>
         <!--研讨信息-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/while_blue"
+            android:padding="10dp"
+            android:paddingLeft="5dp">
+            >
+            <TextView
+                android:id="@+id/tv_userinfo_conf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="研讨信息："
+                android:textColor="@color/pinglun_name"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="研讨信息："/>
-        </LinearLayout>
+            android:orientation="horizontal">
+
+            <TableLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                >
+               <ImageView
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:src="@mipmap/thumbnail"
+                   />
+            </TableLayout>
+            <TableLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+                <TextView
+                    android:text="2222"
+                    />
+            </TableLayout>
+
+
+            <!--研讨信息-->
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0.2px"
@@ -439,7 +488,6 @@
                 android:textColor="#000000" />
 
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
@@ -458,6 +506,5 @@
             android:background="#999999" />
 
     </LinearLayout>
-
-
+    </LinearLayout>
 </LinearLayout>

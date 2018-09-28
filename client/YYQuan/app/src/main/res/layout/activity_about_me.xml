@@ -102,12 +102,6 @@
                 android:layout_height="wrap_content"
                 android:text="邮箱：admin@caecc.com.cn
 传真：010-68372416" />
-
-
         </LinearLayout>
-
-
     </LinearLayout>
-
-
 </LinearLayout>

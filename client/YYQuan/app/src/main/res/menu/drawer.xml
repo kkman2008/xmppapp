@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--我的和信系统设置-->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <group android:checkableBehavior="single">
-
         <item
             android:id="@+id/item_one"
             android:icon="@mipmap/q2"
             android:title="个人资料">
-
-
         </item>
 
         <item
@@ -19,9 +16,8 @@
         <item
             android:id="@+id/item_3"
             android:icon="@mipmap/aboutme"
-            android:title="关于我们"></item>
-
-
+            android:title="关于我们"
+            android:visible="false"
+            ></item>
     </group>
-
 </menu>

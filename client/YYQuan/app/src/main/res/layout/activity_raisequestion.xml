@@ -182,7 +182,7 @@
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginRight="@dimen/activity_vertical_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="与主持人沟通"/>
+            android:text="与管理员沟通"/>
 
     </LinearLayout>
 

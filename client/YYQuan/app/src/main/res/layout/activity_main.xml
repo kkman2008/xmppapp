@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -43,8 +41,6 @@
                         android:src="@mipmap/me_icon_man"
                         app:border_color="#ffffff"
                         app:border_width="0.2px"
-
-
                         />
 
                     <ImageView

@@ -13,6 +13,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -20,6 +21,7 @@ import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushManager;
 import com.yyquan.zkzx.R;
 import com.yyquan.zkzx.entity.User;
+import com.yyquan.zkzx.entity.tb_user;
 import com.yyquan.zkzx.location.Location;
 import com.yyquan.zkzx.util.SaveUserUtil;
 import com.yyquan.zkzx.util.SharedPreferencesUtil;
@@ -178,6 +180,23 @@ public class LoginActivity extends Activity implements View.OnClickListener, Pla
     }
 
     /**
+     * wechat登录
+     */
+    private void wechat_login() {
+//        Platform weibo = ShareSDK.getPlatform(Wechat.NAME);
+//        if (weibo.isValid()) {
+//            weibo.removeAccount();//删除前一次的授权信息
+//        }
+//
+//        weibo.setPlatformActionListener(this); // 设置分享事件回调
+//
+//        // 设置false表示使用SSO授权方式，意思就是如果有QQ就直接跳到QQ授权，如果没有就跳到网页
+//        weibo.SSOSetting(false);
+//
+//
+//        weibo.showUser(null);
+    }
+    /**
      * 跳转到手机注册界面
      */
     private void gotoPhoneRegster(String type) {
@@ -323,20 +342,24 @@ public class LoginActivity extends Activity implements View.OnClickListener, Pla
                         JSONObject object = new JSONObject(str);
                         if (object.getString("code").equals("success")) {
                             object = object.getJSONObject("data");
+                            tb_user userpro =  JSON.parseObject(object.toString(), tb_user.class);
+                            application.InitialUser( userpro);
+
                             User user = new User();
-                            user.setUser(object.getString("user"));
-                            user.setPassword(object.getString("password"));
-                            user.setQq(object.getString("qq"));
-                            user.setIcon(object.getString("icon"));
-                            user.setNickname(object.getString("nickname"));
-                            user.setCity(object.getString("city"));
-                            user.setSex(object.getString("sex"));
-                            user.setYears(object.getString("years"));
-                            user.setQianming(object.getString("qianming"));
+                            user.setUser(userpro.getAccount());
+                            user.setPassword(userpro.getPassword());
+                            user.setQq(userpro.getQq());
+                            user.setIcon(userpro.getHeadimagepath());
+                            user.setNickname(userpro.getName());
+                            user.setCity(userpro.getCity());
+                            user.setSex(userpro.getSex());
+                            user.setYears(userpro.getYears());
+                            user.setQianming(userpro.getQianming());
+                            regster_push(userpro.getAccount());
+
                             Message m = h.obtainMessage(XMPP_LOGIN);
                             m.obj = user;
                             h.sendMessage(m);
-
                         } else {
                             DialogView.dismiss();
                             tv_login.setEnabled(true);

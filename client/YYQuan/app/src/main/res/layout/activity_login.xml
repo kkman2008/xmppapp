@@ -136,7 +136,18 @@
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
-
+            <!--shareSDK暂时不支持微信对接 先隐藏-->
+            <RadioButton
+                android:id="@+id/login_imageView_wechatlogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@mipmap/login_qq_icon_normal"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="微信" />
 
             <RadioButton
                 android:id="@+id/login_imageView_qqlogin"

@@ -15,7 +15,7 @@ public class GlobalApplication extends Application {
     private String value;
     private int appVersionValue;
 //    private String serverIP ="39.108.118.37";
-    private String serverIP ="192.168.43.150";
+    private String serverIP ="192.168.10.27";
     private Long ServerPort;
     // 存储用户信息，全局可用
     public tb_user globalUser;
@@ -30,6 +30,7 @@ public class GlobalApplication extends Application {
     public String ifURL ="http://" +serverIP+":8080";
     public String ip_icon = ifURL + "/YfriendService/DoGetIcon?name=";
     public String ip_user_message = ifURL + "/YfriendService/DoGetUser";
+    public String ip_user_message_pro = ifURL + "/YfriendService/DoGetUserPro";
     public String ip_user_status = ifURL + "/YfriendService/DoGetLunTan";
     public String ip_dservlet = ifURL + "/YfriendService/Dservlet";
     public String ip_upload = ifURL + "/YfriendService/UploadServlet";
@@ -49,8 +50,8 @@ public class GlobalApplication extends Application {
         ip_seminar_topic = ifURL + "/YfriendService/DoGetSeminar";
         return ifURL;
     }
-    public void InitialUser(){
-
+    public void InitialUser(tb_user user){
+        this.globalUser = user;
     }
     @Override
     public void onCreate() {

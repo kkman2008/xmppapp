@@ -4,7 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="magin_size">16dp</dimen>
-
-
+    <dimen name="register_margin">10.0dp</dimen>
+    <dimen name="base_action_bar_height">48.0dip</dimen>
 
 </resources>

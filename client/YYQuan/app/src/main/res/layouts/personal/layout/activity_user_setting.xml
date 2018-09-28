@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/title">
+
+        <LinearLayout
+            android:id="@+id/news_content_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/web_bar_back_press" />
+
+        </LinearLayout>
+
+        <TextView
+
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="个人信息设置"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"/>
+
+        <LinearLayout
+            android:id="@+id/news_content_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@mipmap/rss_bottom_tab_share" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout style="@style/Register_Input"
+         android:layout_height="50dp"
+        >
+        <TextView
+            style="@style/Coder.TextView.Black"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="姓名"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/et_username"
+            style="@style/Register_Edit"
+            android:hint="请输入用户姓名"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/Register_Input"
+        android:layout_height="50dp"
+        >
+        <TextView
+            style="@style/Coder.TextView.Black"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="单位名称"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/Register_Edit"
+            android:hint="请输入单位名称"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/Register_Input"
+        android:layout_height="50dp"
+        >
+        <TextView
+            style="@style/Coder.TextView.Black"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="职位"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/et_email"
+            style="@style/Register_Edit"
+            android:hint="请输入职务名称"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/Register_Input"
+        android:layout_height="50dp"
+        >
+        <TextView
+            style="@style/Coder.TextView.Black"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="地区"
+            android:textStyle="bold"/>
+        <EditText
+        android:id="@+id/et_location"
+        style="@style/Register_Edit"
+        android:hint="请输入地区名称"
+        android:inputType="textPassword"/>
+    </LinearLayout>
+</LinearLayout>
