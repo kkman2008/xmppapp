@@ -45,6 +45,7 @@ public class DoGetQuestion extends HttpServlet {
 		switch(action) {
 		case "create_question":
 			String jsonmodel = request.getParameter("question");
+			System.out.println( "create_question jsonmodel: " + jsonmodel);
 			JSONObject obj = (JSONObject) JSON.parse(jsonmodel);
 			tb_problem problem = JSON.parseObject(jsonmodel, tb_problem.class);
 

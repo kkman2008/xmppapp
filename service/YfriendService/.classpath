@@ -34,5 +34,8 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hamcrest-core-1.3.rc2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hamcrest-library-1.3.rc2.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

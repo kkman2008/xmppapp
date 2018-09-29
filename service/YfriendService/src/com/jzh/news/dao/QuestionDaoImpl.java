@@ -9,7 +9,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
+
 import com.jzh.news.entity.tb_problem;
+import com.jzh.news.entity.tb_topicprocessuserpraise;
+import com.jzh.news.util.ResultSetMapper;
 
 /**
  * @author Jaylon
@@ -21,6 +24,7 @@ public class QuestionDaoImpl extends BaseDaoImpl {
 	Connection conn = null;
 
 	public void CreateQuestion(tb_problem model) {
+		model.setIsdelete("0");
 		if (model.getAskthetime() == null) {
 			model.setAskthetime(new Date());
 		}
@@ -52,48 +56,47 @@ public class QuestionDaoImpl extends BaseDaoImpl {
 	}
 
 	public List<tb_problem> getListbyType(String questionSatusType) {
-		List<tb_problem> list = new ArrayList<>();
+		List<tb_problem> pojoList = new ArrayList<>();
 		conn = this.getYantaodbConnection();
 		try {
 			String whereClausestr = ""; // "0" is all status
 			if (questionSatusType.equalsIgnoreCase("-1") == false) {
-				whereClausestr = " where Phase = " + questionSatusType;
+				whereClausestr = " and Phase = " + questionSatusType;
 			}
-			String sqlStatement = "select * from tb_problem " + whereClausestr;
+			String sqlStatement = "select * from tb_problem where isdelete = 0 "
+					+ whereClausestr;
 			System.out.println(sqlStatement);
 			pstmt = conn.prepareStatement(sqlStatement);
 			rs = pstmt.executeQuery();
-			while (rs.next()) {
-				tb_problem questionContent = new tb_problem();
-				questionContent.setQuestionid(rs.getString("questionid"));
-				questionContent.setProblemname(rs.getString("problemname"));
-				questionContent.setProblemcontent(rs
-						.getString("problemcontent"));
-				questionContent.setAskthetime(rs.getDate("askthetime"));
-				questionContent.setConclusion(rs.getString("conclusion"));
-				list.add(questionContent);
-			}
+			ResultSetMapper<tb_problem> resultSetMapper = new ResultSetMapper<tb_problem>();
+			pojoList = resultSetMapper.mapRersultSetToObject(rs,
+					tb_problem.class);
 
 		} catch (SQLException e) {
-
 			e.printStackTrace();
 		} finally {
 			this.closeAll(rs, pstmt, conn);
 
 		}
-		return list;
+		return pojoList;
 	}
 
-	public void main() {
-		tb_problem model = new tb_problem();
-		model.setUserid("1");
-		model.setQuestionid("7");
-		model.setProblemname("航天气动问题");
-		model.setIsdelete("0");
-		model.setProblemcontent("航天气动问题正文");
-		model.setPhase(0);
-		CreateQuestion(model);
-		model.setPhase(1);
-		UpdateQuestion(model);
+	public static void main(String[] args) {
+		// tb_problem model = new tb_problem();
+		// model.setUserid("1");
+		// model.setQuestionid("7");
+		// model.setProblemname("航天气动问题");
+		// model.setIsdelete("0");
+		// model.setProblemcontent("航天气动问题正文");
+		// model.setPhase(0);
+		// CreateQuestion(model);
+		// model.setPhase(1);
+		// UpdateQuestion(model);
+		QuestionDaoImpl qdi = new QuestionDaoImpl();
+		List<tb_problem> plist = qdi.getListbyType("-1");
+		for (tb_problem tp : plist) {
+			System.out.println(tp.getQuestionid());
+			System.out.println(tp.getProblemname());
+		}
 	}
 }

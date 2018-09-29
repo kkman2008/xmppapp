@@ -60,8 +60,9 @@
                 />
         </LinearLayout>
     </RelativeLayout>
-    <LinearLayout style="@style/Register_Input"
+    <RelativeLayout style="@style/Register_Input"
         android:layout_height="50dp"
+        android:layout_width="match_parent"
         >
         <TextView
             style="@style/Coder.TextView.Black"
@@ -70,17 +71,18 @@
             android:paddingLeft="10dp"
             android:text="头像"
             android:textStyle="bold"/>
-        <Space
-            android:layout_width="70dp"
-            android:layout_height="match_parent" />
+
         <ImageView
             android:id="@+id/iv_user_icon"
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:layout_gravity="center_horizontal"
-            android:textAlignment="center"
-            android:src="@mipmap/me_icon_man" />
-    </LinearLayout>
+            android:src="@mipmap/me_icon_man"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="0dp"
+            android:paddingRight="0dp"
+            />
+    </RelativeLayout>
     <!--抬头框结束， 个人信息部分开始-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -388,8 +390,9 @@
             android:layout_height="match_parent"
             android:background="@drawable/while_blue"
             android:padding="10dp"
-            android:paddingLeft="5dp">
+            android:paddingLeft="5dp"
             >
+
             <TextView
                 android:id="@+id/tv_userinfo_skill"
                 android:layout_width="wrap_content"
@@ -405,20 +408,22 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <TextView
                 android:id="@+id/tv_userinfo_skill_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/grey_write_bg_normal"
                 android:gravity="start"
                 android:minHeight="48dp"
                 android:padding="10dp"
-                android:paddingLeft="10dp"
+                android:paddingLeft="15dp"
                 android:paddingRight="10dp"
                 android:paddingTop="17dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:text="航天"
+                />
         </LinearLayout>
         <!--研讨信息-->
 
@@ -443,15 +448,21 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
+            android:orientation="horizontal"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            >
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
             <TableLayout
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-
+                android:layout_marginBottom="5dp"
                 >
+
                <ImageView
+                   android:layout_marginLeft="1dp"
                    android:layout_width="50dp"
                    android:layout_height="50dp"
                    android:src="@mipmap/thumbnail"
@@ -461,17 +472,51 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp">
                 <TextView
-                    android:text="2222"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="12次"
+                    />
+            </TableLayout>
+            <TableLayout
+                android:padding="2dp"
+                android:layout_marginLeft="50dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                >
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="观点"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    />
+            </TableLayout>
+            <TableLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="21条"
                     />
             </TableLayout>
 
-
             <!--研讨信息-->
+
+        </LinearLayout>
+            <!--研讨信息 end -->
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0.2px"
+            android:layout_gravity="bottom"
             android:background="#999999" />
-
         <RelativeLayout
             android:id="@+id/myself_layout_password"
             android:layout_width="match_parent"
@@ -505,6 +550,5 @@
             android:layout_height="1px"
             android:background="#999999" />
 
-    </LinearLayout>
     </LinearLayout>
 </LinearLayout>

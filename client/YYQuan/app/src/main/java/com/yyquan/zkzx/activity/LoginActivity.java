@@ -75,7 +75,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Pla
         setContentView(R.layout.activity_login);
         ShareSDK.initSDK(this);
         lt = new Location(this);
-        url= ((GlobalApplication)getApplication()).ifURL + "/YfriendService/DoGetUser";
+        url = application.ip_user_message_pro;
     }
 
     @Override

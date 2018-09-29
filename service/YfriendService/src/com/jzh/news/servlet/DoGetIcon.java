@@ -11,24 +11,21 @@ import javax.servlet.http.HttpServletResponse;
 
 public class DoGetIcon extends HttpServlet {
 
-	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		this.doPost(request, response);
 	}
 
-	
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 
 		response.setCharacterEncoding("utf-8");
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("image/gif");
 		String name = request.getParameter("name");
-		String imagePath = "c:/yyquan_icon/" + name;
-		
+		String imagePath = "D:/htzk-web/htzk/Upload/" + name;
+
 		FileInputStream fis = new FileInputStream(imagePath);
 
 		int size = fis.available(); // 得到文件大小
@@ -45,7 +42,5 @@ public class DoGetIcon extends HttpServlet {
 		os.flush();
 		os.close();
 	}
-
-	
 
 }

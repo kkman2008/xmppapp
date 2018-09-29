@@ -12,6 +12,7 @@ import org.jivesoftware.smack.XMPPException;
 
 import com.google.gson.Gson;
 import com.jzh.news.entity.User;
+import com.jzh.news.entity.tb_user;
 import com.jzh.news.util.jdkLog;
 
 /**
@@ -67,6 +68,37 @@ public class XmppTool {
 			return true;
 			/** 修改密码 */
 			// accountManager.changePassword("abc");
+		} catch (XMPPException e) {
+			jdkLog.log.info(e.toString());
+			e.printStackTrace();
+			return true;
+		}
+	}
+	
+	public static boolean createpro(tb_user user) {
+		if (connection == null) {
+			init(false);
+		} else {
+			connection.disconnect();
+			init(true);
+		}
+		String pswd = user.getPassword();
+		user.setPassword(null);
+		User userAttributeFilter = new User();
+		userAttributeFilter.setUser(user.getAccount());
+		userAttributeFilter.setPassword(user.getPassword());
+		String strs = new Gson().toJson(userAttributeFilter);
+		System.out.println(userAttributeFilter);
+		AccountManager accountManager = connection.getAccountManager();
+		try { 
+
+			Map<String, String> map = new HashMap<String, String>();
+			map.put("name", strs);
+			map.put("email", "113531420@qq.com");
+			accountManager.createAccount(userAttributeFilter.getUser(), pswd,
+					map);
+			System.out.println(user.getAccount() + "\t" + pswd + "在xmpp注册成功");
+			return true; 
 		} catch (XMPPException e) {
 			jdkLog.log.info(e.toString());
 			e.printStackTrace();

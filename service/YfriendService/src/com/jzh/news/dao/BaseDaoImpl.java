@@ -66,8 +66,6 @@ public class BaseDaoImpl {
 		ytdbuser = prop.getProperty("jdbc.mysql.zkusername");
 		ytdbpassword = prop.getProperty("jdbc.mysql.zkpassword");
 		driverClass = prop.getProperty("jdbc.mysql.driverClassName");
-		System.out.println("url: " + url + " user: " + user + " password: "
-				+ password + " driverClass: " + driverClass);
 	}
 
 	public Connection getConnection() {
@@ -89,7 +87,7 @@ public class BaseDaoImpl {
 		try {
 			Class.forName(driverClass);
 			conn = DriverManager
-					.getConnection(this.openFireUrl, "root", "root");
+					.getConnection(this.openFireUrl, ytdbuser, ytdbpassword);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
@@ -101,6 +99,9 @@ public class BaseDaoImpl {
 	public Connection getYantaodbConnection(){
 		Connection conn = null;
 		try {
+			System.out.println("YantaodbUrl =" + YantaodbUrl);
+			System.out.println("ytdbuser =" + ytdbuser);
+			System.out.println("ytdbpassword =" + ytdbpassword);
 			Class.forName(driverClass);
 			conn = DriverManager
 					.getConnection(YantaodbUrl,  ytdbuser, ytdbpassword);

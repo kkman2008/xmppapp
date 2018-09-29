@@ -2,10 +2,14 @@ package com.jzh.news;
 
 import java.io.File;
 import java.util.Date;
+
 import com.jzh.news.entity.tb_problem;
 import com.jzh.news.util.LogFactory;
 import com.jzh.news.util.LogUtil;
+
 import java.util.logging.*;
+
+import org.junit.Test;
 public class testComponent { 
 	
     // 自定义的全局log（个人一般用这个记录）
@@ -54,6 +58,11 @@ public class testComponent {
 		model.setAskthetime(new Date());
 		model.setPhase(2);
 		// daoi.UpdateQuestion(model); 
+	}
+	
+	@Test
+	public void TestStart(){
+		System.out.println("TestStart...");
 	}
 
 }

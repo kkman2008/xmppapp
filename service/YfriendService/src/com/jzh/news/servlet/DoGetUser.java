@@ -205,7 +205,7 @@ public class DoGetUser extends HttpServlet {
 			if (files != null) {
 				byte[] b = Base64Coder.decodeLines(files);
 
-				File file = new File("c:/yyquan_icon/");
+				File file = new File("D:/htzk-web/htzk/Upload/");
 				if (!file.exists()) {
 					file.mkdirs();
 
@@ -233,7 +233,7 @@ public class DoGetUser extends HttpServlet {
 
 			response.setContentType("image/gif");
 			String name = request.getParameter("name");
-			String imagePath = "c:/yyquan_icon/" + name;
+			String imagePath = "D:/yantaosoftware/" + name;
 			FileInputStream fis = new FileInputStream(imagePath);
 
 			int size = fis.available(); // 得到文件大小
