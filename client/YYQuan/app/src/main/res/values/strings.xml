@@ -46,5 +46,16 @@
     <string name="cancel_back">返回</string>
     <string name="update">更新</string>
 
+    <string name="longclick_speak">长按说话</string>
+    <string name="picture">照片</string>
+    <string name="camera">取图</string>
+    <string name="location">位置</string>
+    <string name="voice">语音</string>
+    <string name="emotion">表情</string>
+
     <string name="copyright">©Copyright 航天科技 CAASSEE</string>
+    <string name="option_find_subject_math"> 标题 </string>
+    <string name="option_find_subject_chinese"> 中文 </string>
+    <string name="option_click_to_choose"> 选择内容 </string>
+
 </resources>

@@ -42,7 +42,7 @@ public class RaiseQuestionActivity extends BaseActivity   implements View.OnClic
     private EditText etQuestionTitle;
     private EditText etQuestionContent;
     private EditText etFilePath;
-    private Button btnBrowseFile;
+
     private Button  btnUpload;
     private Button btnSubmit;
     private View show;
@@ -55,6 +55,9 @@ public class RaiseQuestionActivity extends BaseActivity   implements View.OnClic
     @Bind(R.id.iv_browse)
     ImageView ivBrowse;
     String uuidFileName;
+
+    @Bind(R.id.btn_browse_file)
+    Button btnBrowseFile;
 
     @Override
     public void initialView() {
@@ -102,7 +105,6 @@ public class RaiseQuestionActivity extends BaseActivity   implements View.OnClic
         etQuestionTitle = (EditText) findViewById(R.id.et_questionTitle);
         etQuestionContent= (EditText) findViewById(R.id.et_questionContent);
         etFilePath = (EditText) findViewById(R.id.etfilepath);
-        btnBrowseFile = (Button) findViewById(R.id.buttonBrowseFile);
         btnUpload = (Button) findViewById(R.id.buttonUpload);
         btnSubmit = (Button) findViewById(R.id.buttonquestionSubmit);
         lback = (LinearLayout) findViewById(R.id.raise_question_back);
@@ -121,7 +123,8 @@ public class RaiseQuestionActivity extends BaseActivity   implements View.OnClic
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.buttonBrowseFile:
+            case R.id.iv_browse:
+            case R.id.btn_browse_file:
                 showFileChooser();
                 break;
             case R.id.buttonUpload:
@@ -137,10 +140,10 @@ public class RaiseQuestionActivity extends BaseActivity   implements View.OnClic
                 //redirect to connect to host
                 connectToHost();
                 break;
-            case R.id.iv_browse:
-                filePath = null;
-                fileUri = null;
-                tvfileName.setText("");
+//            case R.id.iv_browse:
+//                filePath = null;
+//                fileUri = null;
+//                tvfileName.setText("");
             default:
                 break;
         }

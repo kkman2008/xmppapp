@@ -15,7 +15,7 @@ public class GlobalApplication extends Application {
     private String value;
     private int appVersionValue;
 //    private String serverIP ="39.108.118.37";
-    private String serverIP ="192.168.1.101";
+    private String serverIP ="169.254.254.254";
     private Long ServerPort;
     // 存储用户信息，全局可用
     public tb_user globalUser;

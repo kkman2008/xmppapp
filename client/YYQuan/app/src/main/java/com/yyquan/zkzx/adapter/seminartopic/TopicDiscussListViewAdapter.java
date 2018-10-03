@@ -56,7 +56,7 @@ public class TopicDiscussListViewAdapter  extends BaseAdapter {
         final ViewHolder holder;
         if( convertView == null){
             holder = new ViewHolder();
-            convertView = LayoutInflater.from(context).inflate(R.layout.listview_pinglun_item, null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.listview_seminar_discuss, null);
             holder.iv_icon = (ImageView) convertView.findViewById(R.id.listview_pinglun_item_imageview_icon);
             holder.tv_name = (TextView) convertView.findViewById(R.id.listview_pinglun_item_textView_name);
             holder.tv_location = (TextView) convertView.findViewById(R.id.listview_pinglun_item_textView_location);
@@ -101,7 +101,7 @@ public class TopicDiscussListViewAdapter  extends BaseAdapter {
         holder.tv_time.setText(stime);
         holder.tv_content.setText(mdiscusslist.get(position).getDiscusscontent());
         holder.tv_zan.setText(mdiscusslist.get(position).getPraisecount() + " ");
-        holder.tv_lou.setVisibility(View.GONE);
+        //holder.tv_lou.setVisibility(View.GONE);
         // 本项目中地理位置不需要
         holder.tv_location.setVisibility(View.GONE);
 

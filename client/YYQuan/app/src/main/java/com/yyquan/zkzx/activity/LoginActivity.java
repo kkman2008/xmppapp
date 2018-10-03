@@ -332,7 +332,8 @@ public class LoginActivity extends Activity implements View.OnClickListener, Pla
         params.put("password", password);
         params.put("action", "login");
         AsyncHttpClient client = new AsyncHttpClient();
-        client.setConnectTimeout(5000);
+        // 请求超时时间
+        client.setConnectTimeout(10000);
         client.post(url, params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -375,8 +376,6 @@ public class LoginActivity extends Activity implements View.OnClickListener, Pla
                     DialogView.dismiss();
                 }
             }
-
-
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                 DialogView.dismiss();

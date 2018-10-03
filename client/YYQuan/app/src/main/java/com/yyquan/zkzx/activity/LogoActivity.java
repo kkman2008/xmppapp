@@ -198,6 +198,7 @@ public class LogoActivity extends Activity {
         System.out.println("user =" + user);
         System.out.println("password =" + password);
         System.out.println("action = login");
+        client.setConnectTimeout(10000);
         client.post(url, params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {

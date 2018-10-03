@@ -17,6 +17,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -28,15 +29,6 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestHandle;
 import com.loopj.android.http.RequestParams;
 import com.yyquan.zkzx.R;
-import com.yyquan.zkzx.activity.GlobalApplication;
-import com.yyquan.zkzx.adapter.ContentFragmentPageAadpter;
-import com.yyquan.zkzx.entity.User;
-import com.yyquan.zkzx.entity.tb_theme;
-import com.yyquan.zkzx.entity.tb_topicforumprocess;
-import com.yyquan.zkzx.fragment.seminartopic.DiscussListviewFragement;
-import com.yyquan.zkzx.fragment.seminartopic.SeminarTopicContentFragment;
-import com.yyquan.zkzx.location.Location;
-import com.yyquan.zkzx.view.DialogView;
 import com.yyquan.zkzx.activity.GlobalApplication;
 import com.yyquan.zkzx.adapter.ContentFragmentPageAadpter;
 import com.yyquan.zkzx.entity.User;
@@ -68,13 +60,16 @@ public class TopicContentActivity extends FragmentActivity implements AdapterVie
     private SeminarTopicContentFragment seminarTopicContentFragment;
     private DiscussListviewFragement discussListviewFragement;
     //定义一个ViewPager容器
-    private ViewPager mPager;
+    private ViewPager TopicViwerPager;
     private ArrayList<Fragment> fragmentsList;
     private ContentFragmentPageAadpter mAdapter;
     //定义FragmentManager对象
     public FragmentManager fManager;
     @Bind(R.id.spn_discuss_type)
     public Spinner spinnerDicussType;
+    @Bind(R.id.iv_topic_return)
+    ImageView iv_topic_return;
+
     private static final String[] paths ={  "  ",   "主要观点", "重要问题", "指标数据","结论"};
     Intent intent;
     public User user;
@@ -116,8 +111,8 @@ public class TopicContentActivity extends FragmentActivity implements AdapterVie
         initViewPager();
         DialogView.Initial(this, "正在评论......");
         imm = (InputMethodManager) getSystemService(this.INPUT_METHOD_SERVICE);
-        mPager = (ViewPager) findViewById(R.id.discuss_content_vPager);
-        mPager.setOnPageChangeListener(this);
+        TopicViwerPager = (ViewPager) findViewById(R.id.discuss_content_vPager);
+        TopicViwerPager.setOnPageChangeListener(this);
 
         et_discuss = (EditText) findViewById(R.id.news_content_editText_pinglun);
         tv_discuss = (TextView) findViewById(R.id.tv_update_discuss);
@@ -128,15 +123,18 @@ public class TopicContentActivity extends FragmentActivity implements AdapterVie
         back.setOnClickListener(this);
         tv_discuss.setOnClickListener(this);
         tv_contentdiscuss.setOnClickListener(this);
-        mPager.setAdapter(mAdapter);
-        mPager.setCurrentItem(0);
+        TopicViwerPager.setAdapter(mAdapter);
+        TopicViwerPager.setCurrentItem(1);
         // initial the spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(TopicContentActivity.this,
                 android.R.layout.simple_spinner_item, paths);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerDicussType.setAdapter(adapter);
         spinnerDicussType.setOnItemSelectedListener(this);
+        iv_topic_return.setOnClickListener(this);
     }
+
+
 
     /**
      * 初始化viewpager
@@ -183,10 +181,14 @@ public class TopicContentActivity extends FragmentActivity implements AdapterVie
             case R.id.tv_switch_content_discuss:
                 Log.d(TAG, "onClick: tv_switch_content_discuss..." );
                 if (page_select == 0) {
-                    mPager.setCurrentItem(1);
+                    TopicViwerPager.setCurrentItem(1);
                 } else {
-                    mPager.setCurrentItem(0);
+                    TopicViwerPager.setCurrentItem(0);
                 }
+                break;
+            case R.id.iv_topic_return:
+                Log.d(TAG, "onClick: iv_topic_return..." );
+                finish();
                 break;
             default:
                 break;

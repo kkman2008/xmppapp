@@ -29,9 +29,6 @@ import com.yyquan.zkzx.entity.User;
 import com.yyquan.zkzx.entity.tb_theme;
 import com.yyquan.zkzx.entity.tb_topicforumprocess;
 import com.yyquan.zkzx.util.DateTool;
-import com.yyquan.zkzx.activity.ActivityUnitTest;
-import com.yyquan.zkzx.activity.GlobalApplication;
-import com.yyquan.zkzx.adapter.seminartopic.TopicDiscussListViewAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -111,6 +108,7 @@ public class DiscussListviewFragement extends Fragment implements SwipeRefreshLa
             search_url = ((GlobalApplication) getActivity().getApplication()).ip_seminar_topic;
 
             getData(topicContent.getSubjectid(), 0);
+
         }
         return view;
     }
@@ -145,7 +143,8 @@ public class DiscussListviewFragement extends Fragment implements SwipeRefreshLa
 
                                 // use fastjson to deserialize the json data as the POJO object tb_topicforumprocess
                                 list = new ArrayList<tb_topicforumprocess>( JSON.parseArray(array.toString(), tb_topicforumprocess.class));
-                                if( getActivity().getClass().getName().contains( "TopicContentActivity") == true) {
+                                if( getActivity() != null && getActivity().getClass() != null
+                                && getActivity().getClass().getName() !=null && getActivity().getClass().getName().contains( "TopicContentActivity") == true) {
                                     if (((TopicContentActivity) getActivity()) == null) {
                                         return;
                                     } else {

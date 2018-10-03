@@ -24,9 +24,6 @@ import com.yyquan.zkzx.fragment.news.contentFragment;
 import com.yyquan.zkzx.fragment.news.pinglunFragment;
 import com.yyquan.zkzx.location.Location;
 import com.yyquan.zkzx.view.DialogView;
-import com.yyquan.zkzx.adapter.ContentFragmentPageAadpter;
-import com.yyquan.zkzx.fragment.news.pinglunFragment;
-import com.yyquan.zkzx.location.Location;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -148,16 +145,11 @@ public class NewsContentActivity extends FragmentActivity implements View.OnClic
 
                 break;
             case R.id.news_content_text_showpinglun:
-
                 if (page_select == 0) {
-
                     mPager.setCurrentItem(1);
                 } else {
-
-                    mPager.setCurrentItem(0);
+                    mPager.setCurrentItem(1);
                 }
-
-
                 break;
         }
     }
@@ -165,13 +157,11 @@ public class NewsContentActivity extends FragmentActivity implements View.OnClic
     /**
      * 提交评论
      */
+
     private void upPingLun() {
-
-
         String pinglun = et_pinglun.getText().toString();
         if (pinglun.equals("")) {
             Toast.makeText(NewsContentActivity.this, "请先填写讨论内容", Toast.LENGTH_SHORT).show();
-
             return;
         }
         DialogView.show();

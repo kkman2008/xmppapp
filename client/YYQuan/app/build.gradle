@@ -28,6 +28,7 @@ android {
             res.srcDirs = [
                     'src/main/res/layouts/seminartopic',
                     'src/main/res/layouts/personal',
+                    'src/main/res/layouts/question',
                     'src/main/res'
             ]
         }
