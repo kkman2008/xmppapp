@@ -3,8 +3,10 @@ package com.yyquan.zkzx.xmpp;
 import android.content.Context;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.yyquan.zkzx.R;
+import com.yyquan.zkzx.activity.GlobalApplication;
 import com.yyquan.zkzx.entity.XmppUser;
 import com.yyquan.zkzx.util.SLog;
 import com.yyquan.zkzx.util.SharedPreferencesUtil;
@@ -164,6 +166,8 @@ public class XmppTool {
 
         } catch (XMPPException e) {
             SLog.e(tag, Log.getStackTraceString(e));
+            GlobalApplication gapp = new GlobalApplication();
+            Toast.makeText( gapp.getApplicationContext(),"Xmpp连接失败～～～", Toast.LENGTH_SHORT).show();
         }
     }
     private XmppTool(Boolean SASLAuthentication) {

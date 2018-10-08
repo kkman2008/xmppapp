@@ -26,6 +26,8 @@ android {
             jniLibs.srcDirs = ['jniLibs']
 //            每次都需要添加layout新加的目录
             res.srcDirs = [
+                    'src/main/res/layouts/seminartopiccomment',
+                    'src/main/res/layouts/SeminarPlanArrangement',
                     'src/main/res/layouts/seminartopic',
                     'src/main/res/layouts/personal',
                     'src/main/res/layouts/question',
@@ -51,6 +53,7 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.9.1'
     androidTestCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test:rules:0.4.1'
+    compile files('libs/emoji-java-4.0.0.jar')
     compile files('libs/jg_filter_sdk_1.1.jar')
     compile files('libs/mid-sdk-2.20.jar')
     compile files('libs/wup-1.0.0-SNAPSHOT.jar')

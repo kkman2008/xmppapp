@@ -24,11 +24,7 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/javaee-api-7.0.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/javax.mail-1.5.0.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ejb3-persistence.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
-		<attributes>
-			<attribute name="owner.project.facets" value="java"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_151"/>
 	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.generic_1.4">
 		<attributes>
 			<attribute name="owner.project.facets" value="jst.web"/>

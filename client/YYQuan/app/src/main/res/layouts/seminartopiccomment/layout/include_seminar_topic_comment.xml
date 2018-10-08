@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="3dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:src="@drawable/topic_type_main_point"
+                    />
+
+                <com.yyquan.zkzx.view.CircleImageView
+                    android:id="@+id/listview_pinglun_item_imageview_icon"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="start"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/professor_icon1"
+                    app:border_color="#778377"
+                    app:border_width="0.2px" />
+                <TextView
+                    android:id="@+id/listview_pinglun_item_textView_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/while_blue"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"
+                    android:text="张教授"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/rl_topic_list"
+                >
+                <TextView
+                    android:id="@+id/listview_pinglun_item_textView_lou"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="123"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    />
+                <TextView
+                    android:id="@+id/listview_pinglun_item_textView_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/listview_pinglun_item_textView_lou"
+                    android:layout_below="@+id/listview_pinglun_item_textView_lou"
+                    android:drawableLeft="@mipmap/location"
+                    android:ellipsize="marquee"
+                    android:text=""
+                    android:textSize="14dp" />
+
+                <com.rockerhieu.emojicon.EmojiconTextView
+                    android:id="@+id/emotv_topic_item_textView_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:text="111111111"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"
+                    android:layout_margin="10dp"
+                    android:maxLines="4"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="90dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="right|center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/topic_thumbpraise"
+                        />
+                    <TextView
+                        android:paddingTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_marginRight="20dp"
+                        />
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/topic_ref_resource"
+                        />
+
+                    <TextView
+                        android:paddingTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_marginRight="20dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/topic_message" />
+                    <TextView
+                        android:paddingTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="研讨"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/listview_pinglun_item_textView_zan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:drawableRight="@mipmap/pic_btn_liked"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/listview_pinglun_item_textView_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/listview_pinglun_item_textView_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|bottom"
+            android:gravity="right"
+            android:layout_marginTop="5dp"
+            android:text="12：00：00" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#c7bebe" />
+</LinearLayout>

@@ -1,8 +1,10 @@
-package com.yyquan.zkzx;
+package com.yyquan.jzh;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
 import android.util.Log;
+
+import com.vdurmont.emoji.EmojiParser;
 
 import org.junit.Test;
 
@@ -17,6 +19,15 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
         super(Application.class);
     }
     public  String TAG = "Unit Test:";
+
+    @Test
+    public void TestEmoji(){
+        String string = "\uD83D\uDE03";
+        string = EmojiParser.parseToAliases(string); //将表情符号转为字符
+        System.out.println("string ="+string);
+        string =  EmojiParser.parseToUnicode(string); //将字符转为表情符号
+        System.out.println("string ="+string);
+    }
 
     @Test
     public void unitTestStart(){

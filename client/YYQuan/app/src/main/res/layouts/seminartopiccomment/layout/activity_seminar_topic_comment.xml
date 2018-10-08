@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/title">
+
+        <LinearLayout
+            android:id="@+id/news_content_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/iv_topic_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/web_bar_back_press" />
+
+        </LinearLayout>
+
+        <TextView
+
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="主题研讨详情"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"/>
+        <LinearLayout
+            android:id="@+id/news_content_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@mipmap/rss_bottom_tab_share"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/timepicker"
+            layout="@layout/include_seminar_topic_comment" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#999999" />
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="2人参加评论"
+            />
+        <android.support.v4.widget.Space
+            android:layout_width="180dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="在线讨论人员"
+            android:visibility="gone"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/onlineperson"
+            android:layout_gravity="right"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#999999" />
+
+    <com.demievil.library.RefreshLayout
+        android:id="@+id/fragment_content_swipe_container"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation"
+        >
+        <com.yyquan.zkzx.xmpp.view.listview.MsgListView
+            android:scrollbars="none"
+            android:id="@+id/mlv_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:visibility="gone"
+            android:divider="@null" />
+    </com.demievil.library.RefreshLayout>
+
+
+    <LinearLayout
+        android:id="@+id/news_content_layout_enterpinglun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#18f0e6e6"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_picture"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:drawableTop="@drawable/btn_chat_add_picture_selector"
+                android:text="@string/picture"
+                android:layout_margin="2dp"
+                />
+            <TextView
+                android:id="@+id/tv_camera"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/btn_chat_add_camera_selector"
+                android:text="@string/camera"
+                android:layout_margin="2dp"
+                />
+            <TextView
+                android:id="@+id/tv_voice"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/btn_chat_add_voice_selector"
+                android:text="@string/voice"
+                android:layout_margin="2dp"
+                />
+            <TextView
+                android:id="@+id/tv_emotion"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/btn_chat_add_emotion_selector"
+                android:text="@string/emotion"
+                android:layout_margin="2dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.rockerhieu.emojicon.EmojiconEditText
+                android:id="@+id/eet_topic_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="4"
+                android:background="@drawable/shape_edittext"
+                android:hint="多行输入"
+                android:padding="8dp"
+                android:textSize="15dp"
+                />
+
+            <Button
+                android:id="@+id/btn_speak"
+                style="@style/Coder.TextView.Black"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/longclick_speak"
+                android:background="@drawable/btn_chat_record_selector"
+                android:visibility="gone"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/btn_chat_keyboard"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/btn_chat_keyboard_selector"
+                android:gravity="center"
+                android:textColor="@color/base_color_text_black"
+                android:visibility="gone"
+                >
+            </Button>
+
+            <TextView
+                android:id="@+id/tv_update_discuss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+
+                android:background="@drawable/shape_edittext"
+                android:drawableRight="@mipmap/liq"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="发送 "
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/news_content_layout_pinglun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+
+            android:gravity="end"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_switch_content_discuss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_edittext"
+                android:drawableRight="@mipmap/comment_lajiao2_icon"
+                android:padding="8dp"
+                android:text=""
+                android:textSize="16dp"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/emojicons"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:visibility="gone"
+        />
+</LinearLayout>

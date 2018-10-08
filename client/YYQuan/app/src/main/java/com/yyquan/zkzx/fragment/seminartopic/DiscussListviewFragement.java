@@ -11,6 +11,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -23,6 +24,7 @@ import com.loopj.android.http.RequestParams;
 import com.yyquan.zkzx.R;
 import com.yyquan.zkzx.activity.ActivityUnitTest;
 import com.yyquan.zkzx.activity.GlobalApplication;
+import com.yyquan.zkzx.activity.SeminarTopic.ActivityAttendeeDetail;
 import com.yyquan.zkzx.activity.SeminarTopic.TopicContentActivity;
 import com.yyquan.zkzx.adapter.seminartopic.TopicDiscussListViewAdapter;
 import com.yyquan.zkzx.entity.User;
@@ -37,6 +39,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Date;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import cz.msebera.android.httpclient.Header;
 
 public class DiscussListviewFragement extends Fragment implements SwipeRefreshLayout.OnRefreshListener, RefreshLayout.OnLoadListener, View.OnClickListener {
@@ -58,12 +62,17 @@ public class DiscussListviewFragement extends Fragment implements SwipeRefreshLa
     private String search_url  ;
     int pinglun_size = 0 ;
     int index = 0;
+    @Bind(R.id.iv_attendee_detail)
+    ImageView iv_attendee_detail;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (view == null) {
             list = new ArrayList<>();
             view = inflater.inflate(R.layout.fragment_seminar_discuss, container, false);
             footerLayout = getActivity().getLayoutInflater().inflate(R.layout.list_item_more, null);
+            // bind the view in fragment
+            ButterKnife.bind(this,view);
             tv_more = (TextView) footerLayout.findViewById(R.id.text_more);
             tv_more.setOnClickListener(this);
             pb = (ProgressBar) footerLayout.findViewById(R.id.load_progress_bar);
@@ -87,6 +96,7 @@ public class DiscussListviewFragement extends Fragment implements SwipeRefreshLa
             mRefreshLayout = (RefreshLayout) view.findViewById(R.id.fragment_content_swipe_container);
             mRefreshLayout.setOnRefreshListener(this);
             mRefreshLayout.setOnLoadListener(this);
+            iv_attendee_detail.setOnClickListener(this);
             mRefreshLayout.setChildView(listview);
             mRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
                     android.R.color.holo_green_dark,
@@ -109,6 +119,18 @@ public class DiscussListviewFragement extends Fragment implements SwipeRefreshLa
 
             getData(topicContent.getSubjectid(), 0);
 
+//            listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//                public boolean  onItemLongClick(AdapterView<?> parent, View view,
+//                                        int position, long id) {
+//                    // When clicked, show a toast with the TextView text
+//                    TextView tv = (TextView)view.findViewById(R.id.listview_item_textView_title);
+//                    EmojiconTextView etv = (EmojiconTextView)view.findViewById(R.id.emotv_topic_item_textView_content);
+//
+//                    Toast.makeText(getActivity().getApplicationContext(),
+//                            etv.getText(), Toast.LENGTH_SHORT).show();
+//                    return  false;
+//                }
+//            });
         }
         return view;
     }
@@ -150,7 +172,7 @@ public class DiscussListviewFragement extends Fragment implements SwipeRefreshLa
                                     } else {
                                         // ((TopicContentActivity) getActivity()).tv_discuss.setText(pinglun_size + "评");
                                     }
-                                    tv_total.setText("热门研讨(" + pinglun_size + ")");
+                                    tv_total.setText("");
                                     ((TopicContentActivity) getActivity()).pl_size = pinglun_size;
                                 }
                                 if (index == 0) {
@@ -235,6 +257,18 @@ public class DiscussListviewFragement extends Fragment implements SwipeRefreshLa
         switch (v.getId()) {
             case R.id.text_more:
                 loadData();
+                break;
+            case R.id.iv_attendee_detail:
+                /*
+                    会议编排：tb_scheduleplannerpro, tb_discussiongroup
+                */
+                //Toast.makeText(  getActivity(),"trying to redirect to attendee detail page", Toast.LENGTH_LONG ).show();
+                Intent intent = new Intent(getActivity(), ActivityAttendeeDetail.class);
+                intent.putExtra("ThemeSubjectID",topicContent.getSubjectid());
+                intent.putExtra("ThemeContent" , topicContent.getQuestioncontent());
+                startActivity(intent);
+                break;
+            default:
                 break;
         }
     }

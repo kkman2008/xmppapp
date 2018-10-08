@@ -26,58 +26,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56fe93f8-5556-451e-a3be-f8578c46bc48" name="Default" comment="commit file to local">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/chat_add_camera_normal.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/chat_add_camera_press.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/chat_add_location_normal.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/chat_add_location_press.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/chat_add_picture_normal.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/chat_add_picture_press.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/btn_chat_add_camera_selector.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/btn_chat_add_location_selector.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/btn_chat_add_picture_selector.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/professor_icon1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/professor_icon2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/professor_icon3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/professor_icon4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/professor_icon5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/professor_icon6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/topic_message.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/topic_ref_resource.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/topic_thumbpraise.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/clocktime.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/message_dark.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/message_orange.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/statusongoing.png" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/ActivityAttendeeDetail.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layouts/seminartopiccomment/layout/activity_seminar_topic_comment.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layouts/seminartopiccomment/layout/include_seminar_topic_comment.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/entity/tb_role.java" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_multi-image-selector_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_multi-image-selector_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_multi-image-selector_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_multi-image-selector_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_multi-image-selector_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_multi-image-selector_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_multi-image-selector_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_multi-image-selector_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileChanges/last-build.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/yyquan/jzh/ApplicationTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/yyquan/jzh/ApplicationTest.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/yyquan/jzh/activity/RaiseQuestionActivityextendsTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/yyquan/jzh/activity/RaiseQuestionActivityextendsTest.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/ChatActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/ChatActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/GlobalApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/GlobalApplication.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/LoginActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/LogoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/LogoActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/NewsContentActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/NewsContentActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/RaiseQuestionActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/RaiseQuestionActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/TopicContentActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/TopicContentActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/adapter/seminartopic/TopicDiscussListViewAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/adapter/seminartopic/TopicDiscussListViewAdapter.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/DiscussListviewFragement.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/DiscussListviewFragement.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_logo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_logo.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_raisequestion.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_raisequestion.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_question_title.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_question_title.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/listview_item_question.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layouts/question/layout/listview_item_question.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/listview_item_seminar_topic.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/listview_item_seminar_topic.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/SeminarTopicFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/SeminarTopicFragment.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/xmpp/XmppTool.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/xmpp/XmppTool.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/listener.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/listener.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_chat.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_chat.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layouts/SeminarPlanArrangement/layout/activity_attendee_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layouts/SeminarPlanArrangement/layout/activity_attendee_detail.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/activity_seminar_content.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/activity_seminar_content.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/fragment_seminar_discuss.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/fragment_seminar_discuss.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/listview_seminar_discuss.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/listview_seminar_discuss.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/seminar_content_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/seminar_content_item.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/update.md" afterPath="$PROJECT_DIR$/app/src/main/res/update.md" />
+      <change beforePath="$PROJECT_DIR$/../../service/YfriendService/.classpath" afterPath="$PROJECT_DIR$/../../service/YfriendService/.classpath" />
       <change beforePath="$PROJECT_DIR$/../../service/YfriendService/WebRoot/WEB-INF/classes/jdbc.properties" afterPath="$PROJECT_DIR$/../../service/YfriendService/WebRoot/WEB-INF/classes/jdbc.properties" />
+      <change beforePath="$PROJECT_DIR$/../../service/YfriendService/WebRoot/WEB-INF/lib/generatorConfig.xml" afterPath="$PROJECT_DIR$/../../service/YfriendService/WebRoot/WEB-INF/lib/generatorConfig.xml" />
+      <change beforePath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/dao/ModelToSQL.java" afterPath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/dao/ModelToSQL.java" />
+      <change beforePath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/dao/SeminarDiscussProccessDaoImpl.java" afterPath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/dao/SeminarDiscussProccessDaoImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/dao/schedulePlannerProDaoImpl.java" afterPath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/dao/schedulePlannerProDaoImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/entity/tb_discussiongroup.java" afterPath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/entity/tb_discussiongroup.java" />
+      <change beforePath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/entity/tb_scheduleplannerpro.java" afterPath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/entity/tb_scheduleplannerpro.java" />
+      <change beforePath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/util/LogUtil.java" afterPath="$PROJECT_DIR$/../../service/YfriendService/src/com/jzh/news/util/LogUtil.java" />
       <change beforePath="$PROJECT_DIR$/../../service/YfriendService/src/jdbc.properties" afterPath="$PROJECT_DIR$/../../service/YfriendService/src/jdbc.properties" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -122,105 +149,275 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="fragment_seminar_discuss.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/fragment_seminar_discuss.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="94" column="58" lean-forward="false" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_seminar_content.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/activity_seminar_content.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="125" column="18" lean-forward="true" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
-              <folding>
-                <element signature="e#3652#3669#0" expanded="true" />
-                <element signature="e#4089#4105#0" expanded="true" />
-                <element signature="e#4529#4544#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listview_item_question.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/question/layout/listview_item_question.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="vertical" split-proportion="0.627572">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+          <file leaf-file-name="activity_seminar_content.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/activity_seminar_content.xml">
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1971">
+                  <caret line="73" column="29" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="75" selection-end-column="50" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SeminarTopicFragment.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/SeminarTopicFragment.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1755">
+                  <caret line="100" column="33" lean-forward="false" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
+                  <folding>
+                    <element signature="e#8876#8877#0" expanded="true" />
+                    <element signature="e#8902#8903#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ActivitySeminarStartStop.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/ActivitySeminarStartStop.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="62" column="29" lean-forward="false" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="activity_seminar_startstop.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_seminar_startstop.xml">
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="567">
+                  <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/LoginActivity.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="9153">
+                  <caret line="379" column="61" lean-forward="false" selection-start-line="379" selection-start-column="61" selection-end-line="379" selection-end-column="61" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AsyncHttpResponseHandler.java" pinned="false" current-in-tab="false">
+            <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/5d171c3cd5343e5997f974561abed21442273fd1/android-async-http-1.4.9-sources.jar!/com/loopj/android/http/AsyncHttpResponseHandler.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="9234">
+                  <caret line="400" column="31" lean-forward="false" selection-start-line="400" selection-start-column="31" selection-end-line="400" selection-end-column="31" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tb_theme.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/entity/tb_theme.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="6642">
+                  <caret line="259" column="19" lean-forward="false" selection-start-line="259" selection-start-column="19" selection-end-line="259" selection-end-column="19" />
+                  <folding>
+                    <element signature="e#6966#6967#0" expanded="true" />
+                    <element signature="e#6994#6995#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="seminar_content_item.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/seminar_content_item.xml">
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="162">
+                  <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+          <file leaf-file-name="DiscussListviewFragement.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/DiscussListviewFragement.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="132" selection-end-column="17" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="listview_item_seminar_topic.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/listview_item_seminar_topic.xml">
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="864">
+                  <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SeminarTopicListViewAdapter.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/adapter/seminartopic/SeminarTopicListViewAdapter.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AbsListView.java" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-19/android/widget/AbsListView.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="76923">
+                  <caret line="2971" column="0" lean-forward="false" selection-start-line="2971" selection-start-column="0" selection-end-line="2971" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="activity_attendee_detail.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/SeminarPlanArrangement/layout/activity_attendee_detail.xml">
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="594">
+                  <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="activity_seminar_topic_comment.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopiccomment/layout/activity_seminar_topic_comment.xml">
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2700">
+                  <caret line="100" column="6" lean-forward="false" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="listview_seminar_discuss.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/listview_seminar_discuss.xml">
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2052">
+                  <caret line="76" column="70" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="70" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="activity_raisequestion.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/question/layout/activity_raisequestion.xml">
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="162">
+                  <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="include_seminar_topic_comment.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopiccomment/layout/include_seminar_topic_comment.xml">
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="162">
+                  <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/build.gradle">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="513">
+                  <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="resourceFile" />
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="layoutResourceFile_vertical" />
         <option value="valueResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>appversion</find>
-      <find>220.250.64.225</find>
-      <find>220.250.64.22</find>
-      <find>192.168.</find>
-      <find>context</find>
-      <find>TopicTypeMainPoint</find>
-      <find>getAc</find>
-      <find>listview_pinglun_item_textView_lou</find>
-      <find>listview_pinglun_item_textView_name</find>
-      <find>tv_lou</find>
-      <find>tv_content</find>
-      <find>192.</find>
-      <find>背景资料</find>
-      <find>8BC34A</find>
-      <find>buttonquestion</find>
-      <find>btnBrowseFile</find>
-      <find>iv_browse</find>
-      <find>背景</find>
-      <find>-all</find>
-      <find>classpath 'com.android.tools.build:gradle</find>
-      <find>spn_discuss_type</find>
-      <find>spinnerDicussType</find>
-      <find>paths</find>
-      <find>getcount</find>
-      <find>discuss_content_vPager</find>
-      <find>TopicViwerPager</find>
-      <find>mPager</find>
-      <find>android.enableD8</find>
-      <find>192.1</find>
-      <find>_seminar_content</find>
+      <find>cir</find>
+      <find>start</find>
+      <find>dismiss</find>
+      <find>.main</find>
+      <find>.MAIN</find>
+      <find>.dismiss</find>
+      <find>attendee</find>
+      <find>ThemeSubjectID</find>
+      <find>DialogView</find>
+      <find>back</find>
+      <find>onClick(View v)</find>
+      <find>gone</find>
+      <find>viewp</find>
+      <find>xmlns</find>
+      <find>include</find>
+      <find>oncli</find>
+      <find>listview_pinglun_item_textView_content</find>
+      <find>w_seminar_d</find>
+      <find>t_seminar_di</find>
+      <find>news_content_listView</find>
+      <find>emotv_topic_item_textView_content</find>
+      <find>listview</find>
+      <find>w_item_se</find>
+      <find>SeminarTopicListViewAdapter</find>
+      <find>startstop.cl</find>
+      <find>long</find>
+      <find>未开始</find>
+      <find>startstop</find>
+      <find>Toast.makeText(</find>
+      <find>ll_back</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -228,6 +425,9 @@
       <replace>tb_theme</replace>
       <replace>com.yyquan.zkzx</replace>
       <replace>TopicViwerPager</replace>
+      <replace>expertCount</replace>
+      <replace>android:layout_height=&quot;60dp&quot;</replace>
+      <replace>assistantCount</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\workspace\mobile\xmpp-master\client\YYQuan\app\src\main\res\layout</dir>
@@ -3219,29 +3419,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/jzh/util/SmsHttp.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/jzh/fragment/regster/PhoneRegsterFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/jzh/fragment/regster/PhoneRegsterToMessageFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/jzh/util/SaveUserUtil.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/gradle.properties" />
-        <option value="$PROJECT_DIR$/multi-image-selector/build.gradle" />
-        <option value="$PROJECT_DIR$/multi-image-selector/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/update.md" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/jzh/activity/FileUploadActivity.java" />
-        <option value="D:/Users/Jaylon/Documents/AndroidStudio/DeviceExplorer/Nexus_5X_API_19-img [emulator-5554]/storage/sdcard/Download/NewTextFile.txt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/jzh/activity/HttpPost.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/jzh/activity/RaiseQuestionActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/jzh/entity/tb_problem.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/jzh/activity/GlobalApplication.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/ActivityUnitTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/AddFriendActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_about_me.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/drawer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/navigation_header.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/UserInfoSettings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_phone_regster_message.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layouts/personal/layout/activity_user_setting.xml" />
@@ -3253,31 +3430,54 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_myself_message.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_question_title.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/listview_item_question.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/LogoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layouts/question/layout/listview_item_question.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/listview_item_seminar_topic.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/fragment_seminar_discuss.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/DiscussListviewFragement.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/adapter/seminartopic/TopicDiscussListViewAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/GlobalApplication.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_logo.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/RaiseQuestionActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_raisequestion.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/NewsContentActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/TopicContentActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/listview_seminar_discuss.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/activity_seminar_content.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/btn_chat_add_emotion_selector.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_chat.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/seminar_content_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/util/CryptoUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/util/AESEnDecryption.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/util/EncryptUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/xmpp/XmppTool.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/com/yyquan/jzh/activity/RaiseQuestionActivityextendsTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/ChatActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/com/yyquan/jzh/ApplicationTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/Common/Constains.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/Common/Constants.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/TopicContentActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_logo.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layouts/question/layout/activity_raisequestion.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/update.md" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/GlobalApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layouts/SeminarPlanArrangement/layout/activity_attendee_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/ActivityAttendeeDetail.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/activity_seminar_content.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layouts/seminartopiccomment/layout/activity_seminar_discuss.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layouts/seminartopiccomment/layout/listview_seminar_topic_comment.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layouts/seminartopiccomment/layout/include_seminar_topic_comment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/fragment_seminar_discuss.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/adapter/seminartopic/TopicDiscussListViewAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/listview_seminar_discuss.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layouts/seminartopiccomment/layout/activity_seminar_topic_comment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/DiscussListviewFragement.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/SeminarTopicFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/ActivitySeminarStartStop.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="226" />
-    <option name="y" value="90" />
-    <option name="width" value="1672" />
-    <option name="height" value="979" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="73" />
+    <option name="y" value="53" />
+    <option name="width" value="1521" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -3303,6 +3503,9 @@
           </State>
           <State>
             <id>Cloning issuesJava</id>
+          </State>
+          <State>
+            <id>Code maturity issuesJava</id>
           </State>
           <State>
             <id>Code style issuesJava</id>
@@ -3353,6 +3556,21 @@
             <id>Java</id>
           </State>
           <State>
+            <id>Java 5Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 7Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 8Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Javadoc issuesJava</id>
+          </State>
+          <State>
             <id>LintAndroid</id>
           </State>
           <State>
@@ -3398,6 +3616,9 @@
             <id>Serialization issuesJava</id>
           </State>
           <State>
+            <id>TestNGJava</id>
+          </State>
+          <State>
             <id>Threading issuesGroovy</id>
           </State>
           <State>
@@ -3407,6 +3628,11 @@
             <id>Visibility issuesJava</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -3426,17 +3652,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
+      <pane id="Scratches">
         <subPane>
           <expand>
             <path>
-              <item name="YYQuan" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -3472,6 +3699,120 @@
             </path>
             <path>
               <item name="YYQuan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YYQuan" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YYQuan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YYQuan" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YYQuan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YYQuan" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YYQuan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YYQuan" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="question" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YYQuan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YYQuan" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="question" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YYQuan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YYQuan" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="SeminarPlanArrangement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YYQuan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YYQuan" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="SeminarPlanArrangement" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YYQuan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YYQuan" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="seminartopic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YYQuan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YYQuan" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="seminartopic" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YYQuan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YYQuan" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="seminartopiccomment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YYQuan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YYQuan" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="seminartopiccomment" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YYQuan" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -3498,13 +3839,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches">
+      <pane id="PackagesPane">
         <subPane>
           <expand>
             <path>
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+              <item name="YYQuan" type="58d84e3e:PackageViewProjectNode" />
+              <item name="app" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
@@ -3514,7 +3854,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="settings.editor.selected.configurable" value="instant.run" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Android_Full_Demo_AndroidStudio" />
     <property name="device.picker.selection" value="Nexus_5X_API_19-img" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res" />
@@ -3541,8 +3881,8 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\mobile\xmpp-master\client\YYQuan\app\src\main\res\layouts\seminartopic\layout" />
       <recent name="D:\workspace\mobile\xmpp-master\client\YYQuan\app\src\main\res\layouts\question\layout" />
+      <recent name="D:\workspace\mobile\xmpp-master\client\YYQuan\app\src\main\res\layouts\seminartopic\layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -3626,11 +3966,11 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
     </configuration>
-    <configuration name="getProPerties()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+    <configuration name="TestEmoji()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <option name="TESTING_TYPE" value="3" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="getProPerties" />
+      <option name="METHOD_NAME" value="TestEmoji" />
       <option name="CLASS_NAME" value="com.yyquan.jzh.ApplicationTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="EXTRA_OPTIONS" value="" />
@@ -3670,93 +4010,43 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
     </configuration>
-    <configuration name="testPublishSubject()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+    <configuration name="CryptoUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.yyquan.zkzx.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.yyquan.zkzx.util.CryptoUtil" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
       <module name="app" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="testPublishSubject" />
-      <option name="CLASS_NAME" value="com.yyquan.jzh.ApplicationTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-      </Profilers>
+      <envs />
     </configuration>
-    <configuration name="unitTestStart()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+    <configuration name="EncryptUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.yyquan.zkzx.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.yyquan.zkzx.util.EncryptUtil" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
       <module name="app" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="unitTestStart" />
-      <option name="CLASS_NAME" value="com.yyquan.jzh.ApplicationTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-      </Profilers>
+      <envs />
     </configuration>
     <configuration name="SmsComm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -3928,19 +4218,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
       <item index="1" class="java.lang.String" itemvalue="Gradle.Unnamed" />
-      <item index="2" class="java.lang.String" itemvalue="Android Instrumented Tests.testPublishSubject()" />
-      <item index="3" class="java.lang.String" itemvalue="Android Instrumented Tests.unitTestStart()" />
-      <item index="4" class="java.lang.String" itemvalue="Android Instrumented Tests.getProPerties()" />
-      <item index="5" class="java.lang.String" itemvalue="Application.SmsHttp" />
-      <item index="6" class="java.lang.String" itemvalue="Application.SmsComm" />
+      <item index="2" class="java.lang.String" itemvalue="Application.SmsHttp" />
+      <item index="3" class="java.lang.String" itemvalue="Application.SmsComm" />
+      <item index="4" class="java.lang.String" itemvalue="Application.CryptoUtil" />
+      <item index="5" class="java.lang.String" itemvalue="Application.EncryptUtil" />
+      <item index="6" class="java.lang.String" itemvalue="Android Instrumented Tests.TestEmoji()" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.SmsComm" />
-        <item index="1" class="java.lang.String" itemvalue="Application.SmsHttp" />
-        <item index="2" class="java.lang.String" itemvalue="Android Instrumented Tests.getProPerties()" />
-        <item index="3" class="java.lang.String" itemvalue="Android Instrumented Tests.unitTestStart()" />
-        <item index="4" class="java.lang.String" itemvalue="Android Instrumented Tests.testPublishSubject()" />
+        <item index="0" class="java.lang.String" itemvalue="Android Instrumented Tests.TestEmoji()" />
+        <item index="1" class="java.lang.String" itemvalue="Application.EncryptUtil" />
+        <item index="2" class="java.lang.String" itemvalue="Application.CryptoUtil" />
+        <item index="3" class="java.lang.String" itemvalue="Application.SmsComm" />
+        <item index="4" class="java.lang.String" itemvalue="Application.SmsHttp" />
       </list>
     </recent_temporary>
   </component>
@@ -3972,26 +4262,26 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="getProPerties() - 2018.08.25 at 08h 47m 17s.xml">
-      <configuration name="getProPerties()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="TestEmoji() - 2018.10.06 at 14h 00m 51s.xml">
+      <configuration name="TestEmoji()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="getProPerties() - 2018.08.25 at 08h 47m 49s.xml">
-      <configuration name="getProPerties()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="TestEmoji() - 2018.10.06 at 14h 01m 01s.xml">
+      <configuration name="TestEmoji()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="getProPerties() - 2018.08.25 at 08h 48m 53s.xml">
-      <configuration name="getProPerties()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="TestEmoji() - 2018.10.06 at 14h 05m 12s.xml">
+      <configuration name="TestEmoji()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="getProPerties() - 2018.08.25 at 08h 51m 07s.xml">
-      <configuration name="getProPerties()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="TestEmoji() - 2018.10.06 at 14h 05m 47s.xml">
+      <configuration name="TestEmoji()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="getProPerties() - 2018.08.25 at 08h 51m 26s.xml">
-      <configuration name="getProPerties()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="TestEmoji() - 2018.10.06 at 14h 07m 45s.xml">
+      <configuration name="TestEmoji()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="getProPerties() - 2018.08.25 at 09h 02m 55s.xml">
-      <configuration name="getProPerties()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="TestEmoji() - 2018.10.06 at 14h 08m 56s.xml">
+      <configuration name="TestEmoji()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="getProPerties() - 2018.08.25 at 09h 04m 44s.xml">
-      <configuration name="getProPerties()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="TestEmoji() - 2018.10.06 at 14h 20m 28s.xml">
+      <configuration name="TestEmoji()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
     <history-entry file="getProPerties() - 2018.08.25 at 18h 01m 08s.xml">
       <configuration name="getProPerties()" configurationId="AndroidTestRunConfigurationType" />
@@ -4013,32 +4303,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1176" extended-state="6" />
-    <editor active="true" />
+    <frame x="-11" y="-11" width="1942" height="1176" extended-state="7" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.49784017" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32921812" sideWeight="0.49784017" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.49784017" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15442765" sideWeight="0.37284234" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08423326" sideWeight="0.3228022" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.274838" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4886609" sideWeight="0.76064444" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.49892008" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28395063" sideWeight="0.46814254" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.49892008" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33539096" sideWeight="0.36609071" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.576659" sideWeight="0.7356664" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5761317" sideWeight="0.7327214" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35082304" sideWeight="0.6900648" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.49462366" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15442765" sideWeight="0.6271576" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36818686" sideWeight="0.72516197" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295688" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35853133" sideWeight="0.7802198" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13271604" sideWeight="0.72516197" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1349892" sideWeight="0.33825505" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3336933" sideWeight="0.6908784" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4886609" sideWeight="0.23935558" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17710583" sideWeight="0.6771978" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21652268" sideWeight="0.7330174" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.105967075" sideWeight="0.53833693" order="4" side_tool="false" content_ui="tabs" x="306" y="660" width="1335" height="303" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28292182" sideWeight="0.53185743" order="4" side_tool="false" content_ui="tabs" x="306" y="660" width="1335" height="303" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -4048,40 +4335,9 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37345678" sideWeight="0.34908137" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2926566" sideWeight="0.26698261" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295688" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22839506" sideWeight="0.150108" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35082304" sideWeight="0.6900648" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23264311" sideWeight="0.68986905" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25431967" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20194384" sideWeight="0.32036316" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22839506" sideWeight="0.849892" order="3" side_tool="false" content_ui="tabs" x="306" y="660" width="1335" height="303" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.49784017" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37383178" sideWeight="0.34908137" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20194384" sideWeight="0.67963684" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.49892008" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33539096" sideWeight="0.3677106" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.576659" sideWeight="0.7356664" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20842333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295688" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17224622" sideWeight="0.42465752" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -4154,19 +4410,19 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/androidTest/java/com/yyquan/jzh/ApplicationTest.java</url>
-          <line>30</line>
+          <line>41</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/androidTest/java/com/yyquan/jzh/ApplicationTest.java</url>
-          <line>39</line>
+          <line>50</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/androidTest/java/com/yyquan/jzh/ApplicationTest.java</url>
-          <line>38</line>
+          <line>49</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
@@ -4232,7 +4488,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/xmpp/XmppTool.java</url>
-          <line>199</line>
+          <line>203</line>
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
@@ -4256,7 +4512,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/xmpp/XmppTool.java</url>
-          <line>208</line>
+          <line>212</line>
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
@@ -4460,15 +4716,9 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/ChatActivity.java</url>
-          <line>90</line>
+          <line>91</line>
           <properties />
           <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/ChatActivity.java</url>
-          <line>200</line>
-          <properties />
-          <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/ShowMessageActivity.java</url>
@@ -4490,7 +4740,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/ChatActivity.java</url>
-          <line>123</line>
+          <line>124</line>
           <properties />
           <option name="timeStamp" value="100" />
         </line-breakpoint>
@@ -4520,7 +4770,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/ChatActivity.java</url>
-          <line>125</line>
+          <line>126</line>
           <properties />
           <option name="timeStamp" value="107" />
         </line-breakpoint>
@@ -4550,21 +4800,47 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/DiscussListviewFragement.java</url>
-          <line>156</line>
+          <line>178</line>
           <properties />
           <option name="timeStamp" value="234" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/SeminarTopicFragment.java</url>
-          <line>248</line>
+          <line>262</line>
           <properties />
           <option name="timeStamp" value="235" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/DiscussListviewFragement.java</url>
+          <line>125</line>
+          <properties />
+          <option name="timeStamp" value="284" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/ActivitySeminarStartStop.java</url>
+          <line>147</line>
+          <properties />
+          <option name="timeStamp" value="288" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/SeminarTopicFragment.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="291" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/DiscussListviewFragement.java</url>
+          <line>122</line>
+          <properties class="com.yyquan.zkzx.fragment.seminartopic.DiscussListviewFragement">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="285" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="270" />
+      <option name="time" value="292" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
@@ -4582,6 +4858,21 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>list.get(position).getPhase()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>etv.getText()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>editEmojicon.getText().toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>getActivity()</expression-string>
         <language-id>JAVA</language-id>
@@ -4612,125 +4903,86 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>((GlobalApplication)getApplication()).getServerIP()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>iconurl</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>((GlobalApplication) getApplication()).ip_icon + user.getHeadimagepath()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/23.0.1/support-v4-23.0.1-sources.jar!/android/support/v4/app/Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="622" column="0" lean-forward="false" selection-start-line="622" selection-start-column="0" selection-end-line="622" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/5d171c3cd5343e5997f974561abed21442273fd1/android-async-http-1.4.9-sources.jar!/com/loopj/android/http/AsyncHttpResponseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="510" column="0" lean-forward="false" selection-start-line="510" selection-start-column="0" selection-end-line="510" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/DiscussListviewFragement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="148" column="47" lean-forward="false" selection-start-line="148" selection-start-column="47" selection-end-line="148" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/adapter/seminartopic/TopicDiscussListViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="63" column="111" lean-forward="false" selection-start-line="63" selection-start-column="73" selection-end-line="63" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/material_colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="196" column="32" lean-forward="false" selection-start-line="196" selection-start-column="17" selection-end-line="196" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_logo.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="82" column="35" lean-forward="true" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/GlobalApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/com/yyquan/zkzx/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="4622" column="32" lean-forward="false" selection-start-line="4622" selection-start-column="32" selection-end-line="4622" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/RaiseQuestionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="31" column="15" lean-forward="false" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_raisequestion.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
-          <folding>
-            <element signature="e#5644#5666#0" expanded="true" />
-            <element signature="e#6190#6209#0" expanded="true" />
-            <element signature="e#6776#6809#0" expanded="true" />
-            <element signature="e#6849#6882#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_phone_regster.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tb_munion_adview.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/third_image_popupwindow.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/third_image_popupwindows.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/third_image_popupwindowss.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/umeng_common_download_notification.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/umeng_update_dialog.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/xlistview_footer.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_myself_message.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -4739,41 +4991,105 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="171">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="52" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-23/android/widget/ScrollView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-23/com/android/test/hwui/ClipOutlineActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/regster/PhoneRegsterFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="68" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_seminar_startstop.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/question/QuestionListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="2187">
+          <caret line="81" column="17" lean-forward="false" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/update.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="405">
+            <caret line="15" column="55" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="63" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/GlobalApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/ChatActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="8694">
+          <caret line="383" column="40" lean-forward="false" selection-start-line="383" selection-start-column="40" selection-end-line="383" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_show_image.xml">
-      <provider editor-type-id="android-designer2">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/ShowLuntanActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6129">
+          <caret line="277" column="58" lean-forward="false" selection-start-line="277" selection-start-column="58" selection-end-line="277" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-19/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5309" column="40" lean-forward="false" selection-start-line="5309" selection-start-column="40" selection-end-line="5309" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/MyselfMessageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="104" column="21" lean-forward="false" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="5724">
+          <caret line="212" column="17" lean-forward="false" selection-start-line="212" selection-start-column="17" selection-end-line="212" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/TopicContentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="152" column="61" lean-forward="false" selection-start-line="152" selection-start-column="61" selection-end-line="152" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -4783,547 +5099,65 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1890">
+          <caret line="70" column="70" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_about_me.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_optionspicker.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="108">
+          <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_addfriend.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pw_options.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1161">
+          <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_change_message.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/ActivityAttendeeDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7641">
+          <caret line="310" column="11" lean-forward="false" selection-start-line="310" selection-start-column="11" selection-end-line="310" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pw_time.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1296">
+          <caret line="48" column="42" lean-forward="false" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_chat.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_timepicker.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_file_upload.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="95" column="49" lean-forward="false" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_fileupload.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_load.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_lock.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_lock_setup.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="69" lean-forward="false" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="74" lean-forward="false" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/asmack-android-6.jar!/org/jivesoftware/smack/Connection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="44" column="35" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
-          <folding>
-            <marker date="1496997259000" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1496997259000" expanded="false" signature="146:848" ph="..." />
-            <marker date="1496997259000" expanded="true" signature="2253:2363" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="2421:2432" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="2451:2457" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="2493:2504" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="2540:2546" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="2575:2586" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="2615:2621" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="2654:2665" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="2698:2704" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="2730:2741" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="2770:2776" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="3096:3107" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="3150:3156" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="3336:3384" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="3643:3800" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="3855:4000" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="4189:4200" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="4231:4237" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="4267:4278" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="4326:4332" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="4473:4530" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="4621:4681" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="4776:4866" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="4931:5218" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="5286:5340" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="5412:5460" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="5530:5657" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="5721:5732" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="5761:5767" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="5832:5843" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="5866:5872" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="5948:6220" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="6279:6290" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="6322:6328" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="6413:6455" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="6538:6810" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="6877:6925" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="7017:7059" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="7120:7361" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="7448:7727" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="7798:7853" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="7949:7998" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="8063:8311" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="8393:8618" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="8683:8694" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="8725:8731" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="8768:8779" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="8815:8821" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="8915:8956" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="9013:9317" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="9353:11487" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="11500:11692" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="11740:12671" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="11916:12008" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="12053:12448" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="12498:12665" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="12716:13187" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="12880:12969" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="13019:13181" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/asmack-android-6.jar!/org/jivesoftware/smack/ConnectionConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <marker date="1496997259000" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1496997259000" expanded="false" signature="146:443" ph="..." />
-            <marker date="1496997259000" expanded="true" signature="1818:2218" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="2260:2514" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="2580:2957" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="3030:3350" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="3439:3736" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="3796:4116" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="4192:4489" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="4567:5305" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="5350:5361" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="5385:5391" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="5427:5438" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="5462:5468" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="5497:5508" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="5525:5531" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="5557:5568" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="5585:5591" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="5658:5669" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="5694:5700" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="5777:5818" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="5857:5868" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="5895:5901" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="5949:5960" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="5987:5993" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="6032:6043" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="6070:6076" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="6124:6135" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="6162:6168" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="6211:6222" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="6253:6259" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="6311:6322" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="6353:6359" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="6396:6407" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="6432:6438" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="6484:6495" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="6520:6526" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="6563:6574" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="6599:6605" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="6651:6662" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="6687:6693" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="6731:6742" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="6768:6774" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="6821:6832" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="6858:6864" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="6907:6918" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="6949:6955" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="7008:7019" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="7050:7056" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="7100:7111" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="7143:7149" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="7203:7214" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="7246:7252" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="7305:7316" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="7357:7363" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="7427:7484" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="7541:7601" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="7668:7728" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="7782:7793" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="7835:7841" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="7906:7964" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="8009:8020" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="8049:8055" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="8109:8120" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="8149:8155" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="8198:8209" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="8240:8246" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="8299:8310" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="8341:8347" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="8397:8408" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="8446:8452" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="8513:8567" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="8607:8618" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="8646:8652" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="8702:8713" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="8741:8747" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="8801:8812" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="8844:8850" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="8894:8905" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="8937:8943" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="8997:9008" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="9034:9040" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="9087:9098" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="9123:9129" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="9173:9184" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="9216:9222" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="9276:9287" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="9319:9325" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="9374:9385" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="9413:9419" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="9477:9488" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="9516:9522" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="9567:9578" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="9604:9610" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="9636:9647" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="9668:9674" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="9700:9711" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="9732:9738" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="9764:9775" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="9796:9802" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="9845:9856" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="9896:9902" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="9955:9966" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="10006:10012" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="10047:10058" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="10087:10093" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="10131:10142" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="10171:10177" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="10212:10223" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="10244:10250" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="10276:10287" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="10308:10314" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="10344:10355" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="10380:10386" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="10449:10546" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="10584:10688" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="10671:10682" ph="{}" />
-          </folding>
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/asmack-android-6.jar!/org/jivesoftware/smack/XMPPConnection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="614" column="0" lean-forward="true" selection-start-line="614" selection-start-column="0" selection-end-line="614" selection-end-column="0" />
-          <folding>
-            <marker date="1496997259000" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1496997259000" expanded="true" signature="146:1540" ph="..." />
-            <marker date="1496997259000" expanded="true" signature="2169:2433" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="2474:2692" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="2749:2760" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="2772:2778" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="2858:2925" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="2962:2973" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="3027:3033" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="3062:3073" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="3123:3129" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="3226:5330" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="5401:6499" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="6531:7607" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="7641:7652" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="7674:7680" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="7721:7732" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="7757:7763" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="7800:7811" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="7836:7842" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="7880:7891" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="7917:7923" ph=" }" />
-            <marker date="1496997259000" expanded="false" signature="7957:7968" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="7990:7996" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="8041:9285" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="9342:9871" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="9913:10201" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="10207:10225" ph="/**...*/" />
-            <marker date="1496997259000" expanded="true" signature="10312:10366" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="10372:10390" ph="/**...*/" />
-            <marker date="1496997259000" expanded="true" signature="10461:10512" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="10518:10536" ph="/**...*/" />
-            <marker date="1496997259000" expanded="true" signature="10617:10675" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="10681:10699" ph="/**...*/" />
-            <marker date="1496997259000" expanded="true" signature="10764:10819" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="10915:11758" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="11815:14696" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="14758:16650" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="16683:16694" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="16715:16721" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="16763:17351" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="17400:20637" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="20703:20714" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="20745:20751" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="20816:20913" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="20954:20965" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="20994:21000" ph=" }" />
-            <marker date="1496997259000" expanded="true" signature="21039:21970" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="22016:22333" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="22386:22623" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="22660:22733" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="22782:23323" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="23376:23474" ph="{...}" />
-            <marker date="1496997259000" expanded="true" signature="23558:23744" ph="{...}" />
-            <marker date="1496997259000" expanded="false" signature="23786:23797" ph=" { " />
-            <marker date="1496997259000" expanded="false" signature="23838:23844" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/xmpp/XmppTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="128" column="40" lean-forward="true" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/NewsContentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="249" column="0" lean-forward="false" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/TopicContentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="185" column="40" lean-forward="false" selection-start-line="185" selection-start-column="40" selection-end-line="185" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/seminar_content_item.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/SeminarPlanArrangement/layout/activity_attendee_detail.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/listview_seminar_discuss.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="106" column="22" lean-forward="false" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/listview_item_seminar_topic.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/fragment_seminar_topic_content.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/fragment_seminar_discuss.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="94" column="58" lean-forward="false" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/question/layout/listview_item_question.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/chat_add_picture_press.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/btn_chat_add_picture_selector.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="594">
+          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -5339,10 +5173,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-23/android/widget/AdapterView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="192">
+          <caret line="310" column="26" lean-forward="true" selection-start-line="310" selection-start-column="26" selection-end-line="310" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/question/layout/listview_item_question.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopiccomment/layout/include_seminar_topic_comment.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -5352,13 +5206,182 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="125" column="18" lean-forward="true" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
+        <state relative-caret-position="1971">
+          <caret line="73" column="29" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="75" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/question/layout/activity_raisequestion.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/fragment_seminar_topic_content.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/fragment_seminar_discuss.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="116" column="58" lean-forward="false" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopiccomment/layout/activity_seminar_topic_comment.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2700">
+          <caret line="100" column="6" lean-forward="false" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/adapter/seminartopic/TopicDiscussListViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="117" column="30" lean-forward="true" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/seminar_content_item.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-19/android/widget/AbsListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76923">
+          <caret line="2971" column="0" lean-forward="false" selection-start-line="2971" selection-start-column="0" selection-end-line="2971" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/listview_seminar_discuss.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="76" column="70" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layouts/seminartopic/layout/listview_item_seminar_topic.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/adapter/seminartopic/SeminarTopicListViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/DiscussListviewFragement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="132" selection-end-column="17" />
           <folding>
-            <element signature="e#3652#3669#0" expanded="true" />
-            <element signature="e#4089#4105#0" expanded="true" />
-            <element signature="e#4529#4544#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/entity/tb_theme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6642">
+          <caret line="259" column="19" lean-forward="false" selection-start-line="259" selection-start-column="19" selection-end-line="259" selection-end-column="19" />
+          <folding>
+            <element signature="e#6966#6967#0" expanded="true" />
+            <element signature="e#6994#6995#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/5d171c3cd5343e5997f974561abed21442273fd1/android-async-http-1.4.9-sources.jar!/com/loopj/android/http/AsyncHttpResponseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9234">
+          <caret line="400" column="31" lean-forward="false" selection-start-line="400" selection-start-column="31" selection-end-line="400" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9153">
+          <caret line="379" column="61" lean-forward="false" selection-start-line="379" selection-start-column="61" selection-end-line="379" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/fragment/seminartopic/SeminarTopicFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="100" column="33" lean-forward="false" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
+          <folding>
+            <element signature="e#8876#8877#0" expanded="true" />
+            <element signature="e#8902#8903#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_seminar_startstop.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yyquan/zkzx/activity/SeminarTopic/ActivitySeminarStartStop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="62" column="29" lean-forward="false" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

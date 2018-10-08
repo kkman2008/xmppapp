@@ -15,6 +15,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.rockerhieu.emojicon.EmojiconTextView;
+import com.vdurmont.emoji.EmojiParser;
 import com.yyquan.zkzx.R;
 import com.yyquan.zkzx.entity.tb_topicforumprocess;
 
@@ -61,7 +63,7 @@ public class TopicDiscussListViewAdapter  extends BaseAdapter {
             holder.tv_name = (TextView) convertView.findViewById(R.id.listview_pinglun_item_textView_name);
             holder.tv_location = (TextView) convertView.findViewById(R.id.listview_pinglun_item_textView_location);
             holder.tv_time = (TextView) convertView.findViewById(R.id.listview_pinglun_item_textView_time);
-            holder.tv_content = (TextView) convertView.findViewById(R.id.listview_pinglun_item_textView_content);
+            holder.tv_content = (EmojiconTextView) convertView.findViewById(R.id.emotv_topic_item_textView_content);
             holder.tv_zan = (TextView) convertView.findViewById(R.id.listview_pinglun_item_textView_zan);
             holder.tv_lou = (TextView) convertView.findViewById(R.id.listview_pinglun_item_textView_lou);
             convertView.setTag(holder);
@@ -99,7 +101,7 @@ public class TopicDiscussListViewAdapter  extends BaseAdapter {
         }
 
         holder.tv_time.setText(stime);
-        holder.tv_content.setText(mdiscusslist.get(position).getDiscusscontent());
+        holder.tv_content.setText(EmojiParser.parseToUnicode(  mdiscusslist.get(position).getDiscusscontent()));
         holder.tv_zan.setText(mdiscusslist.get(position).getPraisecount() + " ");
         //holder.tv_lou.setVisibility(View.GONE);
         // 本项目中地理位置不需要
@@ -117,7 +119,7 @@ public class TopicDiscussListViewAdapter  extends BaseAdapter {
         private TextView tv_name;
         private TextView tv_location;
         private TextView tv_time;
-        private TextView tv_content;
+        private EmojiconTextView tv_content;
         private TextView tv_zan;
         private TextView tv_lou;
         private ImageView iv_icon;

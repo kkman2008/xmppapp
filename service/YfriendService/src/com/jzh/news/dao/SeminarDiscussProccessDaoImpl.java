@@ -66,7 +66,7 @@ public class SeminarDiscussProccessDaoImpl extends BaseDaoImpl {
 						+ discussType.trim() + "'";
 			}
 			String sqlStatement = "select * from tb_topicforumprocess "
-					+ whereClausestr;
+					+ whereClausestr + " order by DiscussTime desc" ;
 			System.out.println(sqlStatement);
 			pstmt = conn.prepareStatement(sqlStatement);
 			rs = pstmt.executeQuery();

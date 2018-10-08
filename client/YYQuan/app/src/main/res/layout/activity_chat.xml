@@ -81,8 +81,6 @@
                     android:layout_marginBottom="2dp"
                     android:layout_marginLeft="3dp"
                     android:background="@mipmap/emoji" />
-
-
                 <com.rockerhieu.emojicon.EmojiconEditText
                     android:id="@+id/editEmojicon"
                     android:layout_width="wrap_content"
@@ -133,7 +131,8 @@
         android:id="@+id/emojicons"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:visibility="gone" />
+        android:visibility="gone"
+        />
 
 
 </LinearLayout>

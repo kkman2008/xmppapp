@@ -68,6 +68,7 @@ public class LogUtil {
             fileHandler = new FileHandler(filePath);
             // 设置输出文件的等级（如果FileHandler的等级高于或者等于log的level，则按照FileHandler的level输出到文件，如果低于，则按照Log等级输出）
             fileHandler.setLevel(level);
+            fileHandler.setEncoding("UTF-8");
             fileHandler.setFormatter(new Formatter() {
                 @Override
                 public String format(LogRecord record) {

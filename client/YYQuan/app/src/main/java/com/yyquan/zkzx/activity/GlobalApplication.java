@@ -14,8 +14,8 @@ public class GlobalApplication extends Application {
     private static final String VALUE = "123456";
     private String value;
     private int appVersionValue;
-//    private String serverIP ="39.108.118.37";
     private String serverIP ="169.254.254.254";
+    //private String serverIP ="169.254.254.254";
     private Long ServerPort;
     // 存储用户信息，全局可用
     public tb_user globalUser;
@@ -37,6 +37,7 @@ public class GlobalApplication extends Application {
     public String ip_question = ifURL + "/YfriendService/DoGetQuestion";
     public String ip_user_question = ifURL + "/YfriendService/DoGetQuestion";
     public String ip_seminar_topic = ifURL + "/YfriendService/DoGetSeminar";
+    public String ip_seminar_attendee = ifURL + "/YfriendService/DoGetSeminarArragement";
     public static final String  TAG = "GlobalApplication";
 
     public String InterfaceURL(String ServerIP, Long ServerPort) {
@@ -48,6 +49,7 @@ public class GlobalApplication extends Application {
         ip_dservlet = ifURL + "/YfriendService/Dservlet";
         ip_user_question = ifURL + "/YfriendService/DoGetQuestion";
         ip_seminar_topic = ifURL + "/YfriendService/DoGetSeminar";
+        ip_seminar_attendee = ifURL + "/YfriendService/DoGetSeminarArragement";
         return ifURL;
     }
     public void InitialUser(tb_user user){

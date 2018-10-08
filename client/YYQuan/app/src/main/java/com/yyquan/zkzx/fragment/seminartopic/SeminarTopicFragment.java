@@ -32,9 +32,6 @@ import com.yyquan.zkzx.activity.SeminarTopic.TopicContentActivity;
 import com.yyquan.zkzx.adapter.seminartopic.SeminarTopicListViewAdapter;
 import com.yyquan.zkzx.entity.CommonConstant;
 import com.yyquan.zkzx.entity.tb_theme;
-import com.yyquan.zkzx.activity.GlobalApplication;
-import com.yyquan.zkzx.activity.SeminarTopic.ActivitySeminarStartStop;
-import com.yyquan.zkzx.adapter.seminartopic.SeminarTopicListViewAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -87,6 +84,23 @@ public class SeminarTopicFragment  extends Fragment implements  View.OnClickList
             }else{
                 getData("全部"); // 如果未有viewpager里面传过来，则取全部。 测试也可用
             }
+
+            mlistview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                public boolean  onItemLongClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+                    // When clicked, show a toast with the TextView text
+                    // 阶段: 0- 未开始，1-进行中；2-结束
+                    if( list.get(position).getPhase() == 1) {
+                       Intent intent = new Intent(getActivity(), ActivitySeminarStartStop.class);
+                        intent.putExtra("seminar_item_content", list.get(position));
+                        startActivity(intent);
+                    }
+//                    TextView tv = (TextView)view.findViewById(R.id.listview_item_textView_title);
+//                    Toast.makeText(getActivity().getApplicationContext(),
+//                            tv.getText(), Toast.LENGTH_SHORT).show();
+                    return  true;
+                }
+            });
         }
         return view;
     }

@@ -4,12 +4,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Logger;
 
+import com.jzh.news.util.jdkLog;
+
 public class ModelToSQL {
     public static final int INSERTSQL = 1;
     public static final int UPDATESQL = 2;
-    private static Logger log = Logger.getLogger(ModelToSQL.class.getName());
-    
-    
+ 
     /**
      * 获取InsertSQL
      * 
@@ -18,7 +18,7 @@ public class ModelToSQL {
      */
     public static String getInsertSQL(Object model) {
         if (model == null) {
-            log.info("传入参数为null！！");
+    		jdkLog.log.info("传入参数为null！！..."); 
             throw new NullPointerException();
         }
         return getInsertOrUpdateSQL(INSERTSQL, model);
@@ -32,7 +32,7 @@ public class ModelToSQL {
      */
     public static String getUpdateSQL(Object model) {
         if (model == null) {
-            log.info("传入参数为null！！");
+            jdkLog.log.info("传入参数为null！！");
             throw new NullPointerException();
         }
         return getInsertOrUpdateSQL(UPDATESQL, model);
@@ -128,7 +128,7 @@ public class ModelToSQL {
             sql = String.format("update %s set %s where %s=?", table,
                     sb1.substring(1), fields[0].getName());
         }
-        log.info("执行语句：" + sql);
+        jdkLog.log.info("执行语句：" + sql);
         System.out.println("sql =" + sql);
         return sql;
     }
@@ -146,7 +146,7 @@ public class ModelToSQL {
         String table = cl.getSimpleName();
         sql = String.format("delete from %s where %s=?", table,
                 fields[0].getName());
-        log.info("执行语句：" + sql);
+        jdkLog.log.info("执行语句：" + sql);
         return sql;
     }
 
@@ -159,7 +159,7 @@ public class ModelToSQL {
      */
     public static String getDeleteSQL(String table, String primkey) {
         String sql = String.format("delete from %s where %s=?", table, primkey);
-        log.info("执行语句：" + sql);
+        jdkLog.log.info("执行语句：" + sql);
         return sql;
     }
 
@@ -174,7 +174,7 @@ public class ModelToSQL {
     public static String getQueryByIdSQL(String table, String primkey) {
         String sql = null;
         sql = String.format("select * from %s where %s = ?", table, primkey);
-        log.info("执行语句：" + sql);
+        jdkLog.log.info("执行语句：" + sql);
         return sql;
     }
 
@@ -187,14 +187,14 @@ public class ModelToSQL {
      */
     public static String getQueryAllSQL(Object model, String orderBy) {
         if (model == null) {
-            log.info("传入参数为null！！");
+            jdkLog.log.info("传入参数为null！！");
             throw new NullPointerException();
         }
         String sql = null;
         Class<?> cl = model.getClass();
         String table = cl.getSimpleName();
         sql = String.format("select * from %s order by %s", table, orderBy);
-        log.info("执行语句：" + sql);
+        jdkLog.log.info("执行语句：" + sql);
         return sql;
     }
 
@@ -215,7 +215,7 @@ public class ModelToSQL {
     public static String getQuery(Object model, String selections,
             String where, int limit, int page, String orderBy) {
         if (model == null) {
-            log.info("传入参数为null！！");
+            jdkLog.log.info("传入参数为null！！");
             throw new NullPointerException();
         }
         String sql = null;
@@ -246,7 +246,7 @@ public class ModelToSQL {
                                 selections, table, where, table, start, limit);
             }
         }
-        log.info("执行语句:" + sql);
+        jdkLog.log.info("执行语句:" + sql);
         return sql;
     }
 

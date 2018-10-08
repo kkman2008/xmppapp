@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-     >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,7 +10,7 @@
         android:background="@color/title">
 
         <LinearLayout
-            android:id="@+id/raise_question_back"
+            android:id="@+id/ll_discuss_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
@@ -20,6 +19,7 @@
             android:paddingRight="10dp">
 
             <ImageView
+                android:id="@+id/iv_detail_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -64,8 +64,8 @@
         >
         <com.yyquan.zkzx.view.CircleImageView
             android:id="@+id/civ_host_image"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="5dp"
@@ -125,7 +125,7 @@
                 android:src="@drawable/message"
                 />
             <TextView
-                android:id="@+id/tv_seminar_topic"
+                android:id="@+id/tv_seminar_topic_count"
                 android:layout_marginTop="80dp"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
@@ -139,6 +139,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="top"
+            android:visibility="gone"
             >
             <ImageView
                 android:id="@+id/iv_seminar_progress_chart"
@@ -166,10 +167,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="5dp"
         >
         <TextView
-            android:id="@+id/content_text"
+            android:id="@+id/tv_content_text"
             style="@style/Coder.TextView.Black"
             android:text="  十年之前，我不认识你 你不属于我，我们还是一样，陪在一个陌生人左右，走过渐渐熟悉的街头;十年之后，我们是朋友， 还可以问候，只是那种温柔，再也找不到拥抱的理由，情人最后难免沦为朋友。"
             android:layout_margin="4dp"
@@ -184,114 +185,124 @@
         android:orientation="vertical"
         android:layout_marginLeft="5dp"
         >
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="35dp"
-        android:src="@drawable/expert"
-        />
+
         <TableLayout
+            android:id="@+id/tb_expert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:gravity="center_horizontal"
             >
+            <TableRow>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/expert" />
+            </TableRow>
             <TableRow
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_horizontal"
                 >
 
             <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="top"
             >
-            <com.yyquan.zkzx.view.CircleImageView
-                android:id="@+id/iv_expert1"
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/professor_icon1"
-                />
+
+                <com.yyquan.zkzx.view.CircleImageView
+                    android:id="@+id/civ_expert1"
+                    android:layout_width="60dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/professor_icon2" />
             <TextView
-                android:id="@+id/iv_expert1_name"
-                android:layout_marginTop="80dp"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_expert1_name"
+                android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_gravity="bottom"
-                android:gravity="bottom"
+                android:layout_gravity="center"
                 android:layout_marginLeft="2dp"
-                android:text="艾老师"
+                android:layout_marginTop="80dp"
+                android:gravity="center"
+                android:text="张老师"
                 android:textStyle="bold"
                 />
         </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal"
-                >
-                <com.yyquan.zkzx.view.CircleImageView
-                    android:id="@+id/iv_expert2"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/professor_icon1"
-                    />
-                <TextView
-                    android:id="@+id/tv_expert2name"
-                    android:layout_marginTop="80dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center_horizontal"
-                    android:layout_marginLeft="2dp"
-                    android:text="艾老师"
-                    android:textStyle="bold"
-                    />
-            </RelativeLayout>
+
                 <RelativeLayout
-                    android:layout_width="wrap_content"
+                    android:id="@+id/rl_expert2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top">
+
+                    <com.yyquan.zkzx.view.CircleImageView
+                        android:id="@+id/civ_expert2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/professor_icon1" />
+
+                    <TextView
+                        android:id="@+id/tv_expert2_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="80dp"
+                        android:gravity="center"
+                        android:text="张老师"
+                        android:textStyle="bold"
+
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_expert3"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="top"
+                    android:visibility="gone"
                     >
                     <com.yyquan.zkzx.view.CircleImageView
-                        android:id="@+id/iv_expert3"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
+                        android:id="@+id/civ_expert3"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="5dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/professor_icon1"
+                        android:src="@drawable/professor_icon3"
                         />
                     <TextView
                         android:id="@+id/tv_expert3name"
                         android:layout_marginTop="80dp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:layout_gravity="bottom"
-                        android:gravity="bottom"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:layout_marginLeft="2dp"
-                        android:text="艾老师"
+                        android:text="张老师"
                         android:textStyle="bold"
                         />
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="wrap_content"
+                    android:id="@+id/rl_expert4"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="top"
+                    android:visibility="gone"
                     >
                     <com.yyquan.zkzx.view.CircleImageView
-                        android:id="@+id/iv_expert4"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
+                        android:id="@+id/civ_expert4"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="5dp"
@@ -301,10 +312,10 @@
                     <TextView
                         android:id="@+id/tv_expert4name"
                         android:layout_marginTop="80dp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:layout_gravity="bottom"
-                        android:gravity="bottom"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:layout_marginLeft="2dp"
                         android:text="艾老师"
                         android:textStyle="bold"
@@ -316,6 +327,8 @@
                     android:layout_gravity="top"
                     >
                  <ImageView
+                     android:id="@+id/iv_expert_more"
+                     android:visibility="gone"
                      android:layout_width="30dp"
                      android:layout_height="80dp"
                      android:src="@drawable/horizon_more"
@@ -332,60 +345,67 @@
         android:orientation="vertical"
         android:layout_marginLeft="5dp"
         >
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="35dp"
-            android:src="@drawable/expert"
-            />
+
         <TableLayout
+            android:id="@+id/tb_listener"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:gravity="center_horizontal"
             >
+        <TableRow>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/listener"
+                />
+        </TableRow>
         <TableRow
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
             >
-
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="top"
                 >
                 <com.yyquan.zkzx.view.CircleImageView
-                    android:id="@+id/iv_expert1"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:id="@+id/civ_listener1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/professor_icon1"
+                    android:src="@drawable/professor_icon3"
                     />
+
                 <TextView
-                    android:id="@+id/iv_expert1_name"
+                    android:id="@+id/tv_listener1_name"
                     android:layout_marginTop="80dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:layout_gravity="bottom"
-                    android:gravity="bottom"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:layout_marginLeft="2dp"
-                    android:text="艾老师"
-                    android:textStyle="bold"
-                    />
+                    android:text="李教授"
+                    android:textStyle="bold" />
             </RelativeLayout>
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/rl_linster2"
+                android:visibility="gone"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_horizontal"
                 >
                 <com.yyquan.zkzx.view.CircleImageView
-                    android:id="@+id/iv_expert2"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:id="@+id/civ_listener2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
@@ -393,26 +413,28 @@
                     android:src="@drawable/professor_icon1"
                     />
                 <TextView
-                    android:id="@+id/tv_expert2name"
+                    android:id="@+id/tv_listener2name"
                     android:layout_marginTop="80dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:layout_marginLeft="2dp"
                     android:text="艾老师"
                     android:textStyle="bold"
                     />
             </RelativeLayout>
             <RelativeLayout
+                android:id="@+id/rl_linster3"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="top"
                 >
                 <com.yyquan.zkzx.view.CircleImageView
-                    android:id="@+id/iv_expert3"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:id="@+id/cv_listener3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
@@ -420,7 +442,7 @@
                     android:src="@drawable/professor_icon1"
                     />
                 <TextView
-                    android:id="@+id/tv_expert3name"
+                    android:id="@+id/tv_listener3name"
                     android:layout_marginTop="80dp"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
@@ -432,14 +454,16 @@
                     />
             </RelativeLayout>
             <RelativeLayout
+                android:id="@+id/rl_linster4"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="top"
                 >
                 <com.yyquan.zkzx.view.CircleImageView
-                    android:id="@+id/iv_expert4"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:id="@+id/civ_listener4"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
@@ -447,7 +471,7 @@
                     android:src="@drawable/professor_icon1"
                     />
                 <TextView
-                    android:id="@+id/tv_expert4name"
+                    android:id="@+id/tv_listener4name"
                     android:layout_marginTop="80dp"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
@@ -464,6 +488,8 @@
                 android:layout_gravity="top"
                 >
                 <ImageView
+                    android:id="@+id/iv_listener_more"
+                    android:visibility="gone"
                     android:layout_width="30dp"
                     android:layout_height="80dp"
                     android:src="@drawable/horizon_more"
@@ -481,60 +507,69 @@
         android:orientation="vertical"
         android:layout_marginLeft="5dp"
         >
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="35dp"
-            android:src="@drawable/expert"
-            />
+
         <TableLayout
+            android:id="@+id/tb_assistant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:gravity="center_horizontal"
             >
+         <TableRow
+             >
+             <ImageView
+                 android:layout_width="60dp"
+                 android:layout_height="25dp"
+                 android:layout_marginLeft="5dp"
+                 android:src="@drawable/assistant"
+                 android:layout_marginTop="10dp"
+                 />
+         </TableRow>
         <TableRow
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
             >
 
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="top"
                 >
                 <com.yyquan.zkzx.view.CircleImageView
-                    android:id="@+id/iv_expert1"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:id="@+id/civ_assitant1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/professor_icon1"
+                    android:src="@drawable/professor_icon4"
                     />
                 <TextView
-                    android:id="@+id/iv_expert1_name"
+                    android:id="@+id/tv_assitant1_name"
                     android:layout_marginTop="80dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:layout_gravity="bottom"
-                    android:gravity="bottom"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:layout_marginLeft="2dp"
-                    android:text="艾老师"
+                    android:text="赵老师"
                     android:textStyle="bold"
                     />
             </RelativeLayout>
             <RelativeLayout
+                android:id="@+id/rl_assitant2"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_horizontal"
                 >
                 <com.yyquan.zkzx.view.CircleImageView
-                    android:id="@+id/iv_expert2"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:id="@+id/civ_assitant2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
@@ -542,7 +577,7 @@
                     android:src="@drawable/professor_icon1"
                     />
                 <TextView
-                    android:id="@+id/tv_expert2name"
+                    android:id="@+id/tv_assitant2name"
                     android:layout_marginTop="80dp"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
@@ -554,14 +589,16 @@
                     />
             </RelativeLayout>
             <RelativeLayout
+                android:id="@+id/rl_assitant3"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="top"
                 >
                 <com.yyquan.zkzx.view.CircleImageView
-                    android:id="@+id/iv_expert3"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:id="@+id/civ_assitant3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
@@ -569,7 +606,7 @@
                     android:src="@drawable/professor_icon1"
                     />
                 <TextView
-                    android:id="@+id/tv_expert3name"
+                    android:id="@+id/tv_assitant3name"
                     android:layout_marginTop="80dp"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
@@ -581,14 +618,16 @@
                     />
             </RelativeLayout>
             <RelativeLayout
+                android:id="@+id/rl_assitant4"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="top"
                 >
                 <com.yyquan.zkzx.view.CircleImageView
-                    android:id="@+id/iv_expert4"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:id="@+id/civ_assitant4"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
@@ -596,7 +635,7 @@
                     android:src="@drawable/professor_icon1"
                     />
                 <TextView
-                    android:id="@+id/tv_expert4name"
+                    android:id="@+id/tv_assitant4name"
                     android:layout_marginTop="80dp"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
@@ -613,10 +652,11 @@
                 android:layout_gravity="top"
                 >
                 <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_assitant_more"
                     android:layout_width="30dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/horizon_more"
-                    />
+                    android:src="@drawable/horizon_more"/>
             </LinearLayout>
         </TableRow>
         </TableLayout>

@@ -73,7 +73,11 @@
             android:orientation="vertical"
             android:paddingLeft="5dp"
             android:paddingRight="5dp">
-
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
             <TextView
                 android:id="@+id/news_content_textView_total"
                 android:layout_width="wrap_content"
@@ -82,7 +86,25 @@
                 android:drawableLeft="@mipmap/message_icon_friend"
                 android:text="研讨主题"
                 android:textColor="@android:color/black"
-                android:textSize="17dp" />
+                android:textSize="17dp"
+                android:visibility="gone"
+                />
+                <ImageView
+                    android:id="@+id/iv_attendee"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/attendee"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@+id/news_content_textView_total"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_attendee_detail"
+                    android:layout_width="55dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/attendeedetail" />
+            </LinearLayout>
 
             <com.demievil.library.RefreshLayout
                 android:id="@+id/fragment_content_swipe_container"
@@ -90,7 +112,7 @@
                 android:layout_height="match_parent"
                 >
 
-                <ListView
+                <com.yyquan.zkzx.xmpp.view.listview.MsgListView
                     android:scrollbars="none"
                     android:id="@+id/news_content_listView"
                     android:layout_width="match_parent"
@@ -98,14 +120,7 @@
                     android:background="@android:color/white"
                     android:visibility="gone"
                     android:divider="@null" />
-
             </com.demievil.library.RefreshLayout>
-
-
         </LinearLayout>
-
-
     </LinearLayout>
-
-
 </LinearLayout>

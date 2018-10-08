@@ -12,7 +12,8 @@
 #3 单元测试取问题列表 
     http://localhost:8080/YfriendService/DoGetQuestion?action=get_question_list&type=-1
     http://localhost:8080/YfriendService/DoGetSeminar?action=get_seminartopic_list&type=-1
-     http://localhost:8080/YfriendService/DoGetSeminar?action=get_seminar_discuss_list&discusstype=327e2fb7-2c3c-4d64-bbc5-0f00ae80d2bd
+    http://localhost:8080/YfriendService/DoGetSeminar?action=get_seminar_discuss_list&discusstype=327e2fb7-2c3c-4d64-bbc5-0f00ae80d2bd
+    http://localhost:8080/YfriendService/DoGetSeminarArragement?action=get_seminar_attendee&themesubjectid=0931ce4b-41e5-4592-985d-074abb220781
     
       -1 全部，0 未开始，1进行中，2已结束
 
